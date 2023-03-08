@@ -2602,69 +2602,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_sets_89
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 928
-        width: 224
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f313341881f87a410800000000000000
-      internalID: 1488315537279889727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_sets_90
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 928
-        width: 224
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a232034aa4ebd2380800000000000000
-      internalID: -8994323652997536982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_sets_91
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 928
-        width: 224
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3234917cf0f4e8aa0800000000000000
-      internalID: -6156896711385464029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tile_sets_92
       rect:
         serializedVersion: 2
@@ -3214,10 +3151,10 @@ TextureImporter:
       name: tile_sets_118
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
-        width: 480
-        height: 416
+        x: 400
+        y: 497
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

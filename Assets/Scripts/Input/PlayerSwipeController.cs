@@ -6,6 +6,7 @@ public class PlayerSwipeController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1.0f;
     [SerializeField] Animator animator = null;
+    public MovementJoystick joystickMovement;
 
     private Rigidbody2D rigidbody2d = null;
     private Vector3 playerVelocity;
@@ -13,6 +14,7 @@ public class PlayerSwipeController : MonoBehaviour
     private bool isInDialogue = false;
     private bool isInCutscene = false;
     private bool movementBlocked = false;
+    private Vector2 lookDirection;
 
     private void Awake()
     {
@@ -46,8 +48,11 @@ public class PlayerSwipeController : MonoBehaviour
         }
         else
         {
-            rigidbody2d.velocity = playerVelocity * moveSpeed * Time.fixedDeltaTime;
-            consumedSwipe = true;
+            Vector2 position = rigidbody2d.position;
+            position.x = position.x + moveSpeed * joystickMovement.joystickVec.x * Time.deltaTime;
+            position.y = position.y + moveSpeed * joystickMovement.joystickVec.y * Time.deltaTime;
+
+            rigidbody2d.MovePosition(position);
         }
     }
 
@@ -83,36 +88,22 @@ public class PlayerSwipeController : MonoBehaviour
         float xDirection = 0f;
         float yDirection = 0f;
 
-        switch (swipeData.Direction) 
+        //Debug.Log(swipeData.);
+
+        Vector2 move = new Vector2(joystickMovement.joystickVec.x, joystickMovement.joystickVec.y);
+
+        if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
-            case Direction.Up:
-                yDirection = 1.0f;
-                playerVelocity = Vector3.up;
-                break;
-
-            case Direction.Down:
-                yDirection = -1.0f;
-                playerVelocity = Vector3.down;
-                break;
-
-            case Direction.Right:
-                xDirection = 1.0f;
-                playerVelocity = Vector3.right;
-                break;
-            case Direction.Left:
-                xDirection = -1.0f;
-                playerVelocity = Vector3.left;
-                break;
-
-            default:
-                playerVelocity = Vector3.zero;
-                break;
+            lookDirection.Set(move.x, move.y);
+            lookDirection.Normalize();
         }
 
-        bool isWalking = (Mathf.Abs(xDirection) > 0.0f || Mathf.Abs(yDirection) > 0.0f);
+        bool isWalking = (Mathf.Abs(lookDirection.x) > 0.0f || Mathf.Abs(lookDirection.y) > 0.0f);
 
-        animator.SetFloat("xDirection", xDirection);
-        animator.SetFloat("yDirection", yDirection);
+        animator.SetFloat("xDirection", lookDirection.x);
+        animator.SetFloat("yDirection", lookDirection.y);
         animator.SetBool("isWalking", isWalking);
     }
+
+
 }

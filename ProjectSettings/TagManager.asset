@@ -9,6 +9,7 @@ TagManager:
   - PlataformEndPosition
   - Item
   - Ground
+  - CatStatue
   layers:
   - Default
   - TransparentFX
