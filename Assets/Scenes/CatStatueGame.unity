@@ -4525,6 +4525,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1665205028876335161, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335163, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -4645,7 +4649,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1665205028876335161, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+    - {fileID: 1665205029773706569, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+    - {fileID: 1665205029773706566, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+    - {fileID: 1665205029773706567, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
 --- !u!1 &2098829074
 GameObject:

@@ -85,9 +85,6 @@ public class PlayerSwipeController : MonoBehaviour
 
         consumedSwipe = false;
 
-        float xDirection = 0f;
-        float yDirection = 0f;
-
         //Debug.Log(swipeData.);
 
         Vector2 move = new Vector2(joystickMovement.joystickVec.x, joystickMovement.joystickVec.y);
