@@ -4686,8 +4686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 0
-  ignoreSelfCondition: 0
+  ignoreOtherConditions: 1
+  ignoreSelfCondition: 1
   necessaryConditions:
   - {fileID: 11400000, guid: bac94d88342979d4a986add1dd3427a1, type: 2}
   thisCondition: {fileID: 11400000, guid: 061487faf28593a47b5cdd56d96f3736, type: 2}
@@ -5466,7 +5466,7 @@ MonoBehaviour:
   gameObjectName: SchoolExit
   position: {x: 0, y: 0, z: 0}
   direction: 1
-  sceneName: Village_OpenAssets
+  sceneName: Village
   startPositionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
   isDoor: 0
 --- !u!1 &1272076841
@@ -5846,7 +5846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 957478175764725326, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 957478175764725362, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
       propertyPath: m_Pivot.x
@@ -15884,7 +15884,7 @@ MonoBehaviour:
   necessaryConditions: []
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
   playOnlyOnce: 1
-  playAfterConditionsMet: 1
+  playAfterConditionsMet: 0
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
   - {fileID: 416777689}

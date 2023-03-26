@@ -3379,7 +3379,7 @@ MonoBehaviour:
   m_Name: Recorded (5)
   m_EditorClassIdentifier: 
   m_Clip: {fileID: 4807171631011339936}
-  m_Position: {x: 8.38, y: -7.46, z: 0}
+  m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: -0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
@@ -3481,7 +3481,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0.016666668
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 6.5, y: -4, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3490,7 +3490,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1.9666667
-        value: {x: 0, y: 8.28, z: 0}
+        value: {x: 6.5, y: -0.6, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3609,7 +3609,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0.016666668
-        value: 0
+        value: 6.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3618,7 +3618,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.9666667
-        value: 0
+        value: 6.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3637,7 +3637,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0.016666668
-        value: 0
+        value: -4
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3646,7 +3646,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.9666667
-        value: 8.28
+        value: -0.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
