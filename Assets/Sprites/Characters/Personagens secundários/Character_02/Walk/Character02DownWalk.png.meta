@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 0f9413a95e5ab6d41abe6e02c12fc733
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4257594735579486445
+    second: Character02DownWalk_0
+  - first:
+      213: 1074282254474632047
+    second: Character02DownWalk_1
+  - first:
+      213: 5899338040710984655
+    second: Character02DownWalk_2
+  - first:
+      213: -193076970087478409
+    second: Character02DownWalk_3
+  - first:
+      213: -6865675563834769646
+    second: Character02DownWalk_4
+  - first:
+      213: -8464496630935027727
+    second: Character02DownWalk_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_idle_down_0
+      name: Character02DownWalk_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 28
-        height: 28
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add9b741a71e72c60800000000000000
-      internalID: 7793445594633838042
+      spriteID: de8d9c3bad3061b30800000000000000
+      internalID: 4257594735579486445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_1
+      name: Character02DownWalk_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 28
-        height: 28
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03271162244d6240800000000000000
-      internalID: 4786556893413188363
+      spriteID: f6b5776c40e98ee00800000000000000
+      internalID: 1074282254474632047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_2
+      name: Character02DownWalk_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 0
-        width: 28
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d340e5fbc46378d0800000000000000
-      internalID: -2849823312029137961
+      spriteID: fc3f68621b8aed150800000000000000
+      internalID: 5899338040710984655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_3
+      name: Character02DownWalk_3
       rect:
         serializedVersion: 2
-        x: 98
+        x: 96
         y: 0
-        width: 28
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52d46d7181af0f8a0800000000000000
-      internalID: -6273239299541021403
+      spriteID: 77b80a7c48d025df0800000000000000
+      internalID: -193076970087478409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_4
+      name: Character02DownWalk_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
-        width: 30
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f403248a3d96c4ca0800000000000000
-      internalID: -6031329443174010801
+      spriteID: 21f7c8a537838b0a0800000000000000
+      internalID: -6865675563834769646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_5
+      name: Character02DownWalk_5
       rect:
         serializedVersion: 2
-        x: 161
+        x: 160
         y: 0
-        width: 30
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,50 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71cdded8fc1deed90800000000000000
-      internalID: -7066480075928118249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_idle_down_6
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 0
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f12fca5a813007b0800000000000000
-      internalID: -5260149894469967367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_idle_down_7
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8fde9d1c1ea89ba0800000000000000
-      internalID: -6081919860984586358
+      spriteID: 1ff70a63921188a80800000000000000
+      internalID: -8464496630935027727
       vertices: []
       indices: 
       edges: []

@@ -104,7 +104,7 @@ MonoBehaviour:
   fadeTime: 0.5
   explodeSound: {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
   pierceSound: {fileID: 8300000, guid: ff4b8c498a7004b4ea822ac33825d58e, type: 3}
-  finalColor: {r: 0.7137255, g: 1, b: 1, a: 0}
+  finalColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!61 &3822873274683282494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
