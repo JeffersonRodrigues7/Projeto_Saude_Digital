@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: b30ec69806e8bfd45ae3390ffba5cb37
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5099078314606659145
+    second: AlanSickNoAir_0
+  - first:
+      213: 3074076557872800
+    second: AlanSickNoAir_1
+  - first:
+      213: 2906853961962898846
+    second: AlanSickNoAir_2
+  - first:
+      213: -1243747145721399241
+    second: AlanSickNoAir_3
+  - first:
+      213: -2115304975852874688
+    second: AlanSickNoAir_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_idle_down_0
+      name: AlanSickNoAir_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 28
-        height: 28
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add9b741a71e72c60800000000000000
-      internalID: 7793445594633838042
+      spriteID: 946070806b093c640800000000000000
+      internalID: 5099078314606659145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_1
+      name: AlanSickNoAir_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 28
-        height: 28
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03271162244d6240800000000000000
-      internalID: 4786556893413188363
+      spriteID: 0ae8e393bdbea0000800000000000000
+      internalID: 3074076557872800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_2
+      name: AlanSickNoAir_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 0
-        width: 28
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d340e5fbc46378d0800000000000000
-      internalID: -2849823312029137961
+      spriteID: e954cb8f648375820800000000000000
+      internalID: 2906853961962898846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_3
+      name: AlanSickNoAir_3
       rect:
         serializedVersion: 2
-        x: 98
+        x: 96
         y: 0
-        width: 28
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52d46d7181af0f8a0800000000000000
-      internalID: -6273239299541021403
+      spriteID: 738bed48f825dbee0800000000000000
+      internalID: -1243747145721399241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_idle_down_4
+      name: AlanSickNoAir_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
-        width: 30
-        height: 27
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,71 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f403248a3d96c4ca0800000000000000
-      internalID: -6031329443174010801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_idle_down_5
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 0
-        width: 30
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71cdded8fc1deed90800000000000000
-      internalID: -7066480075928118249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_idle_down_6
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 0
-        width: 28
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f12fca5a813007b0800000000000000
-      internalID: -5260149894469967367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_idle_down_7
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 0
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8fde9d1c1ea89ba0800000000000000
-      internalID: -6081919860984586358
+      spriteID: 0445ca2f45de4a2e0800000000000000
+      internalID: -2115304975852874688
       vertices: []
       indices: 
       edges: []

@@ -23,8 +23,8 @@ public class SwipeDetector : MonoBehaviour
 
     private void Update()
     {
-        if(Input.touchCount > 0)
-        {            
+        if (Input.touchCount > 0)
+        {
             ProcessTouch(Input.GetTouch(0));   
         } 
         else
