@@ -8,4 +8,20 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Aldo
   m_Controller: {fileID: 9100000, guid: d3bc96ee38821b94192786595281259d, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: bbabf98a55d0e18489fa621ed346b75c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bbabf98a55d0e18489fa621ed346b75c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f1a88082f990f9a41a8c79911c6cf86b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f1a88082f990f9a41a8c79911c6cf86b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5e25a1a3e844aaa46972790124f83a59, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5e25a1a3e844aaa46972790124f83a59, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5075377f869bc504e98f25faa0c3547d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5075377f869bc504e98f25faa0c3547d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c7343efd06e97774f82c93ee6aa5c1a3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c7343efd06e97774f82c93ee6aa5c1a3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cacc275273e69aa47a2009ee025c5cbc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cacc275273e69aa47a2009ee025c5cbc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c23bcbf42137d9c49a557eeee31bbb3a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c23bcbf42137d9c49a557eeee31bbb3a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0fcac96fb2e62db49bbae7b2499382a7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0fcac96fb2e62db49bbae7b2499382a7, type: 2}
