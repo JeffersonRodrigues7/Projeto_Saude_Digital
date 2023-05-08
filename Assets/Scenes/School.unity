@@ -3609,6 +3609,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7793445594633838042, guid: 656fea0052bad844a95cc51552dcfe92, type: 3}
@@ -3622,6 +3630,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335160, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
@@ -5226,7 +5238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1064992221
 Transform:
   m_ObjectHideFlags: 0
@@ -16189,7 +16201,7 @@ MonoBehaviour:
   necessaryConditions: []
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
   playOnlyOnce: 1
-  playAfterConditionsMet: 1
+  playAfterConditionsMet: 0
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
   - {fileID: 416777689}

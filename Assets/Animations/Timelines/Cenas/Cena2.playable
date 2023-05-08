@@ -4593,7 +4593,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 3.466666666666679
     m_PreExtrapolationTime: 0
-    m_DisplayName: PlayerIdleRight
+    m_DisplayName: MainIdleRight
   - m_Version: 1
     m_Start: 19.333333333333346
     m_ClipIn: 0
@@ -5976,7 +5976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 223c987a46aa91d4cb712a9f956831ff, type: 2}
+  m_Clip: {fileID: 7400000, guid: 9260c8eb2ee41134e8b323798e1ee317, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
