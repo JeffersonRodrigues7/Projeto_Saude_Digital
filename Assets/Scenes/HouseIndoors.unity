@@ -1311,8 +1311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 1
-  ignoreSelfCondition: 1
+  ignoreOtherConditions: 0
+  ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 061487faf28593a47b5cdd56d96f3736, type: 2}
   thisCondition: {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
@@ -1346,7 +1346,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 25f63f0d1ed722e40a9743b8c662ab82, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -11428,7 +11428,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1624011805
@@ -11941,7 +11941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335160, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_LocalPosition.x
