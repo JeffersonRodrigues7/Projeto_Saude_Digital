@@ -1708,7 +1708,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 7
     m_PreExtrapolationTime: 0
-    m_DisplayName: CarlaIdleDown
+    m_DisplayName: KarlaIdleDown
   - m_Version: 1
     m_Start: 37.63333333333333
     m_ClipIn: 0
@@ -9735,7 +9735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 0641e6c818e23e3498a033b345020c38, type: 2}
+  m_Clip: {fileID: 7400000, guid: de6d940fc933e314f942498147b980d2, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
