@@ -6019,8 +6019,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions: []
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
-  playOnlyOnce: 1
-  playAfterConditionsMet: 1
+  playOnlyOnce: 0
+  playAfterConditionsMet: 0
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
   - {fileID: 416777689}
