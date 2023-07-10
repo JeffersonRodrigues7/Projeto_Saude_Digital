@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class InstanciaMoita : MonoBehaviour
 {
-    //Esse código vai fazer as estátuas de instanciarem sozinhas em tempo de execução
+    //Esse código vai fazer as moitas de instanciarem sozinhas em tempo de execução
     [SerializeField] private GameObject Moita;
-    [SerializeField] private int maxNumber = 5;//Número máximo de estátuas permitidas no campo
-    [SerializeField] private float minDistance = 1.0f;//Distância minima entre as estátuas
+    [SerializeField] private int maxNumber = 50;//Número máximo de moitas permitidas no campo
+    [SerializeField] private float minDistance = 1.0f;//Distância minima entre as moitas
 
     [Header("Positions Parameters")]
     [SerializeField] private float minXPos = -15.5f;
     [SerializeField] private float maxXPos = 11.5f;
     [SerializeField] private float minYPos = -6.5f;
     [SerializeField] private float maxYPos = 6.7f;
+
+
 
     private List<Vector2> occupiedPositions;
 
@@ -55,6 +57,7 @@ public class InstanciaMoita : MonoBehaviour
                                                                                                      //No caso ele será filho do GameObject CatStatue pois foi neles que colocamos o script CatStatueInstantiate
             obj.name = "Moita" + i;
         }
+
     }
 
     // Update is called once per frame
@@ -62,4 +65,6 @@ public class InstanciaMoita : MonoBehaviour
     {
         
     }
+
+
 }

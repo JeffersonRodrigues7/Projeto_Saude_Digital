@@ -43,8 +43,9 @@ public class IAFriends : MonoBehaviour
     {
         if (started)
         {
+
             moitas = GameObject.FindGameObjectsWithTag("Moita");
-            Debug.Log(moitas.Length);
+            
             if (moitas.Length == 0)
             {
                 moita = null;
