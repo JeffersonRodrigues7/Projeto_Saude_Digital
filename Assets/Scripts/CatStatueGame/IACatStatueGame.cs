@@ -15,7 +15,7 @@ public class IACatStatueGame : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rigidbody2d;
 
-    private GameObject[] CatStatues;
+    private GameObject[] catStatues;
     private GameObject catStatue;
 
     private int score;
@@ -28,7 +28,7 @@ public class IACatStatueGame : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        CatStatues = null;
+        catStatues = null;
         catStatue = null;
 
         lookDirection = new Vector2(1, 0);
@@ -43,9 +43,9 @@ public class IACatStatueGame : MonoBehaviour
     {
         if (started)
         {
-            CatStatues = GameObject.FindGameObjectsWithTag("CatStatue");
+            catStatues = GameObject.FindGameObjectsWithTag("CatStatue");
 
-            if (CatStatues.Length == 0)
+            if (catStatues.Length == 0)
             {
                 catStatue = null;
                 rigidbody2d.velocity = new Vector2(0, 0);
@@ -54,10 +54,10 @@ public class IACatStatueGame : MonoBehaviour
 
             }
 
-            else if (cooldownTime == 0 && CatStatues.Length < qtdNeigh)
-                catStatue = GetClosestCatStatue(CatStatues, CatStatues.Length);
+            else if (cooldownTime == 0 && catStatues.Length < qtdNeigh)
+                catStatue = GetClosestCatStatue(catStatues, catStatues.Length);
             else if (cooldownTime == 0)
-                catStatue = GetClosestCatStatue(CatStatues, qtdNeigh);
+                catStatue = GetClosestCatStatue(catStatues, qtdNeigh);
 
             if (catStatue != null)
             {

@@ -10,6 +10,8 @@ TagManager:
   - Item
   - Ground
   - CatStatue
+  - Moita
+  - GeraMoita
   layers:
   - Default
   - TransparentFX

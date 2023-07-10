@@ -10,10 +10,10 @@ public class InstanciaMoita : MonoBehaviour
     [SerializeField] private float minDistance = 1.0f;//Distância minima entre as estátuas
 
     [Header("Positions Parameters")]
-    [SerializeField] private float minXPos = -18.5f;
-    [SerializeField] private float maxXPos = 10.5f;
-    [SerializeField] private float minYPos = -8.5f;
-    [SerializeField] private float maxYPos = 4.6f;
+    [SerializeField] private float minXPos = -15.5f;
+    [SerializeField] private float maxXPos = 11.5f;
+    [SerializeField] private float minYPos = -6.5f;
+    [SerializeField] private float maxYPos = 6.7f;
 
     private List<Vector2> occupiedPositions;
 
