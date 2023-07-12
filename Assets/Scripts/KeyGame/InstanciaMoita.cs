@@ -6,6 +6,7 @@ public class InstanciaMoita : MonoBehaviour
 {
     //Esse código vai fazer as moitas de instanciarem sozinhas em tempo de execução
     [SerializeField] private GameObject Moita;
+    private List<GameObject> moitasCriadas = new List<GameObject>();
     [SerializeField] private int maxNumber = 50;//Número máximo de moitas permitidas no campo
     [SerializeField] private float minDistance = 1.0f;//Distância minima entre as moitas
 
@@ -56,7 +57,11 @@ public class InstanciaMoita : MonoBehaviour
             GameObject obj = Instantiate<GameObject>(Moita, pos, Quaternion.identity, transform);//objeto, posição, orientação dele e objeto pai do objeto que vamos posicionar
                                                                                                      //No caso ele será filho do GameObject CatStatue pois foi neles que colocamos o script CatStatueInstantiate
             obj.name = "Moita" + i;
+            moitasCriadas.Add(obj);
+
         }
+
+        moitasCriadas[Random.Range(0, maxNumber - 1)].name = "moitaComChave";
 
     }
 

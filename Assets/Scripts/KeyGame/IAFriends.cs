@@ -45,35 +45,8 @@ public class IAFriends : MonoBehaviour
         {
 
             moitas = GameObject.FindGameObjectsWithTag("Moita");
-            
-            if (moitas.Length == 0)
-            {
-                moita = null;
-                rigidbody2d.velocity = new Vector2(0, 0);
-                animator.SetFloat("xDirection", lookDirection.x);
-                animator.SetFloat("yDirection", lookDirection.y);
 
-            }
-
-            else if (cooldownTime == 0 && moitas.Length < qtdNeigh)
-                moita = GetClosestmoita(moitas, moitas.Length);
-            else if (cooldownTime == 0)
-                moita = GetClosestmoita(moitas, qtdNeigh);
-
-            if (moita != null)
-            {
-                lookDirection = (moita.transform.position - transform.position).normalized;
-
-                animator.SetFloat("xDirection", lookDirection.x);
-                animator.SetFloat("yDirection", lookDirection.y);
-                animator.SetBool("isWalking", true);
-
-                rigidbody2d.velocity = new Vector2(lookDirection.x * speed,
-                    lookDirection.y * speed);
-                cooldownTime = cooldown;
-            }
-
-            cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
+            buscaPorChave(moitas);
         }
     }
 
@@ -131,8 +104,55 @@ public class IAFriends : MonoBehaviour
             Destroy(collision.gameObject);
             score++;
             updateScore();
+        } else //atualiza a moita que esta procurando, caso bata em objetos no cenário
+        {
+            moitas = GameObject.FindGameObjectsWithTag("Moita");
+            buscaPorChave(moitas);
+
+        } 
+        
+        if (collision.gameObject.name == "moitaComChave")
+        {
+            score++;
+            updateScore();
+            Debug.Log("-----------------SEUS AMIGOS ACHARAM A CHAVE ----------------------");
         }
     }
+
+    public void buscaPorChave (GameObject[] moitas)
+    {
+        if (moitas.Length == 0)
+        {
+            moita = null;
+            rigidbody2d.velocity = new Vector2(0, 0);
+            animator.SetFloat("xDirection", lookDirection.x);
+            animator.SetFloat("yDirection", lookDirection.y);
+            animator.SetBool("isWalking", false);
+
+        }
+
+        else if (cooldownTime == 0 && moitas.Length < qtdNeigh)
+            moita = GetClosestmoita(moitas, moitas.Length);
+        else if (cooldownTime == 0)
+            moita = GetClosestmoita(moitas, qtdNeigh);
+
+        if (moita != null)
+        {
+            lookDirection = (moita.transform.position - transform.position).normalized;
+
+            animator.SetFloat("xDirection", lookDirection.x);
+            animator.SetFloat("yDirection", lookDirection.y);
+            animator.SetBool("isWalking", true);
+
+            rigidbody2d.velocity = new Vector2(lookDirection.x * speed,
+                lookDirection.y * speed);
+            cooldownTime = cooldown;
+        }
+
+        cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
+
+    }
+
 
     public int getScore() { return score; }
 
