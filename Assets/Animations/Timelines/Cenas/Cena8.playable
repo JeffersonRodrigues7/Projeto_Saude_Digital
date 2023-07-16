@@ -2095,7 +2095,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12.33333333333333
+    m_Start: 11.333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 104507541926998237}
     m_Duration: 6.666666666666
@@ -4130,10 +4130,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 12.333333333333334
+    m_Start: 11.333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -1434566418795441634}
-    m_Duration: 1.9999996821085606
+    m_Duration: 2.9999996821078945
     m_TimeScale: 1
     m_ParentTrack: {fileID: 7433468577146410558}
     m_EaseInDuration: 0
@@ -4196,7 +4196,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 0.0000003178914393942023
-    m_PreExtrapolationTime: 12.333333333333334
+    m_PreExtrapolationTime: 11.333333333334
     m_DisplayName: AlanWalkDown
   - m_Version: 1
     m_Start: 14.333333333333334
