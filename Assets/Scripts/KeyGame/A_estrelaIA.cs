@@ -7,29 +7,54 @@ public class A_estrelaIA : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private NavMeshAgent friend;
+    private NavMeshAgent agent;
     private GameObject[] moitas;
+    private float cooldown = 0.25f;
+    private float cooldownTime;
 
-    public GameObject player;
+    private GameObject moitaTarget;
 
     void Start()
     {
-        friend = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
+        cooldownTime = cooldown;
+
         
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         moitas = GameObject.FindGameObjectsWithTag("Moita");
+        
 
-        if(moitas.Length != 0)
+        while (moitaTarget != null)
         {
-           
-            friend.SetDestination(player.transform.position);
-            Debug.Log("entrei estou procurando" + player.name);
-
+            Debug.Log("estou procurando" + moitaTarget.name);
+            agent.SetDestination(moitaTarget.transform.position);
         }
+
+        moitaTarget = GetClosestmoita(moitas, moitas.Length);
+
+
+            //if (moitaTarget != null && cooldownTime == 0)
+            //{
+                
+                
+            //    cooldownTime = cooldown;
+            //}
+
+            //cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
+
+
+
+        
 
     }
 
@@ -76,4 +101,28 @@ public class A_estrelaIA : MonoBehaviour
 
         return closestmoitas.ToArray()[position];//retorna posição aleatória dentro do vetor 
     }
+
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Moita")
+        {
+            Destroy(collision.gameObject);
+ 
+        }
+        else //atualiza a moita que esta procurando, caso bata em objetos no cenário
+        {
+            moitas = GameObject.FindGameObjectsWithTag("Moita");
+ 
+
+        }
+
+        if (collision.gameObject.name == "moitaComChave")
+        {
+
+            Debug.Log("-----------------SEUS AMIGOS ACHARAM A CHAVE ----------------------");
+        }
+    }
+
 }
