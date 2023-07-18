@@ -9,10 +9,10 @@ public class A_estrelaIA : MonoBehaviour
 
     private NavMeshAgent agent;
     private GameObject[] moitas;
-    private float cooldown = 0.25f;
+    private float cooldown = 3f;
     private float cooldownTime;
-
     private GameObject moitaTarget;
+
 
     void Start()
     {
@@ -20,11 +20,9 @@ public class A_estrelaIA : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
+        moitaTarget = GetClosestmoita(moitas, moitas.Length);
+
         cooldownTime = cooldown;
-
-        
-        
-
     }
 
     // Update is called once per frame
@@ -32,29 +30,25 @@ public class A_estrelaIA : MonoBehaviour
     {
 
         moitas = GameObject.FindGameObjectsWithTag("Moita");
-        
 
-        while (moitaTarget != null)
+        if (moitaTarget != null && cooldownTime == 0)
         {
-            Debug.Log("estou procurando" + moitaTarget.name);
+
+            //Debug.Log("estou procurando" + moitaTarget.name);
             agent.SetDestination(moitaTarget.transform.position);
+
+            cooldownTime = cooldown;
+        }else if (moitaTarget == null)
+        {
+            moitaTarget = GetClosestmoita(moitas, moitas.Length);
         }
 
-        moitaTarget = GetClosestmoita(moitas, moitas.Length);
-
-
-            //if (moitaTarget != null && cooldownTime == 0)
-            //{
-                
-                
-            //    cooldownTime = cooldown;
-            //}
-
-            //cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
+        cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
+        //Debug.Log(cooldownTime);
 
 
 
-        
+
 
     }
 
@@ -63,6 +57,7 @@ public class A_estrelaIA : MonoBehaviour
         GameObject actualmoita;
         GameObject tempmoita;
         List<GameObject> closestmoitas = new List<GameObject>();
+        List<float> distanciasMoitas = new List<float>();
         Vector3 currentPosition = transform.position;//Posição atual do player
 
         for (int i = 0; i < moitas.Length; i++)
@@ -95,11 +90,14 @@ public class A_estrelaIA : MonoBehaviour
                     }
                 }
             }
+
+            distanciasMoitas.Add(distanceTomoita);
+
         }
         int position = Random.Range(0, k);
 
 
-        return closestmoitas.ToArray()[position];//retorna posição aleatória dentro do vetor 
+        return closestmoitas.ToArray()[distanciasMoitas.IndexOf(Mathf.Min(distanciasMoitas.ToArray()))];//retorna posição aleatória dentro do vetor 
     }
 
 
