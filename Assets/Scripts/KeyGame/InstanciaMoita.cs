@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class InstanciaMoita : MonoBehaviour
 {
@@ -16,25 +17,53 @@ public class InstanciaMoita : MonoBehaviour
     [SerializeField] private float minYPos;
     [SerializeField] private float maxYPos;
 
+    public TilemapCollider2D tilemapCollider; 
+
     public Transform player;
     private GameObject moitaComChave;
 
+    //public List<Vector3> CaptureTilemapPositions()
+    //{
+
+    //    Tilemap tilemap = tilemapCollider.GetComponent<Tilemap>();
+    //    BoundsInt bounds = tilemap.cellBounds;
+
+    //    List<Vector3> posicoesOcupadas = new List<Vector3>();
+
+    //    for (int x = bounds.xMin; x < bounds.xMax; x++)
+    //    {
+    //        for (int y = bounds.yMin; y < bounds.yMax; y++)
+    //        {
+    //            Vector3Int cellPosition = new Vector3Int(x, y, 0);
+    //            Vector3 worldPosition = tilemap.GetCellCenterWorld(cellPosition);
+
+    //            posicoesOcupadas.Add(worldPosition);
+
+    //        }
+    //    }
+
+    //    return posicoesOcupadas;
+    //}
 
 
 
 
-    private List<Vector2> occupiedPositions;
+    private List<Vector3> occupiedPositions;
 
     private void Start()
     {
-        occupiedPositions = new List<Vector2>//posições do mapa já ocupadas por algum objeto
-        {
-            new Vector2(0f, 0f),
-            new Vector2(1f, 1f),
-            new Vector2(1f, -1f),
-            new Vector2(-1f, -1f),
-            new Vector2(-1f, 1f)
-        };
+        occupiedPositions = new List<Vector3>();
+
+        //occupiedPositions = CaptureTilemapPositions();
+
+        //occupiedPositions = new List<Vector2>//posições do mapa já ocupadas por algum objeto
+        //{
+        //    new Vector2(0f, 0f),
+        //    new Vector2(1f, 1f),
+        //    new Vector2(1f, -1f),
+        //    new Vector2(-1f, -1f),
+        //    new Vector2(-1f, 1f)
+        //};
 
         for (int i = 0; i < maxNumber; i++)
         {

@@ -55527,6 +55527,7 @@ MonoBehaviour:
   maxXPos: 11
   minYPos: -47
   maxYPos: 6.2
+  tilemapCollider: {fileID: 1039244220}
   player: {fileID: 290217678}
 --- !u!4 &726560419
 Transform:
