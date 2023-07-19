@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class A_estrelaIA : MonoBehaviour
 {
@@ -13,9 +14,29 @@ public class A_estrelaIA : MonoBehaviour
     private float cooldownTime;
     private GameObject moitaTarget;
 
+    public AudioClip voceAchouChave;
+    public AudioController audioController;
+
+    [SerializeField] private TMP_Text scoreText;
+    private string NPCName;
+    private int score;
+ 
+
+    private bool started;
+
+    private Animator animator;
+    private Vector2 lookDirection; 
+
 
     void Start()
     {
+        animator = GetComponent<Animator>();
+        score = 0;
+
+        lookDirection = new Vector2(1, 0);
+        started = false;
+
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -25,28 +46,44 @@ public class A_estrelaIA : MonoBehaviour
         cooldownTime = cooldown;
     }
 
+    public void startGame() { started = true; }
+
+    private void updateScore()
+    {
+        scoreText.text = "TESTE" + ": " + score;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
-        moitas = GameObject.FindGameObjectsWithTag("Moita");
-
-        if (moitaTarget != null && cooldownTime == 0)
+        if (started == true)
         {
 
-            //Debug.Log("estou procurando" + moitaTarget.name);
-            agent.SetDestination(moitaTarget.transform.position);
+            moitas = GameObject.FindGameObjectsWithTag("Moita");
 
-            cooldownTime = cooldown;
-        }else if (moitaTarget == null)
-        {
-            moitaTarget = GetClosestmoita(moitas, moitas.Length);
+            if (moitaTarget != null && cooldownTime == 0)
+            {
+
+                //Debug.Log("estou procurando" + moitaTarget.name);
+                agent.SetDestination(moitaTarget.transform.position);
+
+                lookDirection = (moitaTarget.transform.position - transform.position).normalized;
+
+                animator.SetFloat("xDirection", lookDirection.x);
+                animator.SetFloat("yDirection", lookDirection.y);
+                animator.SetBool("isWalking", true);
+
+                cooldownTime = cooldown;
+            }
+            else if (moitaTarget == null)
+            {
+                moitaTarget = GetClosestmoita(moitas, moitas.Length);
+            }
+
+            cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
+            //Debug.Log(cooldownTime);
+
         }
-
-        cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
-        //Debug.Log(cooldownTime);
-
-
 
 
 
@@ -106,6 +143,8 @@ public class A_estrelaIA : MonoBehaviour
     {
         if (collision.gameObject.tag == "Moita")
         {
+            score++;
+            updateScore();
             Destroy(collision.gameObject);
  
         }
@@ -118,6 +157,9 @@ public class A_estrelaIA : MonoBehaviour
 
         if (collision.gameObject.name == "moitaComChave")
         {
+            score++;
+            updateScore();
+            audioController.WIN(voceAchouChave);
 
             Debug.Log("-----------------SEUS AMIGOS ACHARAM A CHAVE ----------------------");
         }

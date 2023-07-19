@@ -16,6 +16,11 @@ public class InstanciaMoita : MonoBehaviour
     [SerializeField] private float minYPos;
     [SerializeField] private float maxYPos;
 
+    public Transform player;
+    private GameObject moitaComChave;
+
+
+
 
 
     private List<Vector2> occupiedPositions;
@@ -61,8 +66,32 @@ public class InstanciaMoita : MonoBehaviour
 
         }
 
-        moitasCriadas[Random.Range(0, maxNumber - 1)].name = "moitaComChave";
 
+        moitaComChave = sorteiaMoita();
+        Debug.Log("a moita com a chave é: " + moitaComChave.name);
+
+        moitaComChave.name = "moitaComChave";
+
+    }
+
+    private GameObject sorteiaMoita()
+    {
+        GameObject moitaComChave = null;
+        GameObject moitaSorteada = moitasCriadas[Random.Range(0, maxNumber - 1)];
+
+        float distancia_x = moitaSorteada.transform.position.x - player.position.x;
+        float distancia_y = moitaSorteada.transform.position.y - player.position.y;
+
+        Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
+        
+
+        if (distancia_x < -30 || distancia_y < -20)
+        {
+            moitaComChave = moitaSorteada;
+
+        } else sorteiaMoita();
+
+        return moitaComChave;
     }
 
     // Update is called once per frame
