@@ -12,6 +12,8 @@ TagManager:
   - CatStatue
   - Moita
   - GeraMoita
+  - Points
+  - MensagemVitoria
   layers:
   - Default
   - TransparentFX

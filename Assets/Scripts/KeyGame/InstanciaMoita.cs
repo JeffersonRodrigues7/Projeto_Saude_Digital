@@ -9,7 +9,7 @@ public class InstanciaMoita : MonoBehaviour
     [SerializeField] private GameObject Moita;
     private List<GameObject> moitasCriadas = new List<GameObject>();
     [SerializeField] private int maxNumber = 50;//Número máximo de moitas permitidas no campo
-    [SerializeField] private float minDistance = 1.0f;//Distância minima entre as moitas
+    [SerializeField] private float minDistance = 3.5f;//Distância minima entre as moitas
 
     [Header("Positions Parameters")]
     [SerializeField] private float minXPos;
@@ -21,73 +21,20 @@ public class InstanciaMoita : MonoBehaviour
 
     public Transform player;
     private GameObject moitaComChave;
-
-    //public List<Vector3> CaptureTilemapPositions()
-    //{
-
-    //    Tilemap tilemap = tilemapCollider.GetComponent<Tilemap>();
-    //    BoundsInt bounds = tilemap.cellBounds;
-
-    //    List<Vector3> posicoesOcupadas = new List<Vector3>();
-
-    //    for (int x = bounds.xMin; x < bounds.xMax; x++)
-    //    {
-    //        for (int y = bounds.yMin; y < bounds.yMax; y++)
-    //        {
-    //            Vector3Int cellPosition = new Vector3Int(x, y, 0);
-    //            Vector3 worldPosition = tilemap.GetCellCenterWorld(cellPosition);
-
-    //            posicoesOcupadas.Add(worldPosition);
-
-    //        }
-    //    }
-
-    //    return posicoesOcupadas;
-    //}
-
-
-
-
-    private List<Vector3> occupiedPositions;
+ 
 
     private void Start()
     {
-        occupiedPositions = new List<Vector3>();
-
-        //occupiedPositions = CaptureTilemapPositions();
-
-        //occupiedPositions = new List<Vector2>//posições do mapa já ocupadas por algum objeto
-        //{
-        //    new Vector2(0f, 0f),
-        //    new Vector2(1f, 1f),
-        //    new Vector2(1f, -1f),
-        //    new Vector2(-1f, -1f),
-        //    new Vector2(-1f, 1f)
-        //};
+       
 
         for (int i = 0; i < maxNumber; i++)
         {
             float x, y;
-            bool occupied;
 
-            do
-            {
-                occupied = false;
-                x = Random.Range(minXPos, maxXPos);//vamos colocar a estátua em um local aleatório
-                y = Random.Range(minYPos, maxYPos);
-                Vector2 tryPosition = new Vector2(x, y);
-
-                foreach (Vector2 otherPosition in occupiedPositions)/*Para cada objeto da cena que possui sua posiçaõ em occupied Positions eu vou comparar com a nova que vou 
-                                                                    *colocar. Se o novo objeto estiver perto de qualquer uma delas, vou gerar uma nova posição pra ele*/
-                {
-                    if (Vector2.Distance(tryPosition, otherPosition) < minDistance)
-                        occupied = true;
-                }
-
-            } while (occupied);
-
+            x = Random.Range(minXPos, maxXPos);
+            y = Random.Range(minYPos, maxYPos);
             Vector2 pos = new Vector2(x, y);//posição onde vamos colocar o objeto
-            occupiedPositions.Add(pos);
+            
             GameObject obj = Instantiate<GameObject>(Moita, pos, Quaternion.identity, transform);//objeto, posição, orientação dele e objeto pai do objeto que vamos posicionar
                                                                                                      //No caso ele será filho do GameObject CatStatue pois foi neles que colocamos o script CatStatueInstantiate
             obj.name = "Moita" + i;
@@ -97,8 +44,6 @@ public class InstanciaMoita : MonoBehaviour
 
 
         moitaComChave = sorteiaMoita();
-        Debug.Log("a moita com a chave é: " + moitaComChave.name);
-
         moitaComChave.name = "moitaComChave";
 
     }
@@ -111,7 +56,7 @@ public class InstanciaMoita : MonoBehaviour
         float distancia_x = moitaSorteada.transform.position.x - player.position.x;
         float distancia_y = moitaSorteada.transform.position.y - player.position.y;
 
-        Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
+        //Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
         
 
         if (distancia_x < -30 || distancia_y < -20)
@@ -126,7 +71,7 @@ public class InstanciaMoita : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+               
     }
 
 

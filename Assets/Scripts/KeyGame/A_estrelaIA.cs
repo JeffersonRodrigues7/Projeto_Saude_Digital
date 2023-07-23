@@ -13,12 +13,12 @@ public class A_estrelaIA : MonoBehaviour
     private float cooldown = 3f;
     private float cooldownTime;
     private GameObject moitaTarget;
-
+    public GameObject WIN;
     public AudioClip voceAchouChave;
     public AudioController audioController;
 
     [SerializeField] private TMP_Text scoreText;
-    private string NPCName;
+    public string NPCName;
     private int score;
  
 
@@ -41,7 +41,7 @@ public class A_estrelaIA : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
 
-        moitaTarget = GetClosestmoita(moitas, moitas.Length);
+        updateScore();
 
         cooldownTime = cooldown;
     }
@@ -50,7 +50,7 @@ public class A_estrelaIA : MonoBehaviour
 
     private void updateScore()
     {
-        scoreText.text = "TESTE" + ": " + score;
+        scoreText.text = NPCName + ": " + score;
     }
 
     // Update is called once per frame
@@ -58,6 +58,7 @@ public class A_estrelaIA : MonoBehaviour
     {
         if (started == true)
         {
+            
 
             moitas = GameObject.FindGameObjectsWithTag("Moita");
 
@@ -160,6 +161,15 @@ public class A_estrelaIA : MonoBehaviour
             score++;
             updateScore();
             audioController.WIN(voceAchouChave);
+            
+            WIN.SetActive(true);
+
+            GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
+
+            Vector3 posicaoPlayer = new Vector3(player.transform.position.x, player.transform.position.y);
+            agent.SetDestination(posicaoPlayer);
+
+            started = false;
 
             Debug.Log("-----------------SEUS AMIGOS ACHARAM A CHAVE ----------------------");
         }
