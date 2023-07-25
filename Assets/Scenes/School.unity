@@ -675,6 +675,7 @@ Transform:
   - {fileID: 739576424}
   - {fileID: 1894345569}
   - {fileID: 2028459524}
+  - {fileID: 1296386089}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3021,6 +3022,469 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueToPlay: {fileID: 4900000, guid: aa48a7c90ece9e34982b98f0d6908759, type: 3}
+--- !u!1 &1296386088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296386089}
+  - component: {fileID: 1296386093}
+  - component: {fileID: 1296386092}
+  - component: {fileID: 1296386091}
+  - component: {fileID: 1296386090}
+  m_Layer: 0
+  m_Name: Cena10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296386089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296386088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 304755567}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1296386090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296386088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c93791cbcc3e0240bebc93b30ff6024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1c6c0349865ec7f4680ebb0f9df4f09b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1296386092}
+        m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+        m_MethodName: ResumeTimeline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1296386091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296386088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: dfe1fd67aa5f8014da19306f8dd5421c, type: 2}
+    - {fileID: 11400000, guid: 035c4712f514c594e8b38cac8090ed55, type: 2}
+    - {fileID: 11400000, guid: 7abc72ca9617bdc4d82ec2460185161f, type: 2}
+    - {fileID: 11400000, guid: 917e15f288d919a418f920ccb169d216, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1296386093}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetInkDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: c116586c2f747ba499e20a1cbd99d601, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetStartIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetFinalIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 11
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1296386093}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetInkDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: c116586c2f747ba499e20a1cbd99d601, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetStartIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 12
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetFinalIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1296386092}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: TimelineFinished
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1268655511}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1268655514}
+          m_TargetAssemblyTypeName: SceneChangeTrigger, Assembly-CSharp
+          m_MethodName: ChangeScene
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1296386093}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetInkDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: c116586c2f747ba499e20a1cbd99d601, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetStartIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 51
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetFinalIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 999
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1296386092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296386088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreOtherConditions: 0
+  ignoreSelfCondition: 0
+  necessaryConditions:
+  - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  thisCondition: {fileID: 0}
+  playOnlyOnce: 1
+  playAfterConditionsMet: 1
+  fadeOutBeforeStart: 0
+  _animatorsToControlUntilEnd:
+  - {fileID: 416777689}
+  - {fileID: 219575437}
+  - {fileID: 708025961}
+  - {fileID: 540687327}
+  - {fileID: 1922561085}
+  collidersToDisable:
+  - {fileID: 416777699}
+  - {fileID: 708025959}
+  - {fileID: 540687331}
+  cutsceneStartedEvent: {fileID: 11400000, guid: 5a4317d468f93754ab3cab685b02f42b, type: 2}
+  cutsceneEndedEvent: {fileID: 11400000, guid: 14af7480061963642bf38ac8d42fe5f3, type: 2}
+  setCutsceneIndexOnInk: 1
+  cutsceneIndex: 0
+  backgroundMusicSource: {fileID: 0}
+  timelineBackgroundClip: {fileID: 0}
+  changeBackgroundMusic: 0
+  changeVolume: 0
+  musicVolume: 0
+  addSceneToGallery: 0
+  returnToGalleryAfterSceneEnds: 1
+  gallerySceneIndex: 0
+  gallerySceneName: 
+--- !u!320 &1296386093
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296386088}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8759643369690950357, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 416777689}
+  - key: {fileID: -6173210759354567600, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 219575437}
+  - key: {fileID: -4762509809386585161, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 4210350388617509060, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 1259267183582219790, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -85902220240889755, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: 2040501238693170719, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1064992220}
+  - key: {fileID: 7513896048110297511, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 2066062341}
+  - key: {fileID: -1048619786852659210, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: 7662374988760549190, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: -1415231361474080389, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1375595021}
+  - key: {fileID: 9081731340337745205, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 467673824}
+  - key: {fileID: 3921975671547100808, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 467673825}
+  - key: {fileID: -8029431562835957475, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1268655511}
+  - key: {fileID: 2040501238693170719, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 1064992220}
+  - key: {fileID: -8029431562835957475, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 1268655511}
+  - key: {fileID: 8759643369690950357, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 416777689}
+  - key: {fileID: -6173210759354567600, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 219575437}
+  - key: {fileID: -4762509809386585161, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 4210350388617509060, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 7513896048110297511, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 540687326}
+  - key: {fileID: 1259267183582219790, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -85902220240889755, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -1415231361474080389, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 708025958}
+  - key: {fileID: -1048619786852659210, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: 7662374988760549190, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: 9081731340337745205, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 467673824}
+  - key: {fileID: 3921975671547100808, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 467673825}
+  - key: {fileID: 2040501238693170719, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1064992220}
+  - key: {fileID: -8029431562835957475, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1268655511}
+  - key: {fileID: 8759643369690950357, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 416777689}
+  - key: {fileID: -6173210759354567600, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 219575437}
+  - key: {fileID: 1259267183582219790, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -85902220240889755, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -1415231361474080389, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 708025958}
+  - key: {fileID: -4762509809386585161, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 4210350388617509060, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 7513896048110297511, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 540687326}
+  - key: {fileID: -1048619786852659210, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: 7662374988760549190, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: 9081731340337745205, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 467673824}
+  - key: {fileID: 3921975671547100808, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 467673825}
+  - key: {fileID: -5214223535299421028, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1922561083}
+  - key: {fileID: 5397751828750898091, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1321564600}
+  - key: {fileID: 1334916298970151604, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1691978794}
+  - key: {fileID: 7399085110021632815, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 438769512}
+  - key: {fileID: 6070222661454205951, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1322073269}
+  - key: {fileID: -8940059272946957895, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 711297099}
+  - key: {fileID: 9030779420151096301, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1589291924}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1321564600
 GameObject:
   m_ObjectHideFlags: 0
