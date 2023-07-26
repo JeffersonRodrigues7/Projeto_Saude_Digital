@@ -385,6 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d469de720aee34c8fc58921912cfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WIN: {fileID: 568694786}
   voceAchouChave: {fileID: 8300000, guid: 0cc3d73e6c113bc48a14303ec625a836, type: 3}
   audioController: {fileID: 1288139750}
   scoreText: {fileID: 874641371}
@@ -55041,6 +55042,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 497640718}
   playerName: Bryan
+  audioController: {fileID: 1288139750}
+  voceAchouChave: {fileID: 8300000, guid: 0cc3d73e6c113bc48a14303ec625a836, type: 3}
   WIN: {fileID: 568694786}
 --- !u!114 &290217667
 MonoBehaviour:
@@ -56067,8 +56070,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40.78868}
-  m_SizeDelta: {x: 640, y: 81.5774}
+  m_AnchoredPosition: {x: -0.000030518, y: -36.02379}
+  m_SizeDelta: {x: 998, y: 72.0476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689793727
 MonoBehaviour:
@@ -56978,6 +56981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d469de720aee34c8fc58921912cfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WIN: {fileID: 568694786}
   voceAchouChave: {fileID: 8300000, guid: 0cc3d73e6c113bc48a14303ec625a836, type: 3}
   audioController: {fileID: 1288139750}
   scoreText: {fileID: 293673400}
@@ -67652,7 +67656,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1560484829
 MonoBehaviour:
@@ -68007,6 +68011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d469de720aee34c8fc58921912cfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WIN: {fileID: 568694786}
   voceAchouChave: {fileID: 8300000, guid: 0cc3d73e6c113bc48a14303ec625a836, type: 3}
   audioController: {fileID: 1288139750}
   scoreText: {fileID: 2098829076}
