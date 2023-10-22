@@ -1794,7 +1794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708025958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.45, y: -0.25, z: 0}
+  m_LocalPosition: {x: 5.45, y: -11, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 1375595020}
@@ -6489,7 +6489,7 @@ MonoBehaviour:
   necessaryConditions: []
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
   playOnlyOnce: 0
-  playAfterConditionsMet: 0
+  playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
   - {fileID: 416777689}
