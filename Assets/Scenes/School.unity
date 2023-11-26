@@ -6440,7 +6440,7 @@ PlayableDirector:
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
-  m_InitialTime: 0
+  m_InitialTime: 45
   m_SceneBindings:
   - key: {fileID: 3074660718024868437, guid: db873f8c3ec37f143af9dd3e19e86238, type: 2}
     value: {fileID: 1779753723}
@@ -6597,7 +6597,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:

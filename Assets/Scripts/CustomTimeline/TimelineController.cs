@@ -176,6 +176,8 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
         RestoreAnimatorsOnStop();
 
+
+
         if (thisCondition)
         {
             thisCondition.Value = true;

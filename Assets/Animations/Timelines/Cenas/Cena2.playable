@@ -7200,7 +7200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 44.81666666666667
   m_Retroactive: 0
-  m_EmitOnce: 0
+  m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: 63f9e6eb1218a624c8d9b9ab2e654393, type: 2}
 --- !u!114 &8428267525216710533
 MonoBehaviour:

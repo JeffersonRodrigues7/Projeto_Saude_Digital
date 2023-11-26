@@ -5,7 +5,7 @@ using UnityEngine.PlayerLoop;
 
 public class PlayerSwipeController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1.0f;
+    [SerializeField] public float moveSpeed = 1.0f;
     [SerializeField] Animator animator = null;
     public MovementJoystick joystickMovement;
 
