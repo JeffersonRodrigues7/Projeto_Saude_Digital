@@ -12,6 +12,7 @@ public class KeyGamePlayer : MonoBehaviour
     public AudioClip voceAchouChave;
     public RectTransform stamina;
     public Button buttonRun;
+    public Button buttonSearch;
     public GameObject WIN;
     private int score = 0;
     public bool catRunning = false;
@@ -41,9 +42,6 @@ public class KeyGamePlayer : MonoBehaviour
             stamina.sizeDelta = new Vector2(novaStamina, stamina.sizeDelta.y);
             
         }
-
-        
-       
         
     }
 
@@ -71,27 +69,6 @@ public class KeyGamePlayer : MonoBehaviour
         catRunning = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Moita")
-        {
-            Destroy(collision.gameObject);
-            score++;
-            updateScore();
-        }else
-        {
-            Debug.Log(collision.gameObject.name);
-        }
 
-        if (collision.gameObject.name == "moitaComChave")
-        {
-            score++;
-            updateScore();
-            audioController.WIN(voceAchouChave);
 
-            WIN.SetActive(true);
-
-            Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
-        }
-    }
 }
