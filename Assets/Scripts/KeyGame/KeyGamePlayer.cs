@@ -11,8 +11,6 @@ public class KeyGamePlayer : MonoBehaviour
     public AudioController audioController;
     public AudioClip voceAchouChave;
     public RectTransform stamina;
-    public Button buttonRun;
-    public Button buttonSearch;
     public GameObject WIN;
     private int score = 0;
     public bool catRunning = false;
@@ -67,6 +65,28 @@ public class KeyGamePlayer : MonoBehaviour
     {
         playerSwipeController.moveSpeed = 3.0f;
         catRunning = false;
+    }
+
+    public bool achouChave(string moita)
+    {
+        if (moita == "moitaComChave")
+        {
+            score++;
+            updateScore();
+            audioController.WIN(voceAchouChave);
+
+
+
+            WIN.SetActive(true);
+
+            Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 

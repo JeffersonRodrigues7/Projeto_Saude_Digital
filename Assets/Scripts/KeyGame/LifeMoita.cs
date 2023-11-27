@@ -9,6 +9,8 @@ public class LifeMoita : MonoBehaviour
     
     private Slider slider;
     public bool isSearching;
+    public Button buttonSearching;
+    public KeyGamePlayer playerSearching;
 
     void Start()
     {
@@ -19,7 +21,7 @@ public class LifeMoita : MonoBehaviour
     {
         if (isSearching)
         {
-            slider.value = Mathf.Max(slider.value - 0.5f, -0.1f);
+            slider.value = Mathf.Max(slider.value - 0.1f, -0.1f);
         }
         else
         {
@@ -28,12 +30,35 @@ public class LifeMoita : MonoBehaviour
         
     }
 
-    void Update()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        UpdateHealthBar(slider);
+        buttonSearching.onClick.AddListener(Searching);
+
+        if (collision.gameObject.CompareTag("Player") && isSearching)
+        {
+            UpdateHealthBar(slider);
+        }
 
         isSearching = false;
     }
+
+    
+
+    void Update()
+    {
+        UpdateHealthBar(slider);
+        if (slider.value <= 0f)
+        {
+            if (!playerSearching.achouChave(gameObject.name))
+            {
+                Destroy(gameObject);
+            }
+            
+        }
+    }
+
+    
+
 
     public void Searching()
     {
@@ -44,17 +69,5 @@ public class LifeMoita : MonoBehaviour
 
     
 
-    //public void achouChave(string moita)
-    //{
-    //    if (moita == "moitaComChave")
-    /*  {
-            score++;
-            updateScore();
-            audioController.WIN(voceAchouChave);
-
-            WIN.SetActive(true);
-
-            Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
-        }
-    }*/
+    
 }
