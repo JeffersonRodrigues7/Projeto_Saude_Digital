@@ -6,23 +6,24 @@ using TMPro;
 
 public class KeyGamePlayer : MonoBehaviour
 {
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private Text scoreText;
     [SerializeField] private string playerName;
-    public AudioController audioController;
-    public AudioClip voceAchouChave;
+    
     public RectTransform stamina;
     public GameObject WIN;
     private int score = 0;
     public bool catRunning = false;
 
-    PlayerSwipeController playerSwipeController; 
+    PlayerSwipeController playerSwipeController;
+    AudioController audioController;
 
 
 
     private void Start()
     {
         updateScore();
-        playerSwipeController = gameObject.GetComponent<PlayerSwipeController>(); 
+        playerSwipeController = gameObject.GetComponent<PlayerSwipeController>();
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
     }
 
     public void Update()
@@ -45,6 +46,7 @@ public class KeyGamePlayer : MonoBehaviour
 
     private void updateScore()
     {
+        score += 1;
         scoreText.text = playerName + ": " + score;
     }
 
@@ -73,9 +75,7 @@ public class KeyGamePlayer : MonoBehaviour
         {
             score++;
             updateScore();
-            audioController.WIN(voceAchouChave);
-
-
+            audioController.WIN();
 
             WIN.SetActive(true);
 
@@ -85,6 +85,7 @@ public class KeyGamePlayer : MonoBehaviour
         }
         else
         {
+            updateScore();
             return false;
         }
     }

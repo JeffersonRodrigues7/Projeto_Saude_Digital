@@ -11,10 +11,15 @@ public class LifeMoita : MonoBehaviour
     public bool isSearching;
     public Button buttonSearching;
     public KeyGamePlayer playerSearching;
+    Canvas canvasSlider;
+    
 
     void Start()
     {
         slider = gameObject.GetComponentInChildren<Slider>();
+        canvasSlider = gameObject.GetComponentInChildren<Canvas>();
+        canvasSlider.enabled = false;
+        
     }
 
     public void UpdateHealthBar(Slider slider)
@@ -25,7 +30,7 @@ public class LifeMoita : MonoBehaviour
         }
         else
         {
-            slider.value = Mathf.Min(slider.value + 0.002f, 1.0f);
+            slider.value = Mathf.Min(slider.value + 0.008f, 1.0f);
         }
         
     }
@@ -33,10 +38,12 @@ public class LifeMoita : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         buttonSearching.onClick.AddListener(Searching);
+        canvasSlider.enabled = true;
 
         if (collision.gameObject.CompareTag("Player") && isSearching)
-        {
+        {   
             UpdateHealthBar(slider);
+
         }
 
         isSearching = false;
@@ -52,6 +59,7 @@ public class LifeMoita : MonoBehaviour
             if (!playerSearching.achouChave(gameObject.name))
             {
                 Destroy(gameObject);
+                
             }
             
         }

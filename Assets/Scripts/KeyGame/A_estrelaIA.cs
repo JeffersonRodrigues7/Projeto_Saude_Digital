@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using UnityEngine.UI;
 
 public class A_estrelaIA : MonoBehaviour
 {
@@ -14,10 +15,9 @@ public class A_estrelaIA : MonoBehaviour
     private float cooldownTime;
     private GameObject moitaTarget;
     public GameObject WIN;
-    public AudioClip voceAchouChave;
-    public AudioController audioController;
+    AudioController audioController;
 
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private Text scoreText;
     public string NPCName;
     private int score;
  
@@ -35,6 +35,8 @@ public class A_estrelaIA : MonoBehaviour
 
         lookDirection = new Vector2(1, 0);
         started = false;
+
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
 
 
         agent = GetComponent<NavMeshAgent>();
@@ -146,6 +148,7 @@ public class A_estrelaIA : MonoBehaviour
         {
             score++;
             updateScore();
+            SearchingKey();
             Destroy(collision.gameObject);
  
         }
@@ -160,7 +163,7 @@ public class A_estrelaIA : MonoBehaviour
         {
             score++;
             updateScore();
-            audioController.WIN(voceAchouChave);
+            audioController.WIN();
             
             WIN.SetActive(true);
 
@@ -175,4 +178,11 @@ public class A_estrelaIA : MonoBehaviour
         }
     }
 
-}
+    IEnumerator SearchingKey()
+    {
+        yield return new WaitForSeconds(2);
+    }
+
+    
+
+    }

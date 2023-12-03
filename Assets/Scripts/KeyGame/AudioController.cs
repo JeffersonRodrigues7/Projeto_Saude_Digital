@@ -8,6 +8,8 @@ public class AudioController : MonoBehaviour
 
     public AudioSource musicaDeFundo;
     public AudioSource musicaVoceGanhou;
+    public AudioSource searchingSoundFX;
+    public AudioSource runningSound;
     public AudioClip[] musicas;
 
     void Start()
@@ -21,13 +23,30 @@ public class AudioController : MonoBehaviour
         
     }
 
-    public void WIN (AudioClip clip)
+    public void WIN()
     {
-        musicaVoceGanhou.clip = clip;
+        musicaVoceGanhou.clip = musicas[1];
         musicaVoceGanhou.Play();
         musicaVoceGanhou.loop = false;
         musicaDeFundo.Pause();
     
+    }
+
+    public void SearchingSound()
+    {
+        searchingSoundFX.clip = musicas[2];
+        searchingSoundFX.Play();
+        searchingSoundFX.loop = false;
+        searchingSoundFX.Pause();
+
+    }
+
+    public void RunningSound()
+    {
+        runningSound.clip = musicas[3];
+        runningSound.Play();
+        runningSound.loop = false;
+        runningSound.Pause();
     }
 
 
