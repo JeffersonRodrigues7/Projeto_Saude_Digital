@@ -77,8 +77,8 @@ public class KeyGamePlayer : MonoBehaviour
             updateScore();
             audioController.WIN();
 
-            Instantiate(WIN);
-            /*WIN.SetActive(true);*/
+            
+            WIN.SetActive(true);
 
             Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
 
