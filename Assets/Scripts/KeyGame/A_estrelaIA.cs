@@ -164,7 +164,8 @@ public class A_estrelaIA : MonoBehaviour
             score++;
             updateScore();
             audioController.WIN();
-            
+
+            /*Instantiate(WIN);*/
             WIN.SetActive(true);
 
             GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
@@ -180,7 +181,7 @@ public class A_estrelaIA : MonoBehaviour
 
     IEnumerator SearchingKey()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
     }
 
     

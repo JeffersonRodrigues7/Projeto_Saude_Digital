@@ -59,7 +59,7 @@ public class InstanciaMoita : MonoBehaviour
         //Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
         
 
-        if (distancia_x < -30 || distancia_y < -20)
+        if (distancia_x < -10 || distancia_y < -20)
         {
             moitaComChave = moitaSorteada;
 
