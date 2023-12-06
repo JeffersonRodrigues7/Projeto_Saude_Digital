@@ -51,19 +51,23 @@ public class InstanciaMoita : MonoBehaviour
     private GameObject sorteiaMoita()
     {
         GameObject moitaComChave = null;
-        GameObject moitaSorteada = moitasCriadas[Random.Range(0, maxNumber - 1)];
 
-        float distancia_x = moitaSorteada.transform.position.x - player.position.x;
-        float distancia_y = moitaSorteada.transform.position.y - player.position.y;
-
-        //Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
-        
-
-        if (distancia_x < -10 || distancia_y < -20)
+        while(moitaComChave == null)
         {
-            moitaComChave = moitaSorteada;
+            GameObject moitaSorteada = moitasCriadas[Random.Range(0, maxNumber - 1)];
 
-        } else sorteiaMoita();
+            float distancia_x = moitaSorteada.transform.position.x - player.position.x;
+            float distancia_y = moitaSorteada.transform.position.y - player.position.y;
+
+            //Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
+
+
+            if (distancia_x < -30 || distancia_y < -20)
+            {
+                moitaComChave = moitaSorteada;
+            }
+        }
+         
 
         return moitaComChave;
     }
