@@ -6,6 +6,8 @@ CONST PROFESSOR_ACTOR = "professor"
 VAR player_name = "Bryan"
 VAR a_name = "Alan"
 VAR b_name = "Beatriz"
+VAR adriano = "Adriano"
+VAR sofia = "Sofia"
 VAR professor_name = "Carla"
 
 VAR last_finished_cutscene = -1
