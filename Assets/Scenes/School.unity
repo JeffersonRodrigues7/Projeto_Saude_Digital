@@ -3894,6 +3894,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957478174951891263, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 957478175764725326, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -4788,6 +4792,30 @@ MonoBehaviour:
         - m_Target: {fileID: 1154434211}
           m_TargetAssemblyTypeName: ScreenEffect, Assembly-CSharp
           m_MethodName: FadeIn
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1268655511}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1268655514}
+          m_TargetAssemblyTypeName: SceneChangeTrigger, Assembly-CSharp
+          m_MethodName: ChangeScene
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6440,7 +6468,7 @@ PlayableDirector:
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
-  m_InitialTime: 45
+  m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 3074660718024868437, guid: db873f8c3ec37f143af9dd3e19e86238, type: 2}
     value: {fileID: 1779753723}

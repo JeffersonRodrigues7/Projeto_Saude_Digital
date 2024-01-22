@@ -6,6 +6,13 @@ public class TargetIndicator : MonoBehaviour
 {
     public Transform Target;
     public float distanciaObjetivo;
+    public bool cenaFinalizada;
+
+
+    public void ChangeTarget(Transform target)
+    {
+        Target = target;
+    }
 
 
     // Update is called once per frame

@@ -35733,8 +35733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 0
-  ignoreSelfCondition: 0
+  ignoreOtherConditions: 1
+  ignoreSelfCondition: 1
   necessaryConditions: []
   thisCondition: {fileID: 11400000, guid: e7aa3ffe38f208a45a0f5d330efdcd58, type: 2}
   playOnlyOnce: 1
@@ -35752,7 +35752,7 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 1
+  addSceneToGallery: 0
   returnToGalleryAfterSceneEnds: 0
   gallerySceneIndex: 20
   gallerySceneName: InicioKeyGame
