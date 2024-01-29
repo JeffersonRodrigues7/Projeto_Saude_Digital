@@ -5060,8 +5060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 1
-  ignoreSelfCondition: 1
+  ignoreOtherConditions: 0
+  ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: c50a002bbaf34e24ebaa779c18896005, type: 2}
   thisCondition: {fileID: 11400000, guid: 01a4f97b28c0ec94399c34a8c8a6b257, type: 2}
