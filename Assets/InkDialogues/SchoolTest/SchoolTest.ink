@@ -3,7 +3,6 @@ INCLUDE ../globals.ink
 {PROFESSOR_ACTOR}: Bom dia, turma!  
 {PROFESSOR_ACTOR}: Espero que todos tenham estudado para a prova substitutiva! 
 
-{B_ACTOR}: ... #mute_line
 
 {a_name}: (Desta vez vai dar tudo certo, não tenho o que temer, eu estudei bastante)
 
