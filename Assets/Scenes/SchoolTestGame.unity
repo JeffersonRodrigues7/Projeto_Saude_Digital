@@ -274,7 +274,11 @@ PrefabInstance:
     - target: {fileID: 452674656573599470, guid: a348c7cf4ebb8cc4faa41c9ed67c9ac5, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b193c262425f77d43afdc7f267ce0aad, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 452674656573599470, guid: a348c7cf4ebb8cc4faa41c9ed67c9ac5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 452674656573599471, guid: a348c7cf4ebb8cc4faa41c9ed67c9ac5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -392,7 +396,11 @@ PrefabInstance:
     - target: {fileID: 4773818205568872312, guid: 4d6fc45aaf5e16a458393bf30e1c921e, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 255b2da993d329a459efef2e5409fd78, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773818205568872312, guid: 4d6fc45aaf5e16a458393bf30e1c921e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4773818205568872313, guid: 4d6fc45aaf5e16a458393bf30e1c921e, type: 3}
       propertyPath: m_Name
       value: SFXSource
@@ -980,13 +988,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alternativas:
-  - questao correta
-  - questao errada
-  - 'questao errada 2 '
-  - questao errada 3
+  - "Aus\xEAncia de atividades extracurriculares."
+  - "Press\xE3o acad\xEAmica e de desempenho."
+  - Isolamento social.
+  - "Exerc\xEDcios regulares."
+  - Ignorar os sinais para evitar desconforto.
+  - "Conversar com um adulto de confian\xE7a para obter orienta\xE7\xE3o."
+  - "Porque \xE9 normal sentir-se assim durante a adolesc\xEAncia."
+  - Porque o tratamento adequado pode melhorar significativamente a qualidade de
+    vida.
   questoes:
-  - questao 1 - teste 12343
-  - questao 2 - teste 12343
+  - "1. O que pode ser uma causa comum de ansiedade entre os estudantes do ensino
+    m\xE9dio?"
+  - 2. Qual das seguintes atividades pode ajudar a aliviar os sintomas de ansiedade?
+  - "3. O que pode ser uma maneira eficaz de apoiar um colega de classe que est\xE1
+    lutando com ansiedade ou depress\xE3o?"
+  - "4. Por que \xE9 importante buscar ajuda profissional para ansiedade e depress\xE3o?"
 --- !u!1 &812889805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,7 +1614,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388227715
 GameObject:
@@ -1608,8 +1625,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1388227716}
+  - component: {fileID: 1388227717}
   m_Layer: 0
-  m_Name: Sounds
+  m_Name: Ansiedade_sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1629,8 +1647,26 @@ Transform:
   - {fileID: 192503110}
   - {fileID: 158450453}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1388227717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388227715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfd4ffa7a6f5bb45a1412001f455be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio_relogio: {fileID: 8300000, guid: 324606906f1713a41961d6bb18625978, type: 3}
+  audio_tensao: {fileID: 8300000, guid: 19b1943201388c0409ec79abecb5d072, type: 3}
+  audio_respiracao_ofegante: {fileID: 8300000, guid: 4a99834757d1a3040b25c541b1322706, type: 3}
+  audio_respirando_fundo: {fileID: 8300000, guid: 72e048303b7c62949932136f8bf0ed99, type: 3}
+  SFXSource: {fileID: 192503112}
+  BackgoundMusic: {fileID: 1745549114}
 --- !u!1 &1621372804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1822,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629028961}
   m_CullTransparentMesh: 1
+--- !u!82 &1745549114 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 452674656573599470, guid: a348c7cf4ebb8cc4faa41c9ed67c9ac5, type: 3}
+  m_PrefabInstance: {fileID: 158450452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1849131261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +2001,7 @@ RectTransform:
   - {fileID: 797165032}
   - {fileID: 21132838}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
