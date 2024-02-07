@@ -990,13 +990,13 @@ MonoBehaviour:
   alternativas:
   - "Aus\xEAncia de atividades extracurriculares."
   - "Press\xE3o acad\xEAmica e de desempenho."
-  - Isolamento social.
   - "Exerc\xEDcios regulares."
+  - Isolamento social.
   - Ignorar os sinais para evitar desconforto.
   - "Conversar com um adulto de confian\xE7a para obter orienta\xE7\xE3o."
-  - "Porque \xE9 normal sentir-se assim durante a adolesc\xEAncia."
   - Porque o tratamento adequado pode melhorar significativamente a qualidade de
     vida.
+  - "Porque \xE9 normal sentir-se assim durante a adolesc\xEAncia."
   questoes:
   - "1. O que pode ser uma causa comum de ansiedade entre os estudantes do ensino
     m\xE9dio?"
@@ -1004,6 +1004,7 @@ MonoBehaviour:
   - "3. O que pode ser uma maneira eficaz de apoiar um colega de classe que est\xE1
     lutando com ansiedade ou depress\xE3o?"
   - "4. Por que \xE9 importante buscar ajuda profissional para ansiedade e depress\xE3o?"
+  velocidade: 0.7
 --- !u!1 &812889805
 GameObject:
   m_ObjectHideFlags: 0

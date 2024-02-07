@@ -25,4 +25,18 @@ public class Sounds : MonoBehaviour
     {
         
     }
+
+    public void PlayAudioTensao()
+    {
+        BackgoundMusic.clip = audio_tensao;
+
+        BackgoundMusic.Play();
+    }
+
+    public void PlayAudioRespiracaoOfegante()
+    {
+        BackgoundMusic.clip = audio_respiracao_ofegante;
+
+        BackgoundMusic.Play();
+    }
 }

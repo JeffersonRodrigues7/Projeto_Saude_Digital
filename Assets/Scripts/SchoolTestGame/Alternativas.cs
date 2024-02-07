@@ -11,33 +11,15 @@ public class Alternativas : MonoBehaviour
     private Vector3 posInicial1;
     private Vector3 posInicial2;
     private float canvasHeight;
-    private float velocidade = 0.7f;
+    public float velocidade;
+    private int numQuestao = 0;
 
     private GameObject alternativa1;
     private GameObject alternativa2;
     private GameObject questao;
 
-
-    private void atualizaAlternativa(int i)
-    {
-        if (i == 0) {
-            alternativa1.GetComponentInChildren<Text>().text = alternativas[i];
-            alternativa2.GetComponentInChildren<Text>().text = alternativas[i + 1];
-        }
-        else
-        {
-            alternativa1.GetComponentInChildren<Text>().text = alternativas[i + 1];
-            alternativa2.GetComponentInChildren<Text>().text = alternativas[i + 2];
-        }
-
-        alternativa1.transform.position = posInicial1;
-        alternativa2.transform.position = posInicial2;
-    }
-
-    private void atualizaQuestao (int i)
-    {
-        questao.GetComponentInChildren<Text>().text = questoes[i];
-    }
+    private Sounds sounds;
+    private int[] corretas = { 1, 2, 5, 6 };
 
     private void Start()
     {
@@ -50,8 +32,8 @@ public class Alternativas : MonoBehaviour
         posInicial1 = alternativa1.transform.position;
         posInicial2 = alternativa2.transform.position;
 
-        atualizaAlternativa(0);
-        atualizaQuestao(0);
+        atualizaAlternativa(numQuestao);
+        atualizaQuestao(numQuestao);
 
 
     }
@@ -64,13 +46,44 @@ public class Alternativas : MonoBehaviour
 
         Debug.Log(verificaQueda(alternativa1.transform.position.y) + alternativa1.transform.position.y.ToString());
 
-        if (verificaQueda(alternativa1.transform.position.y))
+        
+        if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 5)
         {
-            atualizaAlternativa(1);
-            atualizaQuestao(1);
+            numQuestao++;
+            atualizaAlternativa(numQuestao);
+            atualizaQuestao(numQuestao);   
         }
 
-        
+        /*alternativa1.GetComponent<Button>().onClick.AddListener();*/
+        /*alternativa2.GetComponent<Button>().onClick.AddListener();*/
+
+
+    }
+
+    private void alternativaSelecionada(int i)
+    {
+        /*if (alternativaCorreta(i)) {
+            sounds.PlayAudioTensao();
+        }else
+        {
+            sounds.PlayAudioRespiracaoOfegante();
+        }*/
+    }
+
+    private void atualizaAlternativa(int i)
+    {
+        alternativa1.GetComponentInChildren<Text>().text = alternativas[i * 2];
+        alternativa2.GetComponentInChildren<Text>().text = alternativas[(i * 2) + 1];
+
+
+
+        alternativa1.transform.position = posInicial1;
+        alternativa2.transform.position = posInicial2;
+    }
+
+    private void atualizaQuestao(int i)
+    {
+        questao.GetComponentInChildren<Text>().text = questoes[i];
     }
 
     bool verificaQueda(float posY)
