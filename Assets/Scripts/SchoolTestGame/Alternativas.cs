@@ -19,7 +19,8 @@ public class Alternativas : MonoBehaviour
     private GameObject questao;
 
     private Sounds sounds;
-    private int[] corretas = { 1, 2, 5, 6 };
+
+    Dictionary<int, int> corretas = new Dictionary<int, int>();
 
     private void Start()
     {
@@ -35,6 +36,17 @@ public class Alternativas : MonoBehaviour
         atualizaAlternativa(numQuestao);
         atualizaQuestao(numQuestao);
 
+        corretas.Add(0, 1);
+        corretas.Add(1, 2);
+        corretas.Add(2, 5);
+        corretas.Add(3, 6);
+        corretas.Add(4, 8);
+        corretas.Add(5, 10);
+        corretas.Add(6, 11);
+        corretas.Add(7, 13);
+        corretas.Add(8, 15);
+        corretas.Add(9, 17);
+        corretas.Add(10, 18);
 
     }
 
@@ -44,30 +56,38 @@ public class Alternativas : MonoBehaviour
         alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
         alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
 
-        Debug.Log(verificaQueda(alternativa1.transform.position.y) + alternativa1.transform.position.y.ToString());
+        /*Debug.Log(verificaQueda(alternativa1.transform.position.y) + alternativa1.transform.position.y.ToString());*/
 
         
-        if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 5)
+        if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 10)
         {
-            numQuestao++;
-            atualizaAlternativa(numQuestao);
-            atualizaQuestao(numQuestao);   
+            atualiza();
         }
-
-        /*alternativa1.GetComponent<Button>().onClick.AddListener();*/
-        /*alternativa2.GetComponent<Button>().onClick.AddListener();*/
-
 
     }
 
-    private void alternativaSelecionada(int i)
+    private void atualiza()
     {
-        /*if (alternativaCorreta(i)) {
-            sounds.PlayAudioTensao();
-        }else
+        numQuestao++;
+        Debug.Log(numQuestao);
+        atualizaAlternativa(numQuestao);
+        atualizaQuestao(numQuestao);
+    }
+
+    private bool validaResposta(int numAlternativa)
+    {
+        if (corretas[numQuestao] == numAlternativa)
         {
-            sounds.PlayAudioRespiracaoOfegante();
-        }*/
+            Debug.Log("resposta correta!!");
+            atualiza();
+            return true;
+        }
+        else
+        {
+            Debug.Log("resposta errada!!");
+            atualiza();
+            return false;
+        }
     }
 
     private void atualizaAlternativa(int i)
@@ -75,11 +95,19 @@ public class Alternativas : MonoBehaviour
         alternativa1.GetComponentInChildren<Text>().text = alternativas[i * 2];
         alternativa2.GetComponentInChildren<Text>().text = alternativas[(i * 2) + 1];
 
-
-
         alternativa1.transform.position = posInicial1;
         alternativa2.transform.position = posInicial2;
+
+        alternativa1.GetComponent<Button>().onClick.RemoveAllListeners();
+        alternativa1.GetComponent<Button>().onClick.AddListener(() => validaResposta(i * 2));
+
+        alternativa2.GetComponent<Button>().onClick.RemoveAllListeners();
+        alternativa2.GetComponent<Button>().onClick.AddListener(() => validaResposta((i * 2) + 1));
     }
+
+  
+
+
 
     private void atualizaQuestao(int i)
     {

@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Key Game.unity
     guid: d0092aa37d1c85c4c93c824b3c7dc098
+  - enabled: 1
+    path: Assets/Scenes/SchoolTestGame.unity
+    guid: 01fa0219da1771044abb6a2d72e04316
+  - enabled: 1
+    path: Assets/Scenes/SchoolTest.unity
+    guid: 3f1c0be14d5f0594c9f0be4051c28898
   m_configObjects: {}
