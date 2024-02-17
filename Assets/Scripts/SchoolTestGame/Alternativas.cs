@@ -13,6 +13,9 @@ public class Alternativas : MonoBehaviour
     private float canvasHeight;
     public float velocidade;
     private int numQuestao = 0;
+    public bool isPaused = false;
+    private List<bool> lembrancas;
+    public GameObject conversas_alan;
 
     private GameObject alternativa1;
     private GameObject alternativa2;
@@ -32,6 +35,12 @@ public class Alternativas : MonoBehaviour
 
         posInicial1 = alternativa1.transform.position;
         posInicial2 = alternativa2.transform.position;
+
+        lembrancas.Add(false);
+        lembrancas.Add(false);
+        lembrancas.Add(false);
+        lembrancas.Add(false);
+        lembrancas.Add(false);
 
         atualizaAlternativa(numQuestao);
         atualizaQuestao(numQuestao);
@@ -55,6 +64,12 @@ public class Alternativas : MonoBehaviour
     {
         alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
         alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
+
+        if (numQuestao == 3 && lembrancas[0] == false)
+        {
+            conversas_alan.SetActive(true);
+            PauseGame();
+        }
 
         /*Debug.Log(verificaQueda(alternativa1.transform.position.y) + alternativa1.transform.position.y.ToString());*/
 
@@ -105,7 +120,27 @@ public class Alternativas : MonoBehaviour
         alternativa2.GetComponent<Button>().onClick.AddListener(() => validaResposta((i * 2) + 1));
     }
 
-  
+    public void PauseGame()
+    {
+        alternativa1.transform.Translate(Vector3.down * 0 * Time.deltaTime);
+        alternativa2.transform.Translate(Vector3.down * 0 * Time.deltaTime);// Pausa o jogo
+        isPaused = true;
+        // Aqui você pode adicionar código adicional, como mostrar um menu de pausa
+    }
+
+    public void ResumeGame()
+    {
+        alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
+        alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime); // Continua o jogo com o tempo normal
+        isPaused = false;
+
+        if (numQuestao == 3)
+        {
+            lembrancas[0] = true;
+        }
+        
+        // Aqui você pode adicionar código adicional, como esconder o menu de pausa
+    }
 
 
 
