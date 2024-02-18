@@ -2,6 +2,7 @@ CONST PLAYER_ACTOR = "player"
 CONST A_ACTOR = "A"
 CONST B_ACTOR = "B"
 CONST PROFESSOR_ACTOR = "professor"
+CONST OLD_STUDENT = "oldstudent"
 
 VAR player_name = "Bryan"
 VAR a_name = "Alan"
