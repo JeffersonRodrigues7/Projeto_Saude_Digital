@@ -8,20 +8,21 @@ public class Alternativas : MonoBehaviour
     public List<string> alternativas;
     public List<string> questoes;
 
+    public BoolVariable jogadorErrou;
+
     private Vector3 posInicial1;
     private Vector3 posInicial2;
     private float canvasHeight;
     public float velocidade;
     private int numQuestao = 0;
     public bool isPaused = false;
-    private List<bool> lembrancas;
+    private List<bool> lembrancas = new List<bool>();
     public GameObject conversas_alan;
 
     private GameObject alternativa1;
     private GameObject alternativa2;
     private GameObject questao;
 
-    private Sounds sounds;
 
     Dictionary<int, int> corretas = new Dictionary<int, int>();
 
@@ -76,17 +77,25 @@ public class Alternativas : MonoBehaviour
         
         if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 10)
         {
-            atualiza();
+            atualiza(jogadorErrou);
         }
 
     }
 
-    private void atualiza()
+    private void atualiza(BoolVariable errou)
     {
-        numQuestao++;
-        Debug.Log(numQuestao);
-        atualizaAlternativa(numQuestao);
-        atualizaQuestao(numQuestao);
+        if (errou.Value == false) { 
+            numQuestao++;
+            Debug.Log(numQuestao);
+            atualizaAlternativa(numQuestao);
+            atualizaQuestao(numQuestao);
+        }
+        else
+        {
+            Debug.Log(numQuestao);
+            atualizaAlternativa(numQuestao);
+            atualizaQuestao(numQuestao);
+        }
     }
 
     private bool validaResposta(int numAlternativa)
@@ -94,13 +103,18 @@ public class Alternativas : MonoBehaviour
         if (corretas[numQuestao] == numAlternativa)
         {
             Debug.Log("resposta correta!!");
-            atualiza();
+            atualiza(jogadorErrou);
             return true;
         }
         else
         {
             Debug.Log("resposta errada!!");
-            atualiza();
+            
+            conversas_alan.SetActive(true);
+            PauseGame();
+
+            atualiza(jogadorErrou);
+            jogadorErrou.Value = true;
             return false;
         }
     }
@@ -133,6 +147,7 @@ public class Alternativas : MonoBehaviour
         alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
         alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime); // Continua o jogo com o tempo normal
         isPaused = false;
+        jogadorErrou.Value = false;
 
         if (numQuestao == 3)
         {
