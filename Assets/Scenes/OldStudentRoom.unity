@@ -234,6 +234,321 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78867512}
   m_CullTransparentMesh: 1
+--- !u!1 &94406982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94406983}
+  - component: {fileID: 94406987}
+  - component: {fileID: 94406986}
+  - component: {fileID: 94406985}
+  - component: {fileID: 94406984}
+  m_Layer: 0
+  m_Name: Cena12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94406983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94406982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 304755567}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &94406984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94406982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c93791cbcc3e0240bebc93b30ff6024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1c6c0349865ec7f4680ebb0f9df4f09b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 94406986}
+        m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+        m_MethodName: ResumeTimeline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &94406985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94406982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 82cd07146751dfa4e8c28f534a1eab41, type: 2}
+    - {fileID: 11400000, guid: 18eca9c73e2f9c749af93c00696bff43, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 94406987}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetInkDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 98f5a49e5de85ae4189c70dfb6a46087, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetStartIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetFinalIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 999
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 94406986}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: TimelineFinished
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1268655511}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1268655514}
+          m_TargetAssemblyTypeName: SceneChangeTrigger, Assembly-CSharp
+          m_MethodName: ChangeScene
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &94406986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94406982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreOtherConditions: 1
+  ignoreSelfCondition: 1
+  necessaryConditions:
+  - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  thisCondition: {fileID: 0}
+  playOnlyOnce: 1
+  playAfterConditionsMet: 1
+  fadeOutBeforeStart: 0
+  _animatorsToControlUntilEnd:
+  - {fileID: 416777689}
+  - {fileID: 219575437}
+  - {fileID: 708025961}
+  - {fileID: 368947154}
+  collidersToDisable:
+  - {fileID: 416777699}
+  - {fileID: 708025959}
+  cutsceneStartedEvent: {fileID: 11400000, guid: 5a4317d468f93754ab3cab685b02f42b, type: 2}
+  cutsceneEndedEvent: {fileID: 11400000, guid: 14af7480061963642bf38ac8d42fe5f3, type: 2}
+  setCutsceneIndexOnInk: 1
+  cutsceneIndex: 0
+  backgroundMusicSource: {fileID: 0}
+  timelineBackgroundClip: {fileID: 0}
+  changeBackgroundMusic: 0
+  changeVolume: 0
+  musicVolume: 0
+  addSceneToGallery: 0
+  returnToGalleryAfterSceneEnds: 1
+  gallerySceneIndex: 0
+  gallerySceneName: 
+--- !u!320 &94406987
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94406982}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 225295680b37a294b945c720f5837eed, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8759643369690950357, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 416777689}
+  - key: {fileID: -6173210759354567600, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 219575437}
+  - key: {fileID: -4762509809386585161, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 4210350388617509060, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 1259267183582219790, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -85902220240889755, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: 2040501238693170719, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1064992220}
+  - key: {fileID: 7513896048110297511, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 2066062341}
+  - key: {fileID: -1048619786852659210, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: 7662374988760549190, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1922561085}
+  - key: {fileID: -1415231361474080389, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1375595021}
+  - key: {fileID: 9081731340337745205, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 467673824}
+  - key: {fileID: 3921975671547100808, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 467673825}
+  - key: {fileID: -8029431562835957475, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1268655511}
+  - key: {fileID: 2040501238693170719, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 1064992220}
+  - key: {fileID: -8029431562835957475, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 1268655511}
+  - key: {fileID: 8759643369690950357, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 416777689}
+  - key: {fileID: -6173210759354567600, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 219575437}
+  - key: {fileID: -4762509809386585161, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 4210350388617509060, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 540687327}
+  - key: {fileID: 7513896048110297511, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 2066062341}
+  - key: {fileID: 1259267183582219790, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -85902220240889755, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -1415231361474080389, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 1375595021}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 9081731340337745205, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3921975671547100808, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 8759643369690950357, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 416777689}
+  - key: {fileID: -6173210759354567600, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 219575437}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 1259267183582219790, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: -85902220240889755, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 708025961}
+  - key: {fileID: 9081731340337745205, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3921975671547100808, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8321490948067146190, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 368947154}
+  - key: {fileID: 7901000763630380457, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 368947154}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &143992378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -677,6 +992,7 @@ Transform:
   - {fileID: 2028459524}
   - {fileID: 1296386089}
   - {fileID: 1581006977}
+  - {fileID: 94406983}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

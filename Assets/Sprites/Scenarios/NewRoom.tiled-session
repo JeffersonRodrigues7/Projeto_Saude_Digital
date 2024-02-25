@@ -5,6 +5,7 @@
     },
     "activeFile": "",
     "expandedProjectPaths": [
+        "."
     ],
     "file.lastUsedOpenFilter": "Todos os Arquivos (*)",
     "fileStates": {
@@ -12,16 +13,17 @@
             "scaleInDock": 1
         },
         "Classroom.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 1
         },
         "Tileset.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.75,
             "scaleInEditor": 1
         }
     },
     "last.imagePath": "D:/Desktop/UFABC/PGC/Projeto_Jogo_Saude_Digital/Projeto_Saude_Digital/Assets/Sprites/Scenarios",
     "openFiles": [
+        "Classroom.tsx"
     ],
     "project": "NewRoom.tiled-project",
     "recentFiles": [

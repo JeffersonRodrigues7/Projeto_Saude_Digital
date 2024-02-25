@@ -3153,7 +3153,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 679f320d13ece8f4e87c3106a4cf1441, type: 2}
-  m_InitialState: 0
+  m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -3714,12 +3714,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 0
-  ignoreSelfCondition: 0
+  ignoreOtherConditions: 1
+  ignoreSelfCondition: 1
   necessaryConditions:
   - {fileID: 11400000, guid: e553b1ba7a512674a917a50a4e85034e, type: 2}
   thisCondition: {fileID: 11400000, guid: f25404830e4bb904a8018eab24ba51b0, type: 2}
-  playOnlyOnce: 0
+  playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
