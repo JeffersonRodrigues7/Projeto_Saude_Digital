@@ -9,6 +9,7 @@ public class Alternativas : MonoBehaviour
     public List<string> questoes;
 
     public BoolVariable jogadorErrou;
+    public BoolVariable imaginacao_respiracao_ofegante;
 
     private Vector3 posInicial1;
     private Vector3 posInicial2;
@@ -23,14 +24,19 @@ public class Alternativas : MonoBehaviour
     private GameObject alternativa2;
     private GameObject questao;
 
+    private GameObject cenaRespiracaoOfegante;
+
 
     Dictionary<int, int> corretas = new Dictionary<int, int>();
 
     private void Start()
     {
+        jogadorErrou.Value = false;
         // Obt�m a altura do canvas onde a resposta � exibida
         alternativa1 = GameObject.Find("Alternativa_1");
         alternativa2 = GameObject.Find("Alternativa_2");
+
+        
 
         questao = gameObject;
 
@@ -68,6 +74,7 @@ public class Alternativas : MonoBehaviour
 
         if (numQuestao == 3 && lembrancas[0] == false)
         {
+            imaginacao_respiracao_ofegante.Value = true;
             conversas_alan.SetActive(true);
             PauseGame();
         }
@@ -77,6 +84,11 @@ public class Alternativas : MonoBehaviour
         
         if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 10)
         {
+            jogadorErrou.Value = true;
+            conversas_alan.SetActive(true);
+            PauseGame();
+
+            
             atualiza(jogadorErrou);
         }
 
@@ -103,18 +115,20 @@ public class Alternativas : MonoBehaviour
         if (corretas[numQuestao] == numAlternativa)
         {
             Debug.Log("resposta correta!!");
+            jogadorErrou.Value = false;
             atualiza(jogadorErrou);
             return true;
         }
         else
         {
             Debug.Log("resposta errada!!");
-            
+
+            jogadorErrou.Value = true;
             conversas_alan.SetActive(true);
             PauseGame();
 
+            
             atualiza(jogadorErrou);
-            jogadorErrou.Value = true;
             return false;
         }
     }

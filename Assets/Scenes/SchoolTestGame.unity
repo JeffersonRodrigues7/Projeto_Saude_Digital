@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 403930793}
   - component: {fileID: 403930792}
   m_Layer: 0
-  m_Name: Lembrancas_Alan_erro
+  m_Name: Coracao batendo (erro questao)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,6 +1189,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8affd0c6c59a7064ea00e9c624b6a825, type: 2}
     - {fileID: 11400000, guid: 055b49ea4168445488ca6b9d2e7e42c0, type: 2}
     - {fileID: 11400000, guid: acdc5be39172cab4ea74ac32c627cba2, type: 2}
+    - {fileID: 11400000, guid: 5fedd630664306242805bcfd0e379084, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1314,42 +1315,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2034977125}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1868470623}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 797165035}
-          m_TargetAssemblyTypeName: Alternativas, Assembly-CSharp
-          m_MethodName: ResumeGame
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 1745549114}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: set_clip
@@ -1411,6 +1376,32 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2034977125}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1868470623}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!320 &403930795
 PlayableDirector:
@@ -2013,7 +2004,8 @@ MonoBehaviour:
   - "9. O que s\xE3o gatilhos de ansiedade?"
   - "10. Qual \xE9 uma maneira saud\xE1vel de lidar com o estresse?"
   jogadorErrou: {fileID: 11400000, guid: 2e7d7de2772edcf419ebcc237b943bd3, type: 2}
-  velocidade: 0.5
+  imaginacao_respiracao_ofegante: {fileID: 11400000, guid: 498f7ac98c70c8d43bcfe86518ee3e5c, type: 2}
+  velocidade: 0.3
   isPaused: 0
   conversas_alan: {fileID: 2034977125}
 --- !u!1 &812889805
@@ -3431,13 +3423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfd4ffa7a6f5bb45a1412001f455be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio_relogio: {fileID: 8300000, guid: 324606906f1713a41961d6bb18625978, type: 3}
-  audio_background: {fileID: 8300000, guid: 39ac31d3ccddb87468495b5040acdd8b, type: 3}
-  audio_tensao: {fileID: 8300000, guid: 19b1943201388c0409ec79abecb5d072, type: 3}
-  audio_respiracao_ofegante: {fileID: 8300000, guid: 4a99834757d1a3040b25c541b1322706, type: 3}
-  audio_respirando_fundo: {fileID: 8300000, guid: 72e048303b7c62949932136f8bf0ed99, type: 3}
-  SFXSource: {fileID: 192503112}
-  BackgoundMusic: {fileID: 1745549114}
 --- !u!1 &1407124692
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,7 +4217,7 @@ GameObject:
   - component: {fileID: 1863771349}
   - component: {fileID: 1863771348}
   m_Layer: 0
-  m_Name: Lembrancas_Alan
+  m_Name: Respiracao ofegante
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4294,17 +4279,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
-  necessaryConditions: []
+  necessaryConditions:
+  - {fileID: 11400000, guid: 498f7ac98c70c8d43bcfe86518ee3e5c, type: 2}
   thisCondition: {fileID: 11400000, guid: 37ac683808af50b4199b6b47ccba8c78, type: 2}
   playOnlyOnce: 1
-  playAfterConditionsMet: 1
+  playAfterConditionsMet: 0
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd: []
   collidersToDisable: []
   cutsceneStartedEvent: {fileID: 11400000, guid: 5a4317d468f93754ab3cab685b02f42b, type: 2}
   cutsceneEndedEvent: {fileID: 11400000, guid: 14af7480061963642bf38ac8d42fe5f3, type: 2}
   setCutsceneIndexOnInk: 1
-  cutsceneIndex: 2
+  cutsceneIndex: 999
   backgroundMusicSource: {fileID: 0}
   timelineBackgroundClip: {fileID: 0}
   changeBackgroundMusic: 0
