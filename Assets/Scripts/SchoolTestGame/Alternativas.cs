@@ -13,18 +13,19 @@ public class Alternativas : MonoBehaviour
 
     private Vector3 posInicial1;
     private Vector3 posInicial2;
-    private float canvasHeight;
+
     public float velocidade;
     private int numQuestao = 0;
     public bool isPaused = false;
-    private List<bool> lembrancas = new List<bool>();
     public GameObject conversas_alan;
 
     private GameObject alternativa1;
     private GameObject alternativa2;
     private GameObject questao;
 
-    private GameObject cenaRespiracaoOfegante;
+    public GameObject cenaRespiracaoOfegante;
+    public GameObject cenaCoracaoBatendo;
+
 
 
     Dictionary<int, int> corretas = new Dictionary<int, int>();
@@ -36,18 +37,10 @@ public class Alternativas : MonoBehaviour
         alternativa1 = GameObject.Find("Alternativa_1");
         alternativa2 = GameObject.Find("Alternativa_2");
 
-        
-
         questao = gameObject;
 
         posInicial1 = alternativa1.transform.position;
         posInicial2 = alternativa2.transform.position;
-
-        lembrancas.Add(false);
-        lembrancas.Add(false);
-        lembrancas.Add(false);
-        lembrancas.Add(false);
-        lembrancas.Add(false);
 
         atualizaAlternativa(numQuestao);
         atualizaQuestao(numQuestao);
@@ -72,20 +65,28 @@ public class Alternativas : MonoBehaviour
         alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
         alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
 
-        if (numQuestao == 3 && lembrancas[0] == false)
+        if (numQuestao == 3 && jogadorErrou.Value == false)
         {
-            imaginacao_respiracao_ofegante.Value = true;
             conversas_alan.SetActive(true);
+            cenaCoracaoBatendo.SetActive(false);
+            cenaRespiracaoOfegante.SetActive(true);
+
+            cenaRespiracaoOfegante.GetComponent<TimelineController>().StartTimeline();
+
             PauseGame();
+            
         }
-
-        /*Debug.Log(verificaQueda(alternativa1.transform.position.y) + alternativa1.transform.position.y.ToString());*/
-
-        
+   
         if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 10)
         {
             jogadorErrou.Value = true;
             conversas_alan.SetActive(true);
+
+            cenaRespiracaoOfegante.SetActive(false);
+            cenaCoracaoBatendo.SetActive(true);
+
+            cenaCoracaoBatendo.GetComponent<TimelineController>().StartTimeline();
+
             PauseGame();
 
             
@@ -124,10 +125,16 @@ public class Alternativas : MonoBehaviour
             Debug.Log("resposta errada!!");
 
             jogadorErrou.Value = true;
-            conversas_alan.SetActive(true);
-            PauseGame();
 
-            
+            conversas_alan.SetActive(true);
+
+            cenaRespiracaoOfegante.SetActive(false);
+            cenaCoracaoBatendo.SetActive(true);
+
+            cenaCoracaoBatendo.GetComponent<TimelineController>().StartTimeline();
+
+            PauseGame();
+      
             atualiza(jogadorErrou);
             return false;
         }
@@ -163,10 +170,8 @@ public class Alternativas : MonoBehaviour
         isPaused = false;
         jogadorErrou.Value = false;
 
-        if (numQuestao == 3)
-        {
-            lembrancas[0] = true;
-        }
+        
+
         
         // Aqui você pode adicionar código adicional, como esconder o menu de pausa
     }
