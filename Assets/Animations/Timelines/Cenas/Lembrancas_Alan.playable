@@ -470,6 +470,23 @@ MonoBehaviour:
     - {fileID: 5126312822089196121}
     - {fileID: 6379826147230775803}
     - {fileID: -6904764504512669138}
+    - {fileID: 1883046767074150341}
+--- !u!114 &1883046767074150341
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 16.5
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 5fedd630664306242805bcfd0e379084, type: 2}
 --- !u!114 &2217165161598305207
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -521,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Lembrancas_Alan_01
   m_EditorClassIdentifier: 
-  m_Time: 16.5
+  m_Time: 15.983333333333333
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 055b49ea4168445488ca6b9d2e7e42c0, type: 2}
