@@ -8,6 +8,11 @@ public class Alternativas : MonoBehaviour
     public List<string> alternativas;
     public List<string> questoes;
 
+    public AudioSource sfxSound;
+    public AudioClip acerto_sound;
+    public AudioClip erro_sound;
+
+
     public BoolVariable jogadorErrou;
     public BoolVariable imaginacao_respiracao_ofegante;
 
@@ -16,7 +21,7 @@ public class Alternativas : MonoBehaviour
 
     public float velocidade;
     private int numQuestao = 0;
-    public bool isPaused = false;
+    public bool isPaused = true;
     public GameObject conversas_alan;
 
     private GameObject alternativa1;
@@ -25,6 +30,8 @@ public class Alternativas : MonoBehaviour
 
     public GameObject cenaRespiracaoOfegante;
     public GameObject cenaCoracaoBatendo;
+    public GameObject cenaMaosSoando;
+    public GameObject cenaNegacao;
 
 
 
@@ -45,16 +52,16 @@ public class Alternativas : MonoBehaviour
         atualizaAlternativa(numQuestao);
         atualizaQuestao(numQuestao);
 
-        corretas.Add(0, 1);
-        corretas.Add(1, 2);
-        corretas.Add(2, 5);
-        corretas.Add(3, 6);
-        corretas.Add(4, 8);
-        corretas.Add(5, 11);
-        corretas.Add(6, 13);
-        corretas.Add(7, 15);
-        corretas.Add(8, 16);
-        corretas.Add(9, 18);
+        corretas.Add(0, 1);/*questao 1*//*ok*/
+        corretas.Add(1, 2);/*questao 2*//*ok*/
+        corretas.Add(2, 5);/*questao 3*//*ok*/
+        corretas.Add(3, 6);/*questao 4*//*ok*/
+        corretas.Add(4, 8);/*questao 5*//*ok*/
+        corretas.Add(5, 11);/*questao 6*//*ok*/
+        corretas.Add(6, 13);/*questao 7*//*ok*/
+        corretas.Add(7, 15);/*questao 8*//*ok*/
+        corretas.Add(8, 16);/*questao 9*//*ok*/
+        corretas.Add(9, 18);/*questao 10*//*ok*/
 
 
     }
@@ -71,9 +78,40 @@ public class Alternativas : MonoBehaviour
             {
                 conversas_alan.SetActive(true);
                 cenaCoracaoBatendo.SetActive(false);
+                cenaMaosSoando.SetActive(false);
+                cenaNegacao.SetActive(false);
                 cenaRespiracaoOfegante.SetActive(true);
 
                 cenaRespiracaoOfegante.GetComponent<TimelineController>().StartTimeline();
+                
+
+                PauseGame();
+
+            }
+
+            if (numQuestao == 5 && jogadorErrou.Value == false)
+            {
+                conversas_alan.SetActive(true);
+                cenaCoracaoBatendo.SetActive(false);
+                cenaRespiracaoOfegante.SetActive(false);
+                cenaNegacao.SetActive(false);
+                cenaMaosSoando.SetActive(true);
+
+                cenaMaosSoando.GetComponent<TimelineController>().StartTimeline();
+
+                PauseGame();
+
+            }
+
+            if (numQuestao == 7 && jogadorErrou.Value == false)
+            {
+                conversas_alan.SetActive(true);
+                cenaCoracaoBatendo.SetActive(false);
+                cenaRespiracaoOfegante.SetActive(false);
+                cenaMaosSoando.SetActive(false);
+                cenaNegacao.SetActive(true);
+
+                cenaNegacao.GetComponent<TimelineController>().StartTimeline();
 
                 PauseGame();
 
@@ -102,17 +140,8 @@ public class Alternativas : MonoBehaviour
 
     public void atualiza(BoolVariable errou)
     {
-        if (errou.Value == false) { 
-            numQuestao++;
-            Debug.Log(numQuestao);
-            atualizaAlternativa(numQuestao);
-            atualizaQuestao(numQuestao);
-        }
-        else
-        {
-            Debug.Log(numQuestao);
-            atualizaAlternativa(numQuestao);
-            atualizaQuestao(numQuestao);
+        if (errou.Value == false) {
+            ProximaQuestao();
         }
     }
 
@@ -120,27 +149,41 @@ public class Alternativas : MonoBehaviour
     {
         if (corretas[numQuestao] == numAlternativa)
         {
+            Debug.Log("questão correta = " + corretas[numQuestao] + " alternativa selecionada: " + numAlternativa);
             Debug.Log("resposta correta!!");
+            sfxSound.clip = acerto_sound;
+            sfxSound.Play();
+            sfxSound.loop = false;
             jogadorErrou.Value = false;
+            Debug.Log("****************************VALIDANDO RESPOSTA*************************");
             atualiza(jogadorErrou);
+            
+            
             return true;
         }
         else
         {
+            Debug.Log("questão correta = " + corretas[numQuestao] + " alternativa selecionada: " + numAlternativa);
             Debug.Log("resposta errada!!");
+
+            sfxSound.clip = erro_sound;
+            sfxSound.Play();
+            sfxSound.loop = false;
 
             jogadorErrou.Value = true;
 
             conversas_alan.SetActive(true);
-
             cenaRespiracaoOfegante.SetActive(false);
+            cenaMaosSoando.SetActive(false);
+            cenaNegacao.SetActive(false);
             cenaCoracaoBatendo.SetActive(true);
 
             cenaCoracaoBatendo.GetComponent<TimelineController>().StartTimeline();
 
+            atualizaAlternativa(numQuestao);
+            atualizaQuestao(numQuestao);
+
             PauseGame();
-      
-            atualiza(jogadorErrou);
             return false;
         }
     }
@@ -175,12 +218,13 @@ public class Alternativas : MonoBehaviour
         isPaused = false;
         jogadorErrou.Value = false;
  
-        // Aqui você pode adicionar código adicional, como esconder o menu de pausa
     }
 
     public void ProximaQuestao()
-    {
+    {        
         numQuestao++;
+        atualizaAlternativa(numQuestao);
+        atualizaQuestao(numQuestao);
     }
 
 

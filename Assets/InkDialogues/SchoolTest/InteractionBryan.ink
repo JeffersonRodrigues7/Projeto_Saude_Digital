@@ -15,3 +15,21 @@ INCLUDE ../globals.ink
 
 {player_name}:Ok, vamos voltar a prova. Está preparado?
 {a_name}:Estou, vamos lá!
+
+
+{a_name}:Minhas mãos estão suando muito.
+{player_name}:Alan, é somente uma prova, você vai conseguir.
+{player_name}:No final, tudo dá certo. 
+{player_name}:Parece que você está indo bem! mantenha-se confiante.
+{a_name}:Eu vou respirar fundo mais uma vez, este hábito vem me ajudando muito.
+{a_name}:Eu vou conseguir!!
+
+
+{a_name}:Acho que eu não vou conseguir.
+{a_name}:Falta pouco tempo e ainda tenho duas questões para responder!
+{a_name}:Eu estudei tanto. Estudei o final de semana inteiro.
+{player_name}:Alan, vamos lá! vai dar tempo.
+{player_name}:Leia atentamente a questão, você consegue.
+{a_name}:Eu vou conseguir!
+{a_name}:Foco!
+{a_name}:Vamos nessa!
