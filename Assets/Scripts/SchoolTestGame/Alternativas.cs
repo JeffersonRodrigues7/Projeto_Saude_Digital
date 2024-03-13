@@ -32,6 +32,7 @@ public class Alternativas : MonoBehaviour
     public GameObject cenaCoracaoBatendo;
     public GameObject cenaMaosSoando;
     public GameObject cenaNegacao;
+    public GameObject cenaFinal;
 
 
 
@@ -69,53 +70,10 @@ public class Alternativas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isPaused)
+        if (!isPaused && numQuestao < 10)
         {
             alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
             alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
-
-            if (numQuestao == 3 && jogadorErrou.Value == false)
-            {
-                conversas_alan.SetActive(true);
-                cenaCoracaoBatendo.SetActive(false);
-                cenaMaosSoando.SetActive(false);
-                cenaNegacao.SetActive(false);
-                cenaRespiracaoOfegante.SetActive(true);
-
-                cenaRespiracaoOfegante.GetComponent<TimelineController>().StartTimeline();
-                
-
-                PauseGame();
-
-            }
-
-            if (numQuestao == 5 && jogadorErrou.Value == false)
-            {
-                conversas_alan.SetActive(true);
-                cenaCoracaoBatendo.SetActive(false);
-                cenaRespiracaoOfegante.SetActive(false);
-                cenaNegacao.SetActive(false);
-                cenaMaosSoando.SetActive(true);
-
-                cenaMaosSoando.GetComponent<TimelineController>().StartTimeline();
-
-                PauseGame();
-
-            }
-
-            if (numQuestao == 7 && jogadorErrou.Value == false)
-            {
-                conversas_alan.SetActive(true);
-                cenaCoracaoBatendo.SetActive(false);
-                cenaRespiracaoOfegante.SetActive(false);
-                cenaMaosSoando.SetActive(false);
-                cenaNegacao.SetActive(true);
-
-                cenaNegacao.GetComponent<TimelineController>().StartTimeline();
-
-                PauseGame();
-
-            }
 
             if (verificaQueda(alternativa1.transform.position.y) && numQuestao < 10)
             {
@@ -123,6 +81,9 @@ public class Alternativas : MonoBehaviour
                 conversas_alan.SetActive(true);
 
                 cenaRespiracaoOfegante.SetActive(false);
+                cenaMaosSoando.SetActive(false);
+                cenaNegacao.SetActive(false);
+                cenaFinal.SetActive(false);
                 cenaCoracaoBatendo.SetActive(true);
 
                 cenaCoracaoBatendo.GetComponent<TimelineController>().StartTimeline();
@@ -138,11 +99,85 @@ public class Alternativas : MonoBehaviour
 
     }
 
+    void cenas()
+    {
+        if (numQuestao == 3 && jogadorErrou.Value == false)
+        {
+            conversas_alan.SetActive(true);
+            cenaCoracaoBatendo.SetActive(false);
+            cenaMaosSoando.SetActive(false);
+            cenaNegacao.SetActive(false);
+            cenaFinal.SetActive(false);
+            cenaRespiracaoOfegante.SetActive(true);
+
+            cenaRespiracaoOfegante.GetComponent<TimelineController>().StartTimeline();
+
+
+            PauseGame();
+
+        }
+
+        if (numQuestao == 5 && jogadorErrou.Value == false)
+        {
+            conversas_alan.SetActive(true);
+            cenaCoracaoBatendo.SetActive(false);
+            cenaRespiracaoOfegante.SetActive(false);
+            cenaNegacao.SetActive(false);
+            cenaFinal.SetActive(false);
+            cenaMaosSoando.SetActive(true);
+
+            cenaMaosSoando.GetComponent<TimelineController>().StartTimeline();
+
+            PauseGame();
+
+        }
+
+        if (numQuestao == 7 && jogadorErrou.Value == false)
+        {
+            conversas_alan.SetActive(true);
+            cenaCoracaoBatendo.SetActive(false);
+            cenaRespiracaoOfegante.SetActive(false);
+            cenaMaosSoando.SetActive(false);
+            cenaFinal.SetActive(false);
+            cenaNegacao.SetActive(true);
+
+            cenaNegacao.GetComponent<TimelineController>().StartTimeline();
+
+            PauseGame();
+
+        }
+
+        if (numQuestao == 10 && jogadorErrou.Value == false)
+        {
+            conversas_alan.SetActive(true);
+            cenaCoracaoBatendo.SetActive(false);
+            cenaRespiracaoOfegante.SetActive(false);
+            cenaMaosSoando.SetActive(false);
+            cenaNegacao.SetActive(false);
+            cenaFinal.SetActive(true);         
+
+            cenaFinal.GetComponent<TimelineController>().StartTimeline();
+
+            PauseGame();
+        }
+    }
+
     public void atualiza(BoolVariable errou)
     {
         if (errou.Value == false) {
             ProximaQuestao();
         }
+    }
+
+    public void ProximaQuestao()
+    {
+        numQuestao++;
+        if (numQuestao < 10)
+        {
+            atualizaAlternativa(numQuestao);
+            atualizaQuestao(numQuestao);
+        }
+
     }
 
     private bool validaResposta(int numAlternativa)
@@ -157,7 +192,8 @@ public class Alternativas : MonoBehaviour
             jogadorErrou.Value = false;
             Debug.Log("****************************VALIDANDO RESPOSTA*************************");
             atualiza(jogadorErrou);
-            
+
+            cenas();
             
             return true;
         }
@@ -176,6 +212,7 @@ public class Alternativas : MonoBehaviour
             cenaRespiracaoOfegante.SetActive(false);
             cenaMaosSoando.SetActive(false);
             cenaNegacao.SetActive(false);
+            cenaFinal.SetActive(false);
             cenaCoracaoBatendo.SetActive(true);
 
             cenaCoracaoBatendo.GetComponent<TimelineController>().StartTimeline();
@@ -220,12 +257,7 @@ public class Alternativas : MonoBehaviour
  
     }
 
-    public void ProximaQuestao()
-    {        
-        numQuestao++;
-        atualizaAlternativa(numQuestao);
-        atualizaQuestao(numQuestao);
-    }
+    
 
 
 
