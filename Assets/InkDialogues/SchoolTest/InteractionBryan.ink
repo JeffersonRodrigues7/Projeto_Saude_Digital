@@ -33,3 +33,9 @@ INCLUDE ../globals.ink
 {a_name}:Eu vou conseguir!
 {a_name}:Foco!
 {a_name}:Vamos nessa!
+
+
+{player_name}:Nossa parece que você foi muito bem!
+{a_name}:Eu não tenho tanta certeza disso...
+{player_name}:Eu tenho!
+{player_name}:Vamos aguardar a correção da professora, mas eu tenho certeza que vocÊ foi muito bem! mantenha-se confiante!
