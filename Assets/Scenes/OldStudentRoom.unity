@@ -428,8 +428,8 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions:
-  - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
-  thisCondition: {fileID: 0}
+  - {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
+  thisCondition: {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
@@ -759,8 +759,8 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions:
-  - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
-  thisCondition: {fileID: 0}
+  - {fileID: 11400000, guid: 86271255b265280408f45b3d2a24472b, type: 2}
+  thisCondition: {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
