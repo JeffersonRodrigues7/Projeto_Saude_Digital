@@ -48,6 +48,7 @@ INCLUDE ../globals.ink
 {B_ACTOR}: Vejo vocês depois. 
 
 AÇÃO: {B_ACTOR} deixa a cena. 
+
 {A_ACTOR}: Acho que as coisas realmente vão melhorar daqui para frente. 
 {A_ACTOR}: O que você quer fazer agora, {PLAYER_ACTOR}? 
 {PLAYER_ACTOR}: ... 
