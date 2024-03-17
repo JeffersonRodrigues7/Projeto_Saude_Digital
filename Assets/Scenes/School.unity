@@ -493,8 +493,8 @@ MonoBehaviour:
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   thisCondition: {fileID: 0}
-  playOnlyOnce: 1
-  playAfterConditionsMet: 1
+  playOnlyOnce: 0
+  playAfterConditionsMet: 0
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
   - {fileID: 416777689}
@@ -529,7 +529,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: fad42f9cede440642a50d27404493350, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
