@@ -245,8 +245,8 @@ GameObject:
   - component: {fileID: 88094290}
   - component: {fileID: 88094294}
   - component: {fileID: 88094293}
-  - component: {fileID: 88094292}
   - component: {fileID: 88094291}
+  - component: {fileID: 88094292}
   m_Layer: 0
   m_Name: Cena13
   m_TagString: Untagged
@@ -452,8 +452,8 @@ MonoBehaviour:
   musicVolume: 0
   addSceneToGallery: 0
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 20
+  gallerySceneName: Fim da conversa com aluno antigo
 --- !u!320 &88094294
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -576,8 +576,8 @@ GameObject:
   - component: {fileID: 94406983}
   - component: {fileID: 94406987}
   - component: {fileID: 94406986}
-  - component: {fileID: 94406985}
   - component: {fileID: 94406984}
+  - component: {fileID: 94406985}
   m_Layer: 0
   m_Name: Cena12
   m_TagString: Untagged
@@ -781,10 +781,10 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 0
+  addSceneToGallery: 1
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 19
+  gallerySceneName: Conversa com aluno antigo
 --- !u!320 &94406987
 PlayableDirector:
   m_ObjectHideFlags: 0

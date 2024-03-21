@@ -978,8 +978,8 @@ GameObject:
   - component: {fileID: 383283702}
   - component: {fileID: 383283701}
   - component: {fileID: 383283700}
-  - component: {fileID: 383283699}
   - component: {fileID: 383283703}
+  - component: {fileID: 383283699}
   m_Layer: 0
   m_Name: Cena5
   m_TagString: Untagged
@@ -3119,9 +3119,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1033612292}
   - component: {fileID: 1033612293}
-  - component: {fileID: 1033612294}
   - component: {fileID: 1033612295}
   - component: {fileID: 1033612296}
+  - component: {fileID: 1033612294}
   m_Layer: 0
   m_Name: Cena2
   m_TagString: Untagged
@@ -6057,7 +6057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335159, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1665205028876335160, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
       propertyPath: m_LocalPosition.x

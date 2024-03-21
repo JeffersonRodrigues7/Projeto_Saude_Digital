@@ -245,8 +245,8 @@ GameObject:
   - component: {fileID: 115644744}
   - component: {fileID: 115644748}
   - component: {fileID: 115644747}
-  - component: {fileID: 115644746}
   - component: {fileID: 115644745}
+  - component: {fileID: 115644746}
   m_Layer: 0
   m_Name: Cena14
   m_TagString: Untagged
@@ -488,13 +488,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 1
-  ignoreSelfCondition: 1
+  ignoreOtherConditions: 0
+  ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
   thisCondition: {fileID: 11400000, guid: 1453b757906636543b1f0598cfbddc97, type: 2}
-  playOnlyOnce: 0
-  playAfterConditionsMet: 0
+  playOnlyOnce: 1
+  playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
   - {fileID: 416777689}
@@ -515,10 +515,10 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 0
+  addSceneToGallery: 1
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 21
+  gallerySceneName: "Entrega do di\xE1rio para Beatriz"
 --- !u!320 &115644748
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -2799,7 +2799,7 @@ PlayableDirector:
     value: {fileID: 540687327}
   - key: {fileID: -8082373237924899436, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
     value: {fileID: 540687327}
-  - key: {fileID: 3693168901652609742, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 396017178}
   - key: {fileID: 250876606431699868, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
     value: {fileID: 2066062342}
@@ -3480,8 +3480,8 @@ GameObject:
   - component: {fileID: 1296386089}
   - component: {fileID: 1296386093}
   - component: {fileID: 1296386092}
-  - component: {fileID: 1296386091}
   - component: {fileID: 1296386090}
+  - component: {fileID: 1296386091}
   m_Layer: 0
   m_Name: Cena10
   m_TagString: Untagged
@@ -3813,10 +3813,10 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 0
+  addSceneToGallery: 1
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 17
+  gallerySceneName: Conversa com Beatriz
 --- !u!320 &1296386093
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4653,8 +4653,8 @@ GameObject:
   - component: {fileID: 1581006977}
   - component: {fileID: 1581006981}
   - component: {fileID: 1581006980}
-  - component: {fileID: 1581006979}
   - component: {fileID: 1581006978}
+  - component: {fileID: 1581006979}
   m_Layer: 0
   m_Name: Cena11
   m_TagString: Untagged
@@ -4962,10 +4962,10 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 0
+  addSceneToGallery: 1
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 18
+  gallerySceneName: "Conversa com professor: depress\xE3o e automutila\xE7\xE3o"
 --- !u!320 &1581006981
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5498,9 +5498,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1745183694}
   - component: {fileID: 1745183696}
-  - component: {fileID: 1745183695}
   - component: {fileID: 1745183697}
   - component: {fileID: 1745183698}
+  - component: {fileID: 1745183695}
   m_Layer: 0
   m_Name: Cena4_1
   m_TagString: Untagged
@@ -5625,18 +5625,6 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
           m_MethodName: TimelineFinished
           m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1154434211}
-          m_TargetAssemblyTypeName: ScreenEffect, Assembly-CSharp
-          m_MethodName: FadeIn
-          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5890,6 +5878,8 @@ PlayableDirector:
     value: {fileID: 2066062342}
   - key: {fileID: -8091591809089523439, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
     value: {fileID: 2066062341}
+  - key: {fileID: 5284627604324241533, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
+    value: {fileID: 1064992220}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1745183697
@@ -6416,8 +6406,8 @@ GameObject:
   - component: {fileID: 1894345569}
   - component: {fileID: 1894345571}
   - component: {fileID: 1894345570}
-  - component: {fileID: 1894345572}
   - component: {fileID: 1894345573}
+  - component: {fileID: 1894345572}
   m_Layer: 0
   m_Name: Cena7
   m_TagString: Untagged
@@ -6478,10 +6468,10 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 0
+  addSceneToGallery: 1
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 14
+  gallerySceneName: Depois da Prova
 --- !u!320 &1894345571
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7276,8 +7266,8 @@ GameObject:
   - component: {fileID: 1987237631}
   - component: {fileID: 1987237632}
   - component: {fileID: 1987237633}
-  - component: {fileID: 1987237634}
   - component: {fileID: 1987237635}
+  - component: {fileID: 1987237634}
   m_Layer: 0
   m_Name: Cena0
   m_TagString: Untagged
@@ -7372,7 +7362,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions: []
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
-  playOnlyOnce: 0
+  playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
   _animatorsToControlUntilEnd:
@@ -7987,8 +7977,8 @@ GameObject:
   - component: {fileID: 2028459524}
   - component: {fileID: 2028459528}
   - component: {fileID: 2028459527}
-  - component: {fileID: 2028459526}
   - component: {fileID: 2028459525}
+  - component: {fileID: 2028459526}
   m_Layer: 0
   m_Name: Cena9
   m_TagString: Untagged
@@ -8257,10 +8247,10 @@ MonoBehaviour:
   changeBackgroundMusic: 0
   changeVolume: 0
   musicVolume: 0
-  addSceneToGallery: 0
+  addSceneToGallery: 1
   returnToGalleryAfterSceneEnds: 1
-  gallerySceneIndex: 0
-  gallerySceneName: 
+  gallerySceneIndex: 16
+  gallerySceneName: Progressos de Alan
 --- !u!320 &2028459528
 PlayableDirector:
   m_ObjectHideFlags: 0

@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 382500627}
   - component: {fileID: 382500626}
   m_Layer: 0
-  m_Name: ProfessoraCarla
+  m_Name: ProfessoraCarlak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
