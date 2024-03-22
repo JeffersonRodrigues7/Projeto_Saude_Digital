@@ -674,6 +674,8 @@ PlayableDirector:
     value: {fileID: 711297099}
   - key: {fileID: 9030779420151096301, guid: fad42f9cede440642a50d27404493350, type: 2}
     value: {fileID: 1589291924}
+  - key: {fileID: -2109365779866004931, guid: fad42f9cede440642a50d27404493350, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &143992378
@@ -1789,7 +1791,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1466700188}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2825,6 +2827,8 @@ PlayableDirector:
     value: {fileID: 1779753723}
   - key: {fileID: -2907552267299057819, guid: 3e24bdb9e23574d4690cb88ac36fa26c, type: 2}
     value: {fileID: 1268655511}
+  - key: {fileID: -7823476060055543792, guid: 3e24bdb9e23574d4690cb88ac36fa26c, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &744547781
@@ -3930,6 +3934,8 @@ PlayableDirector:
     value: {fileID: 711297099}
   - key: {fileID: 9030779420151096301, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
     value: {fileID: 1589291924}
+  - key: {fileID: 9194720860137101035, guid: 0a46a8f481f2e4f4a80478f40d206d17, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1321564600
@@ -5037,6 +5043,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 3921975671547100808, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -6998006081919169737, guid: ca2d950d2405816499372d6ba3a5c593, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &1583057504
@@ -5880,6 +5888,8 @@ PlayableDirector:
     value: {fileID: 2066062341}
   - key: {fileID: 5284627604324241533, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
     value: {fileID: 1064992220}
+  - key: {fileID: 7771615435191193437, guid: bf22ebe8454cf8e4389ac88a408b07b3, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1745183697
@@ -6515,6 +6525,8 @@ PlayableDirector:
     value: {fileID: 467673825}
   - key: {fileID: -8029431562835957475, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
     value: {fileID: 1268655511}
+  - key: {fileID: -3510909333347297945, guid: d9479ff1da0c3d2498b630df16aab119, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1894345572
@@ -7134,7 +7146,7 @@ RectTransform:
   - {fileID: 283814416}
   - {fileID: 78867513}
   m_Father: {fileID: 1466700188}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7344,6 +7356,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 2547889435257829588, guid: db873f8c3ec37f143af9dd3e19e86238, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 1684961800807703700, guid: db873f8c3ec37f143af9dd3e19e86238, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1987237633
@@ -8322,6 +8336,8 @@ PlayableDirector:
     value: {fileID: 467673824}
   - key: {fileID: 3921975671547100808, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
     value: {fileID: 467673825}
+  - key: {fileID: 5119788131154320973, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
+    value: {fileID: 1967534879}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &2066062338
