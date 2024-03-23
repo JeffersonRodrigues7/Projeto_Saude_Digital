@@ -8234,8 +8234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 0
-  ignoreSelfCondition: 0
+  ignoreOtherConditions: 1
+  ignoreSelfCondition: 1
   necessaryConditions:
   - {fileID: 11400000, guid: c3f950dd788e6264f9bacc9747fae1a2, type: 2}
   thisCondition: {fileID: 11400000, guid: a701aad527398054598691412422d183, type: 2}
@@ -8256,9 +8256,9 @@ MonoBehaviour:
   cutsceneEndedEvent: {fileID: 11400000, guid: 14af7480061963642bf38ac8d42fe5f3, type: 2}
   setCutsceneIndexOnInk: 1
   cutsceneIndex: 0
-  backgroundMusicSource: {fileID: 0}
-  timelineBackgroundClip: {fileID: 0}
-  changeBackgroundMusic: 0
+  backgroundMusicSource: {fileID: 452674657631663029}
+  timelineBackgroundClip: {fileID: 8300000, guid: 957226b0c20e681458716b970172af1e, type: 3}
+  changeBackgroundMusic: 1
   changeVolume: 0
   musicVolume: 0
   addSceneToGallery: 1
@@ -8275,7 +8275,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 1755e64bdda23f04ea5bc0e228238879, type: 2}
-  m_InitialState: 0
+  m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
