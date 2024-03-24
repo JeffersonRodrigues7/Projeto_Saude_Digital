@@ -14,6 +14,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
     [Header("Params")]
     [SerializeField] BoolVariable[] necessaryConditions;
+    [SerializeField] private string Cena_Necessaria = "";
     [SerializeField] BoolVariable thisCondition;
     [SerializeField] bool playOnlyOnce = true;
     [SerializeField] bool playAfterConditionsMet = true;
@@ -62,26 +63,57 @@ public class TimelineController : MonoBehaviour, IDataPersistence
             InvokeRepeating("CheckConditionsAndStart", 0.0f, 0.5f);
     }
 
+    //private bool ConditionsMet()
+    //{
+    //    //Debug.Log("Checking conditions for " + gameObject.name);
+    //    if (ignoreOtherConditions)
+    //        return true;
+
+    //    if(thisCondition)
+    //        //Debug.Log("thisCondition for " + gameObject.name + " is '" + thisCondition.name + "' with value: " + thisCondition.Value);
+
+    //    if (playOnlyOnce && thisCondition && thisCondition.Value)
+    //        return false;
+
+    //    foreach(BoolVariable condition in necessaryConditions)
+    //    {
+    //        //Debug.Log("condition '" + condition.name + "' for " + gameObject.name + " has value: " + condition.Value);
+    //        if (!condition.Value)
+    //            return false;
+    //    }
+
+    //    return true;
+    //}
+
+    public void FinalizarCena(string cena)
+    {
+        GameManager.Instance.SetCenaTrue(cena);
+    }
+
     private bool ConditionsMet()
     {
         //Debug.Log("Checking conditions for " + gameObject.name);
         if (ignoreOtherConditions)
             return true;
 
-        if(thisCondition)
+        if (thisCondition)
             //Debug.Log("thisCondition for " + gameObject.name + " is '" + thisCondition.name + "' with value: " + thisCondition.Value);
 
-        if (playOnlyOnce && thisCondition && thisCondition.Value)
-            return false;
-
-        foreach(BoolVariable condition in necessaryConditions)
-        {
-            //Debug.Log("condition '" + condition.name + "' for " + gameObject.name + " has value: " + condition.Value);
-            if (!condition.Value)
+            if (playOnlyOnce && thisCondition && thisCondition.Value)
                 return false;
-        }
 
-        return true;
+        //foreach (BoolVariable condition in necessaryConditions)
+        //{
+        //    //Debug.Log("condition '" + condition.name + "' for " + gameObject.name + " has value: " + condition.Value);
+        //    if (!condition.Value)
+        //        return false;
+        //}
+
+        if (Cena_Necessaria == "-1") return true;
+
+        if(GameManager.Instance.GetCenaValue(Cena_Necessaria)) return true;
+
+        return false;
     }
 
     public void StartTimeline()
@@ -144,11 +176,9 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
         _director.Play();
     }
-
     
     public void TimelineFinished()
     {
-        
         if (!_isPlaying)
             return;
 

@@ -492,6 +492,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: 1453b757906636543b1f0598cfbddc97, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -1573,6 +1574,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
+  newPositionData: {fileID: 0}
+  hasfoundKey: {fileID: 0}
+  XValue: 0
+  YValue: 0
+  shouldSetInitialPosition: 0
 --- !u!114 &416777688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2750,6 +2756,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: bac94d88342979d4a986add1dd3427a1, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: 061487faf28593a47b5cdd56d96f3736, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -3794,6 +3801,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: a701aad527398054598691412422d183, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: 06e0346fbef6b584f82b46c3f0dbba26, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -4945,6 +4953,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 06e0346fbef6b584f82b46c3f0dbba26, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: 86271255b265280408f45b3d2a24472b, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -5908,6 +5917,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: c50a002bbaf34e24ebaa779c18896005, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: ea58d3860e77c6b43b5ed347b358491c, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -6455,6 +6465,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 119d3be9930033e47ac125f24f087f67, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: 55a68e1264b7b24458da323342ad271e, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -7375,6 +7386,7 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions: []
+  Cena_Necessaria: -1
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -7485,6 +7497,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1987237633}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 0
             m_BoolArgument: 1
           m_CallState: 2
     - m_PersistentCalls:
@@ -8238,6 +8262,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: c3f950dd788e6264f9bacc9747fae1a2, type: 2}
+  Cena_Necessaria: 
   thisCondition: {fileID: 11400000, guid: a701aad527398054598691412422d183, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1

@@ -4,7 +4,8 @@ using UnityEngine;
 public class StartingPositionData : ScriptableObject
 {
     [SerializeField] private string gameObjectName = "";
-    [SerializeField] private Vector3 vector3Position = Vector3.zero;
+    [SerializeField] public Vector3 vector3Position = Vector3.zero;
+    [SerializeField] public bool setPos = false;
     [SerializeField] private Direction direction;
 
 

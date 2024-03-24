@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
 {
+    //feito pelo thiago
     [SerializeField] private StartingPositionData positionData;
+
+    //feito por gustavo e jefferson
+    [SerializeField] public StartingPositionData newPositionData;
+    [SerializeField] public BoolVariable hasfoundKey;
 
     private Vector3 playerPosition;
     private string gameObjectNameForPosition;
     private Direction playerDirection;
+
+    //Gambiarra para setar posição inicial
+    public float XValue = 0;
+    public float YValue = 0;
+    public bool shouldSetInitialPosition = false;
 
     private void Start()
     {
         Animator animator = transform.GetChild(0).GetComponent<Animator>();
         SetPosition();
         SetDirection(animator);
+
+        if(hasfoundKey != null)
+        {
+            Debug.Log("Key Village: " + hasfoundKey.Value);
+            setStartPosition();
+        }
     }
 
     /*private void SetPosition()
@@ -114,6 +130,15 @@ public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
         //Debug.Log("new childPosition: " + child.position);
         //Debug.Log("new childLocalPosition: " + child.localPosition);
         //Debug.Log("new transformPosition: " + transform.position);
+    }
+
+    public void setStartPosition()
+    {
+        if(newPositionData != null)
+        {
+            newPositionData.setPos = false;
+            transform.position = new Vector3(newPositionData.vector3Position.x, newPositionData.vector3Position.y, 0);
+        }
     }
 
 }

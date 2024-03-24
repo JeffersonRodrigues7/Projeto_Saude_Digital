@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class KeyGamePlayer : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
     [SerializeField] private string playerName;
-    
+    [SerializeField] public BoolVariable hasfoundKey;
+
     public RectTransform stamina;
     public GameObject WIN;
     private int score = 0;
@@ -16,8 +18,6 @@ public class KeyGamePlayer : MonoBehaviour
 
     PlayerSwipeController playerSwipeController;
     AudioController audioController;
-
-
 
     private void Start()
     {
@@ -77,7 +77,6 @@ public class KeyGamePlayer : MonoBehaviour
             updateScore();
             audioController.WIN();
 
-            
             WIN.SetActive(true);
 
             //Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
@@ -89,6 +88,17 @@ public class KeyGamePlayer : MonoBehaviour
             updateScore();
             return false;
         }
+    }
+
+    public void callVillage()
+    {
+        Debug.Log("Key: " + hasfoundKey.Value);
+        hasfoundKey.Value = true;
+        Debug.Log("Key: " + hasfoundKey.Value);
+
+        FindObjectOfType<PlayerStartPositionSetter>().newPositionData.setPos = true;
+        FindObjectOfType<PlayerStartPositionSetter>().newPositionData.vector3Position = new Vector3(-3f, 16.5f, 0);
+        SceneManager.LoadScene("Village");
     }
 
 
