@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Mais de uma instância de ScoreManager");
+            //Debug.LogWarning("Mais de uma instância de ScoreManager");
         }
 
         instance = this;

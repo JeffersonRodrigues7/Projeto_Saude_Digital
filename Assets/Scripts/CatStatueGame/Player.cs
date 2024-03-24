@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(joystickMovement.joystickVec);
+        ////Debug.Log(joystickMovement.joystickVec);
         bool walking = false;
         Vector2 move = new Vector2(joystickMovement.joystickVec.x, joystickMovement.joystickVec.y);
 

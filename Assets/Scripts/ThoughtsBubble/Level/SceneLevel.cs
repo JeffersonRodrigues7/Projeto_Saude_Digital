@@ -83,7 +83,7 @@ namespace ThoughtBubbleMiniGame
                 EndSceneLevel();
                 return;
             }
-            Debug.Log("Starting level {" + currentStepIndex + "} from " + gameLevel.gameObject.name);
+            //Debug.Log("Starting level {" + currentStepIndex + "} from " + gameLevel.gameObject.name);
 
             LevelStep nextLevelStep = gameLevel.GetNextLevelStep();
             nextLevelStep.onLevelStepWon.AddListener(OnSucess);
@@ -111,19 +111,19 @@ namespace ThoughtBubbleMiniGame
 
         private void OnFail()
         {
-            Debug.Log("OnFail fired for " + gameObject.name + " at index: " + currentStepIndex);
+            //Debug.Log("OnFail fired for " + gameObject.name + " at index: " + currentStepIndex);
             StartCoroutine(PerformFailedCoroutine());
         }
 
         private void OnSucess()
         {
-            Debug.Log("OnSucess fired for " + gameObject.name + " at index: " + currentStepIndex);
+            //Debug.Log("OnSucess fired for " + gameObject.name + " at index: " + currentStepIndex);
             StartCoroutine(PerformSuccessCoroutine());
         }
 
         private IEnumerator PerformFailedCoroutine()
         {
-            Debug.Log("PerformFailedCoroutine fired from " + gameObject.name);
+            //Debug.Log("PerformFailedCoroutine fired from " + gameObject.name);
             if (onFailDialogue)
             {
                 yield return ShowDialogue(onFailDialogue);
@@ -144,7 +144,7 @@ namespace ThoughtBubbleMiniGame
 
         private IEnumerator ShowDialogue(TextAsset inkDialogue)
         {
-            Debug.Log("showing dialogue with asset: " + inkDialogue.name);
+            //Debug.Log("showing dialogue with asset: " + inkDialogue.name);
             yield return new WaitForSeconds(dialogueDelay);
             currentDialogueEnded = false;
             dialogueTrigger.StartDialogue(inkDialogue);
@@ -163,7 +163,7 @@ namespace ThoughtBubbleMiniGame
             {
                 if (returnToGalleryAfterSceneEnds)
                 {
-                    Debug.Log("Returning to gallery");
+                    //Debug.Log("Returning to gallery");
                     SceneChanger.Instance.GoToSceneGallery(true);
                 }
 

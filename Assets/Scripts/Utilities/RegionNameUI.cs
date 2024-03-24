@@ -25,7 +25,7 @@ public class RegionNameUI : MonoBehaviour, IDataPersistence
 
     private void SetRegionName(string newRegionName)
     {
-        Debug.Log("setting regionName to: " + newRegionName);
+        //Debug.Log("setting regionName to: " + newRegionName);
         currentRegion = newRegionName;
     }
 

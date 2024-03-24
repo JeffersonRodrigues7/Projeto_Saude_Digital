@@ -31,7 +31,7 @@ public class ReturnToMainMenu : MonoBehaviour
 
     public void ShowConfirmPopup()
     {
-        Debug.Log("Show confirm popup fired");
+        //Debug.Log("Show confirm popup fired");
 
         if (openPopupButtonSound)
             SFXManager.GetInstance().PlayClip(openPopupButtonSound);

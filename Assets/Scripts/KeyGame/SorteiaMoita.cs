@@ -14,7 +14,7 @@ public class SorteiaMoita : MonoBehaviour
         moitas = GameObject.FindGameObjectsWithTag("Moita");
 
         moitaComChave = moitas[Random.Range(0, moitas.Length)];
-        Debug.Log("a moita com a chave é: " + moitaComChave.name);
+        //Debug.Log("a moita com a chave é: " + moitaComChave.name);
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class SorteiaMoita : MonoBehaviour
     {
         if (collision.gameObject.name == moitaComChave.name)
         {
-            Debug.Log("-----------------VOCE ACHOU A CHAVE--------------------");
+            //Debug.Log("-----------------VOCE ACHOU A CHAVE--------------------");
         }
     }
 }

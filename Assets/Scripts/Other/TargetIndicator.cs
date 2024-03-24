@@ -37,24 +37,25 @@ public class TargetIndicator : MonoBehaviour
         if (cenaFinalizada)
         {
             validaCenas();
-        }  
-
-        var dir = Target.position - transform.position;
-
-
-        if(dir.magnitude < distanciaObjetivo)
-        {
-            SetChildrenActive(false);
-        }
-        else
-        {
-            SetChildrenActive(true);
-            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
         }
 
+        if (Target != null)
+        {
+            var dir = Target.position - transform.position;
 
+
+            if (dir.magnitude < distanciaObjetivo)
+            {
+                SetChildrenActive(false);
+            }
+            else
+            {
+                SetChildrenActive(true);
+                var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            }
+        }
     }
 
     private void SetChildrenActive(bool value)

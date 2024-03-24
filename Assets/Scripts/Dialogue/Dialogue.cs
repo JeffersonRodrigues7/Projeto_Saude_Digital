@@ -68,10 +68,10 @@ public class Dialogue
         DialogueLineData thisLineData = new DialogueLineData();
         thisLineData.lineTextChunks = new List<DialogueChunkData>();
 
-        //Debug.Log("get line at index: " + _currentIndex);
+        ////Debug.Log("get line at index: " + _currentIndex);
         if (_partialDialogue && _currentIndex > _finalIndex)
         {
-            //Debug.Log("reached final index: " + _finalIndex);
+            ////Debug.Log("reached final index: " + _finalIndex);
             _currentLine = thisLineData;
             return thisLineData;
         }
@@ -89,7 +89,7 @@ public class Dialogue
                 if(thisLineData.actor == "" || thisLineData.actor == null)
                 {
                     string[] splitDialogue = dialogueText.Split(':');
-                    //Debug.Log(splitDialogue);
+                    ////Debug.Log(splitDialogue);
                     if(splitDialogue.Length > 1)
                     {
                         thisLineData.actor = splitDialogue[0];
@@ -123,7 +123,7 @@ public class Dialogue
 
     public void SetDialogueVariablesInstance(DialogueVariables dialogueVariables)
     {
-        Debug.Log("setting dialogueVariable instance");
+        //Debug.Log("setting dialogueVariable instance");
         _dialogueVariables = dialogueVariables;
 
         if(_inkStory != null)
@@ -188,7 +188,7 @@ public class Dialogue
                     }
                     else
                     {
-                        Debug.LogWarning("Failed to parse typing delay: " + tagValue);
+                        //Debug.LogWarning("Failed to parse typing delay: " + tagValue);
                     }
                     break;
                     ;
@@ -202,7 +202,7 @@ public class Dialogue
                     break;
 
                 default:
-                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                    //Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                     break;
             }
         }

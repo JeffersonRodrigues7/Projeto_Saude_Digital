@@ -75,8 +75,8 @@ public class SwipeDetector : MonoBehaviour
 
             SendSwipe(direction);
 
-            //Debug.Log(fingerUpPosition);
-            //Debug.Log(fingerDownPosition);
+            ////Debug.Log(fingerUpPosition);
+            ////Debug.Log(fingerDownPosition);
 
             lastSwipeDirection = direction;
             fingerUpPosition = fingerDownPosition;

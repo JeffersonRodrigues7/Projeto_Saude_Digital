@@ -12,15 +12,15 @@ public class HelperButton : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("helperBtn start fired");
+        ////Debug.Log("helperBtn start fired");
         btnImage = GetComponent<Image>();
         btnText = transform.GetChild(0).GetComponent<Text>();
     }
 
     public void ShowHelpText()
     {
-        Debug.Log("ShowHelpText fired");
-        Debug.Log("isInDialogueMode: " + DialogueManager.Instance.isInDialogueMode);
+        ////Debug.Log("ShowHelpText fired");
+        ////Debug.Log("isInDialogueMode: " + DialogueManager.Instance.isInDialogueMode);
         if (DialogueManager.Instance.isInDialogueMode)
             return;
 

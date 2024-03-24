@@ -93,7 +93,7 @@ public class Quiz : MonoBehaviour
     private void ShowQuestion(int index)
     {
         QuizQuestion currentQuestion = questions[index];
-        Debug.Log(questions[index].question);
+        //Debug.Log(questions[index].question);
         questionText.text = currentQuestion.question;
 
         for(int i = 0; i < alternativeButtons.Length; i++)

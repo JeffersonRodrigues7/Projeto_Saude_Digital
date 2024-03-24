@@ -33,7 +33,7 @@ public class DialogueSceneManager : MonoBehaviour
         if(dialogueStarted && !isDialogueFinished && !DialogueManager.Instance.IsTypingDialogue() && Input.touchCount > 0)
         {
             isDialogueFinished = !DialogueManager.Instance.AdvanceDialogue();
-            Debug.Log("Trying to show next line. Dialogue Finished: " + (isDialogueFinished ? "True" : "False"));
+            //Debug.Log("Trying to show next line. Dialogue Finished: " + (isDialogueFinished ? "True" : "False"));
         }
     }
 

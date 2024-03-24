@@ -14,7 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("Player entered trigger");
+            //Debug.Log("Player entered trigger");
             //DialogueManager.Instance.EnterDialogueMode(inkDialogue);
         }
     }
@@ -28,7 +28,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void StartDialogue()
     {
-        Debug.Log("startDialogue with startIndex = " + _startIndex + " and finalIndex = " + _finalIndex);
+        //Debug.Log("startDialogue with startIndex = " + _startIndex + " and finalIndex = " + _finalIndex);
         Dialogue dialogue = new Dialogue(_inkDialogue, _startIndex, _finalIndex);
         DialogueManager.Instance.InitDialogue(dialogue);
         DialogueManager.Instance.StartDialogue();

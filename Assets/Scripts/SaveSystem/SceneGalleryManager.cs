@@ -18,7 +18,7 @@ public class SceneGalleryManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.Log("Found more than one Data Persistence Manager in the scene. Destroying the newest one.");
+            //Debug.Log("Found more than one Data Persistence Manager in the scene. Destroying the newest one.");
             Destroy(this.gameObject);
             return;
         }

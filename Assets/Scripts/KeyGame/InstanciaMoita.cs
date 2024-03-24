@@ -59,7 +59,7 @@ public class InstanciaMoita : MonoBehaviour
             float distancia_x = moitaSorteada.transform.position.x - player.position.x;
             float distancia_y = moitaSorteada.transform.position.y - player.position.y;
 
-            //Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
+            ////Debug.Log("distancia_x= " + distancia_x + " | distancia_y= " +distancia_y );
 
 
             if (distancia_x < -30 || distancia_y < -20)

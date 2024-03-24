@@ -26,7 +26,7 @@ public class DialogueActorProvider : ScriptableObject
 
         if (_actorDictionary == null)
         {
-            Debug.LogError("Erro ao inicializar o dicionário de personagens");
+            //Debug.LogError("Erro ao inicializar o dicionário de personagens");
             return null;
         }
             

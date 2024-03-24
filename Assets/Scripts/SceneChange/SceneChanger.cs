@@ -33,9 +33,9 @@ public class SceneChanger : Singleton<SceneChanger>, IDataPersistence
 
     public void ChangeTo(string sceneName)
     {
-        Debug.Log("ChangeTo called with sceneName: " + sceneName);
-        Debug.Log("IsGalleryMode?: " + (DataPersistenceManager.Instance.LoadedMode == GameLoadedMode.GALLERY));
-        Debug.Log("shouldCheckForGalleryMode?: " + checkForGalleryMode);
+        //Debug.Log("ChangeTo called with sceneName: " + sceneName);
+        //Debug.Log("IsGalleryMode?: " + (DataPersistenceManager.Instance.LoadedMode == GameLoadedMode.GALLERY));
+        //Debug.Log("shouldCheckForGalleryMode?: " + checkForGalleryMode);
 
         if (checkForGalleryMode && DataPersistenceManager.Instance.LoadedMode == GameLoadedMode.GALLERY)
             return;
@@ -176,23 +176,23 @@ public class SceneChanger : Singleton<SceneChanger>, IDataPersistence
         {
             data.playerDirection = playerDirection;
 
-            Debug.Log("DirectionValue: " + data.playerDirection);
+            //Debug.Log("DirectionValue: " + data.playerDirection);
             switch (playerDirection)
             {
                 case Direction.Right:
-                    Debug.Log("Saved Right direction");
+                    //Debug.Log("Saved Right direction");
                     break;
                 case Direction.Left:
-                    Debug.Log("Saved Left direction");
+                    //Debug.Log("Saved Left direction");
                     break;
                 case Direction.Up:
-                    Debug.Log("Saved Up direction");
+                    //Debug.Log("Saved Up direction");
                     break;
                 case Direction.Down:
-                    Debug.Log("Saved Down direction");
+                    //Debug.Log("Saved Down direction");
                     break;
                 default:
-                    Debug.Log("Saved is wrong");
+                    //Debug.Log("Saved is wrong");
                     break;
             }
         }

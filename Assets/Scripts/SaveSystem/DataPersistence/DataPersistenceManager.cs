@@ -37,7 +37,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (Instance != null) 
         {
-            Debug.Log("Found more than one Data Persistence Manager in the scene. Destroying the newest one.");
+            //Debug.Log("Found more than one Data Persistence Manager in the scene. Destroying the newest one.");
             Destroy(this.gameObject);
             return;
         }
@@ -46,10 +46,10 @@ public class DataPersistenceManager : MonoBehaviour
 
         if (disableDataPersistence) 
         {
-            Debug.LogWarning("Data Persistence is currently disabled!");
+            //Debug.LogWarning("Data Persistence is currently disabled!");
         }
 
-        Debug.Log("setting standardProfileId");
+        ////Debug.Log("setting standardProfileId");
         selectedProfileId = standardProfileId;
         SetDefaultDataHandler();
 
@@ -143,7 +143,7 @@ public class DataPersistenceManager : MonoBehaviour
         if (overrideSelectedProfileId) 
         {
             this.selectedProfileId = testSelectedProfileId;
-            Debug.LogWarning("Overrode selected profile id with test id: " + testSelectedProfileId);
+            //Debug.LogWarning("Overrode selected profile id with test id: " + testSelectedProfileId);
         }
     }
 
@@ -172,7 +172,7 @@ public class DataPersistenceManager : MonoBehaviour
         // if no data can be loaded, don't continue
         if (this.gameData == null) 
         {
-            Debug.Log("No data was found. A New Game needs to be started before data can be loaded.");
+            //Debug.Log("No data was found. A New Game needs to be started before data can be loaded.");
             return;
         }
 
@@ -194,7 +194,7 @@ public class DataPersistenceManager : MonoBehaviour
         // if we don't have any data to save, log a warning here
         if (this.gameData == null) 
         {
-            Debug.LogWarning("No data was found. A New Game needs to be started before data can be saved.");
+            //Debug.LogWarning("No data was found. A New Game needs to be started before data can be saved.");
             return;
         }
 
@@ -271,7 +271,7 @@ public class DataPersistenceManager : MonoBehaviour
         {
             yield return new WaitForSeconds(autoSaveTimeSeconds);
             SaveGame();
-            Debug.Log("Auto Saved Game");
+            //Debug.Log("Auto Saved Game");
         }
     }*/
 }

@@ -184,13 +184,13 @@ public class Alternativas : MonoBehaviour
     {
         if (corretas[numQuestao] == numAlternativa)
         {
-            Debug.Log("questão correta = " + corretas[numQuestao] + " alternativa selecionada: " + numAlternativa);
-            Debug.Log("resposta correta!!");
+            //Debug.Log("questão correta = " + corretas[numQuestao] + " alternativa selecionada: " + numAlternativa);
+            //Debug.Log("resposta correta!!");
             sfxSound.clip = acerto_sound;
             sfxSound.Play();
             sfxSound.loop = false;
             jogadorErrou.Value = false;
-            Debug.Log("****************************VALIDANDO RESPOSTA*************************");
+            //Debug.Log("****************************VALIDANDO RESPOSTA*************************");
             atualiza(jogadorErrou);
 
             cenas();
@@ -199,8 +199,8 @@ public class Alternativas : MonoBehaviour
         }
         else
         {
-            Debug.Log("questão correta = " + corretas[numQuestao] + " alternativa selecionada: " + numAlternativa);
-            Debug.Log("resposta errada!!");
+            //Debug.Log("questão correta = " + corretas[numQuestao] + " alternativa selecionada: " + numAlternativa);
+            //Debug.Log("resposta errada!!");
 
             sfxSound.clip = erro_sound;
             sfxSound.Play();

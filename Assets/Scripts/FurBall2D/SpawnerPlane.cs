@@ -6,7 +6,7 @@ public class SpawnerPlane : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter2D fired");
+        //Debug.Log("OnTriggerEnter2D fired");
         if (collision.gameObject.CompareTag("PlataformEndPosition"))
         {
             // Setando a posição z para 0 para evitar que algum valor acidental

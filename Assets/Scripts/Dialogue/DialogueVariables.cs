@@ -15,23 +15,23 @@ public class DialogueVariables
 
     public DialogueVariables(TextAsset loadGlobalsJSON)
     {
-        Debug.Log("DialogueVariables created start");
+        ////Debug.Log("DialogueVariables created start");
         // create the story
         globalVariablesStory = new Story(loadGlobalsJSON.text);
 
         // initialize the dictionary
         InitializeVariablesDictionary();
-        Debug.Log("DialogueVariables created finished");
+        ////Debug.Log("DialogueVariables created finished");
     }
 
     public void LoadJsonState(string jsonState)
     {
-        Debug.Log("DialogueVariables LoadJsonState fired ");
-        Debug.Log(jsonState);
+        ////Debug.Log("DialogueVariables LoadJsonState fired ");
+        ////Debug.Log(jsonState);
         globalVariablesStory.state.LoadJson(jsonState);
-        Debug.Log("DialogueVariables LoadJson completed");
+        ////Debug.Log("DialogueVariables LoadJson completed");
         InitializeVariablesDictionary();
-        Debug.Log("Dictionary initialized completed");
+        ////Debug.Log("Dictionary initialized completed");
     }
 
     public string GetJsonState()
@@ -47,15 +47,15 @@ public class DialogueVariables
 
         if(!value)
         {
-            Debug.LogWarning("Error while setting dialogue variable with name '" 
-                + key + "' and primitive value '" + primitiveValue + "'");
+            ////Debug.LogWarning("Error while setting dialogue variable with name '" 
+            //    + key + "' and primitive value '" + primitiveValue + "'");
 
             return;
         }
 
         if (!variables.ContainsKey(key))
         {
-            Debug.LogWarning("Trying to set an invalid dialogue variable with key: " + key);
+            ////Debug.LogWarning("Trying to set an invalid dialogue variable with key: " + key);
             return;
         }
         
@@ -76,8 +76,8 @@ public class DialogueVariables
         }
         catch (InvalidCastException e)
         {
-            Debug.LogWarning(e.Message);
-            Debug.LogWarning("GetVariable changetype error with key '" + key + "' returning default value: " + default(T));
+            //Debug.LogWarning(e.Message);
+            //Debug.LogWarning("GetVariable changetype error with key '" + key + "' returning default value: " + default(T));
             return default(T);
         }
     }
@@ -120,7 +120,7 @@ public class DialogueVariables
         {
             Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
             variables.Add(name, value);
-            Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
+            ////Debug.Log("Initialized global dialogue variable: " + name + " = " + value);
         }
     }
 

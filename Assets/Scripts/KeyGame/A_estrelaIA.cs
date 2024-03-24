@@ -67,7 +67,7 @@ public class A_estrelaIA : MonoBehaviour
             if (moitaTarget != null && cooldownTime == 0)
             {
 
-                //Debug.Log("estou procurando" + moitaTarget.name);
+                ////Debug.Log("estou procurando" + moitaTarget.name);
                 agent.SetDestination(moitaTarget.transform.position);
 
                 lookDirection = (moitaTarget.transform.position - transform.position).normalized;
@@ -84,7 +84,7 @@ public class A_estrelaIA : MonoBehaviour
             }
 
             cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
-            //Debug.Log(cooldownTime);
+            ////Debug.Log(cooldownTime);
 
         }
 
@@ -175,7 +175,7 @@ public class A_estrelaIA : MonoBehaviour
 
             started = false;
 
-            Debug.Log("-----------------SEUS AMIGOS ACHARAM A CHAVE ----------------------");
+            //Debug.Log("-----------------SEUS AMIGOS ACHARAM A CHAVE ----------------------");
         }
     }
 

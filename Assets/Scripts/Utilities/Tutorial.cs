@@ -107,7 +107,7 @@ public class Tutorial : MonoBehaviour
 
     private IEnumerator ShowTutorial()
     {
-        Debug.Log("ShowTutorial fired");
+        //Debug.Log("ShowTutorial fired");
         yield return new WaitForSeconds(1.2f);
 
         screenBlockerAnimator.SetTrigger("Show");

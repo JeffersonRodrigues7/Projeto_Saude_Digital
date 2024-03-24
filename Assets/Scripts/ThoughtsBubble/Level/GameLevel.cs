@@ -34,7 +34,7 @@ namespace ThoughtBubbleMiniGame
 
         public void PlayNextLevelStep()
         {
-            Debug.Log("PlayNextLevelStep fired");
+            //Debug.Log("PlayNextLevelStep fired");
             currentStepIndex++;
             
             if(levelSteps.Length <= currentStepIndex)
@@ -67,7 +67,7 @@ namespace ThoughtBubbleMiniGame
 
         public void EndLevel()
         {
-            Debug.Log("level ended");
+            //Debug.Log("level ended");
             onLevelFinished?.Invoke(this);
         }
 

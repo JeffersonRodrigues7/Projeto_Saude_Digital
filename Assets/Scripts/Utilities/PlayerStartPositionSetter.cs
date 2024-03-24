@@ -104,16 +104,16 @@ public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
 
         Transform child = transform.GetChild(0);
 
-        Debug.Log("childPosition: " + child.position);
-        Debug.Log("childLocalPosition: " + child.localPosition);
-        Debug.Log("transformPosition: " + transform.position);
+        //Debug.Log("childPosition: " + child.position);
+        //Debug.Log("childLocalPosition: " + child.localPosition);
+        //Debug.Log("transformPosition: " + transform.position);
 
         transform.position = child.position;
         child.localPosition = new Vector3(0, 0, 0);
 
-        Debug.Log("new childPosition: " + child.position);
-        Debug.Log("new childLocalPosition: " + child.localPosition);
-        Debug.Log("new transformPosition: " + transform.position);
+        //Debug.Log("new childPosition: " + child.position);
+        //Debug.Log("new childLocalPosition: " + child.localPosition);
+        //Debug.Log("new transformPosition: " + transform.position);
     }
 
 }

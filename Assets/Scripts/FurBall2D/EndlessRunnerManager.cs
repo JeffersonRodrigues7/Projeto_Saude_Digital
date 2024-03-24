@@ -43,7 +43,7 @@ public class EndlessRunnerManager : Singleton<EndlessRunnerManager>, IDataPersis
 
     private void Awake()
     {
-        Debug.Log("EndlessRunnerManager awake fired");
+        //Debug.Log("EndlessRunnerManager awake fired");
         increaseSpeedTimer = 0;
         moveSpeed.value = 0;
         gameStarted = false;
@@ -187,7 +187,7 @@ public class EndlessRunnerManager : Singleton<EndlessRunnerManager>, IDataPersis
 
         foreach(var plataform in plataformList)
         {
-            Debug.Log("Adicionada plataforma: " + plataform.name);
+            //Debug.Log("Adicionada plataforma: " + plataform.name);
         }
     }
 

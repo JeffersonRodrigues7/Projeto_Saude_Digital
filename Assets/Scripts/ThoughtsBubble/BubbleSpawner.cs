@@ -23,7 +23,7 @@ namespace ThoughtBubbleMiniGame
 
             if(randomBubbleData == null)
             {
-                Debug.LogWarning("Error on getting random bubble");
+                //Debug.LogWarning("Error on getting random bubble");
                 return null;
             }
 

@@ -17,7 +17,7 @@ public class SFXManager : MonoBehaviour
     {
         if(instance != null)
         {
-            Debug.LogWarning("Mais de uma instância de AudioSource");
+            //Debug.LogWarning("Mais de uma instância de AudioSource");
         }
 
         instance = this;

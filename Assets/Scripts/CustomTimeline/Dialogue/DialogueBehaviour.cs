@@ -67,7 +67,7 @@ public class DialogueBehaviour : PlayableBehaviour
 			// função para fechar o UI
 			if(typingCompleted && !closeDialogRegistered)
             {
-				Debug.Log("Closing dialogue registered");
+				//Debug.Log("Closing dialogue registered");
 				InputManager.OnTouchStart -= SkipTypingAnimation;
 				InputManager.OnTouchStart += CloseDialogue;
 				closeDialogRegistered = true;
@@ -128,7 +128,7 @@ public class DialogueBehaviour : PlayableBehaviour
 
 	private void SkipTypingAnimation()
     {
-		Debug.Log("Closing dialogue registered");
+		//Debug.Log("Closing dialogue registered");
 		skipedTalking = true;
 		typingCompleted = true;
 		closeDialogRegistered = true;

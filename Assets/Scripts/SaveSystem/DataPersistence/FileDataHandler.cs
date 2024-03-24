@@ -29,7 +29,7 @@ public class FileDataHandler
 
         // use Path.Combine to account for different OS's having different path separators
         string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
-        Debug.Log("loading scene from path: " + fullPath);
+        ////Debug.Log("loading scene from path: " + fullPath);
         GameData loadedData = null;
         if (File.Exists(fullPath)) 
         {
@@ -61,7 +61,7 @@ public class FileDataHandler
                 // which without this check may cause an infinite recursion loop.
                 if (allowRestoreFromBackup) 
                 {
-                    Debug.LogWarning("Failed to load data file. Attempting to roll back.\n" + e);
+                    //Debug.LogWarning("Failed to load data file. Attempting to roll back.\n" + e);
                     bool rollbackSuccess = AttemptRollback(fullPath);
                     if (rollbackSuccess)
                     {
@@ -72,8 +72,8 @@ public class FileDataHandler
                 // if we hit this else block, one possibility is that the backup file is also corrupt
                 else 
                 {
-                    Debug.LogError("Error occured when trying to load file at path: " 
-                        + fullPath  + " and backup did not work.\n" + e);
+                    //Debug.LogError("Error occured when trying to load file at path: " 
+                      //  + fullPath  + " and backup did not work.\n" + e);
                 }
             }
         }
@@ -130,7 +130,7 @@ public class FileDataHandler
         }
         catch (Exception e) 
         {
-            Debug.LogError("Error occured when trying to save data to file: " + fullPath + "\n" + e);
+            //Debug.LogError("Error occured when trying to save data to file: " + fullPath + "\n" + e);
         }
     }
 
@@ -153,13 +153,13 @@ public class FileDataHandler
             }
             else 
             {
-                Debug.LogWarning("Tried to delete profile data, but data was not found at path: " + fullPath);
+                //Debug.LogWarning("Tried to delete profile data, but data was not found at path: " + fullPath);
             }
         }
         catch (Exception e) 
         {
-            Debug.LogError("Failed to delete profile data for profileId: " 
-                + profileId + " at path: " + fullPath + "\n" + e);
+            //Debug.LogError("Failed to delete profile data for profileId: " 
+             //   + profileId + " at path: " + fullPath + "\n" + e);
         }
     }
 
@@ -178,8 +178,8 @@ public class FileDataHandler
             string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
             if (!File.Exists(fullPath))
             {
-                Debug.LogWarning("Skipping directory when loading all profiles because it does not contain data: "
-                    + profileId);
+                //Debug.LogWarning("Skipping directory when loading all profiles because it does not contain data: "
+                 //   + profileId);
                 continue;
             }
 
@@ -193,7 +193,7 @@ public class FileDataHandler
             }
             else 
             {
-                Debug.LogError("Tried to load profile but something went wrong. ProfileId: " + profileId);
+                //Debug.LogError("Tried to load profile but something went wrong. ProfileId: " + profileId);
             }
         }
 
@@ -258,7 +258,7 @@ public class FileDataHandler
             {
                 File.Copy(backupFilePath, fullPath, true);
                 success = true;
-                Debug.LogWarning("Had to roll back to backup file at: " + backupFilePath);
+                //Debug.LogWarning("Had to roll back to backup file at: " + backupFilePath);
             }
             // otherwise, we don't yet have a backup file - so there's nothing to roll back to
             else 
@@ -268,8 +268,8 @@ public class FileDataHandler
         }
         catch (Exception e) 
         {
-            Debug.LogError("Error occured when trying to roll back to backup file at: " 
-                + backupFilePath + "\n" + e);
+            //Debug.LogError("Error occured when trying to roll back to backup file at: " 
+              //  + backupFilePath + "\n" + e);
         }
 
         return success;

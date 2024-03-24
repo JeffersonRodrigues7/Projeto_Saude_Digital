@@ -71,7 +71,7 @@ namespace ThoughtBubbleMiniGame
 
         private void OnSucess()
         {
-            Debug.Log("OnSucess fired");
+            //Debug.Log("OnSucess fired");
             StartCoroutine(PerformSuccessCoroutine());
         }
 

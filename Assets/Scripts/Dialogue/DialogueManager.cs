@@ -72,7 +72,7 @@ public class DialogueManager : Singleton<DialogueManager>, IDataPersistence
 
     private IEnumerator ExitDialogueModeCO()
     {
-        Debug.Log("Exiting dialogue started");
+        //Debug.Log("Exiting dialogue started");
         if (currentDialogue == null)
             yield break;
         //yield return InputDelay();
@@ -87,7 +87,7 @@ public class DialogueManager : Singleton<DialogueManager>, IDataPersistence
 
         dialogEndedEvent?.Invoke();
         isInDialogueMode = false;
-        Debug.Log("Exiting dialogue ended");
+        //Debug.Log("Exiting dialogue ended");
     }
 
     private bool PlayerInputDetected() => Input.touchCount > 0;
@@ -136,7 +136,7 @@ public class DialogueManager : Singleton<DialogueManager>, IDataPersistence
 
     public void InitDialogue(Dialogue dialogue)
     {
-        Debug.Log("Init dialogue started");
+        //Debug.Log("Init dialogue started");
         currentDialogue = dialogue;
         currentDialogue.SetDialogueVariablesInstance(dialogueVariables);
 
@@ -144,7 +144,7 @@ public class DialogueManager : Singleton<DialogueManager>, IDataPersistence
         //dialogueText.text = "";
 
         dialogueStartedEvent?.Invoke();
-        Debug.Log("Init dialogue ended");
+        //Debug.Log("Init dialogue ended");
     }
 
     public void StartDialogue()
@@ -459,23 +459,23 @@ public class DialogueManager : Singleton<DialogueManager>, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        Debug.Log("DialogueManager loaddata fired");
+        ////Debug.Log("DialogueManager loaddata fired");
         if (dialogueVariables != null && data.dialogueVariablesJsonState != null && data.dialogueVariablesJsonState != "")
             dialogueVariables.LoadJsonState(data.dialogueVariablesJsonState);
 
-        Debug.Log("DialogueManager loaddata completed");
+        //Debug.Log("DialogueManager loaddata completed");
     }
 
     public void SaveData(GameData data)
     {
-        Debug.Log("DialogueManager saving game");
+        //Debug.Log("DialogueManager saving game");
         if (dialogueVariables != null)
             data.dialogueVariablesJsonState = dialogueVariables.GetJsonState();
     }
 
     public void SetDialogueVariable<T>(string key, T value)
     {
-        Debug.Log("DialogueManager setting ink variable: " + key + ": " + value);
+        //Debug.Log("DialogueManager setting ink variable: " + key + ": " + value);
         if (dialogueVariables != null)
             dialogueVariables.SetVariable(key, value);
     }

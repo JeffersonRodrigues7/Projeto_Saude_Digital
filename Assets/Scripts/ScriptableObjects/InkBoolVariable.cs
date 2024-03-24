@@ -14,19 +14,19 @@ public class InkBoolVariable : BoolVariable
         {
             if (!DialogueManager.Instance)
             {
-                Debug.LogWarning("No instance of DialogueManager on the scene");
+                //Debug.LogWarning("No instance of DialogueManager on the scene");
                 return false;
             }
 
             this.value = DialogueManager.Instance.GetDialogueVariable<bool>(inkVariableName);
 
-            Debug.Log("Value obtained from GetDialogueVariable for inkVariable " + inkVariableName + " was: " + this.value);
+            //Debug.Log("Value obtained from GetDialogueVariable for inkVariable " + inkVariableName + " was: " + this.value);
 
             return this.value;
         }
         set {
-            Debug.Log("Trying to set " + inkVariableName + " value to: " + value);
-            Debug.Log("current value is: " + this.Value);
+            //Debug.Log("Trying to set " + inkVariableName + " value to: " + value);
+            //Debug.Log("current value is: " + this.Value);
             Task.Delay(1000).ContinueWith(t => CheckValue());
             
         }
@@ -34,6 +34,6 @@ public class InkBoolVariable : BoolVariable
 
     private void CheckValue()
     {
-        Debug.Log("CheckValue fired. Current value is: " + this.Value);
+        //Debug.Log("CheckValue fired. Current value is: " + this.Value);
     }
 }

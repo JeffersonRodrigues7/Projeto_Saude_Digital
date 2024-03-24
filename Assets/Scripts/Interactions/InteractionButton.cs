@@ -102,7 +102,7 @@ public class InteractionButton : MonoBehaviour
 
     public void OnDialogueEnded()
     {
-        Debug.Log("OnDialogueEnded fired");
+        //Debug.Log("OnDialogueEnded fired");
         isInDialogue = false;
         if(shouldBeVisible)
         {

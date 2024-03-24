@@ -20,7 +20,7 @@ public class GameData
     // the game starts with when there's no data to load
     public GameData() 
     {
-        Debug.Log("new GameData created");
+        ////Debug.Log("new GameData created");
         playerPosition = Vector3.zero;
         sceneName = "ThoughtsBubble";
         gameObjectNameForPosition = "";

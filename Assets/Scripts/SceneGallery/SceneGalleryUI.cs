@@ -14,16 +14,16 @@ public class SceneGalleryUI : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("SceneGalleryUI Start fired");
+        //Debug.Log("SceneGalleryUI Start fired");
         InitializeButtons();
         InitializeButtonTexts();
         InitializeUI();
 
-        Debug.Log("SceneGalleryUI returning DataPersistenceManager to default settings");
+        //Debug.Log("SceneGalleryUI returning DataPersistenceManager to default settings");
         DataPersistenceManager.Instance.ReturnDefaultSettings();
-        Debug.Log("SceneGalleryUI Calling fadeIn effect");
+        //Debug.Log("SceneGalleryUI Calling fadeIn effect");
         ScreenEffect.Instance.FadeIn(false);
-        Debug.Log("SceneGalleryUI Start ended");
+        //Debug.Log("SceneGalleryUI Start ended");
     }
 
     public void PlayScene(int sceneIndex)
@@ -47,7 +47,7 @@ public class SceneGalleryUI : MonoBehaviour
 
     private void InitializeUI()
     {
-        Debug.Log("SceneGalleryUI InitializeUI fired");
+        //Debug.Log("SceneGalleryUI InitializeUI fired");
         List<GameData> gameDataList = SceneGalleryManager.Instance.GetAllScenesData();
 
         for(int i = 0; i < buttons.Length; i++)
@@ -63,29 +63,29 @@ public class SceneGalleryUI : MonoBehaviour
                 buttons[i].interactable = false;
             }
         }
-        Debug.Log("SceneGalleryUI InitializeUI finished");
+        //Debug.Log("SceneGalleryUI InitializeUI finished");
     }
 
     private void InitializeButtonTexts()
     {
-        Debug.Log("SceneGalleryUI InitializeButtonTexts fired");
+        //Debug.Log("SceneGalleryUI InitializeButtonTexts fired");
         btnTexts = new Text[buttons.Length];
 
         for(int i = 0; i < buttons.Length; i++)
         {
             btnTexts[i] = buttons[i].transform.GetChild(0).GetComponent<Text>();
         }
-        Debug.Log("SceneGalleryUI InitializeButtonTexts finished");
+        //Debug.Log("SceneGalleryUI InitializeButtonTexts finished");
     }
 
     private void InitializeButtons()
     {
-        Debug.Log("SceneGalleryUI InitializeButtons fired");
+        //Debug.Log("SceneGalleryUI InitializeButtons fired");
         for (int i = 0; i < buttons.Length; i++)
         {
             int btnIndex = i;
             buttons[i].onClick.AddListener(() => PlayScene(btnIndex));
         }
-        Debug.Log("SceneGalleryUI InitializeButtons finished");
+        //Debug.Log("SceneGalleryUI InitializeButtons finished");
     }
 }

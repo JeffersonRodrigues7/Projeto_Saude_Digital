@@ -80,7 +80,7 @@ public class KeyGamePlayer : MonoBehaviour
             
             WIN.SetActive(true);
 
-            Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
+            //Debug.Log("-----------------VOCE ACHOU A CHAVE ----------------------");
 
             return true;
         }

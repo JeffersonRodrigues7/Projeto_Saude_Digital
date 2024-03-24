@@ -64,19 +64,19 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
     private bool ConditionsMet()
     {
-        Debug.Log("Checking conditions for " + gameObject.name);
+        //Debug.Log("Checking conditions for " + gameObject.name);
         if (ignoreOtherConditions)
             return true;
 
         if(thisCondition)
-            Debug.Log("thisCondition for " + gameObject.name + " is '" + thisCondition.name + "' with value: " + thisCondition.Value);
+            //Debug.Log("thisCondition for " + gameObject.name + " is '" + thisCondition.name + "' with value: " + thisCondition.Value);
 
         if (playOnlyOnce && thisCondition && thisCondition.Value)
             return false;
 
         foreach(BoolVariable condition in necessaryConditions)
         {
-            Debug.Log("condition '" + condition.name + "' for " + gameObject.name + " has value: " + condition.Value);
+            //Debug.Log("condition '" + condition.name + "' for " + gameObject.name + " has value: " + condition.Value);
             if (!condition.Value)
                 return false;
         }
@@ -123,12 +123,12 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
         if(fadeOutBeforeStart && DataPersistenceManager.Instance.LoadedMode != GameLoadedMode.GALLERY)
         {
-            Debug.Log("FadeOut before starting: " + ScreenEffect.Instance.FadeOutDuration);
+            //Debug.Log("FadeOut before starting: " + ScreenEffect.Instance.FadeOutDuration);
             ScreenEffect.Instance.FadeOut(true);
             yield return new WaitForSeconds(ScreenEffect.Instance.FadeOutDuration);
         }
 
-        Debug.Log("Starting timeline");
+        //Debug.Log("Starting timeline");
         _director.Play();
         _isPlaying = true;
         _timelineStarted = true;
@@ -158,7 +158,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
         {
             if(returnToGalleryAfterSceneEnds)
             {
-                Debug.Log("Returning to gallery");
+                //Debug.Log("Returning to gallery");
                 SceneChanger.Instance.GoToSceneGallery(false);
             }
 
@@ -215,7 +215,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
     /*private void RestoreAnimatorsOnPause(PlayableDirector director)
     {
-        Debug.Log("RestoreAnimatorsOnPause fired");
+        //Debug.Log("RestoreAnimatorsOnPause fired");
         foreach (Animator anim in _animatorsToControlUntilPause)
         {
             RestoreAnimator(anim);
@@ -288,7 +288,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
     public void CheckConditionsAndStart()
     {
-        Debug.Log("CheckConditionsAndStart fired");
+        ////Debug.Log("CheckConditionsAndStart fired");
         if (ConditionsMet())
         {
             StartTimeline();

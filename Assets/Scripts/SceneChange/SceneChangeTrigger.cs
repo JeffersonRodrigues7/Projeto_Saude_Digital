@@ -69,7 +69,7 @@ public class SceneChangeTrigger : MonoBehaviour, IDataPersistence
         if (!instanceTriggered)
             return;
 
-        Debug.Log("Scene ChangeTrigger save fired");
+        //Debug.Log("Scene ChangeTrigger save fired");
         data.playerPosition = position;
         data.gameObjectNameForPosition = gameObjectName;
         data.sceneName = sceneName;
