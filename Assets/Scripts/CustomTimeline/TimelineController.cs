@@ -15,6 +15,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
     [Header("Params")]
     [SerializeField] BoolVariable[] necessaryConditions;
     [SerializeField] private string Cena_Necessaria = "";
+    [SerializeField] private string Cena_Atual = "";
     [SerializeField] BoolVariable thisCondition;
     [SerializeField] bool playOnlyOnce = true;
     [SerializeField] bool playAfterConditionsMet = true;
@@ -111,7 +112,13 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
         if (Cena_Necessaria == "-1") return true;
 
-        if(GameManager.Instance.GetCenaValue(Cena_Necessaria)) return true;
+        if (GameManager.Instance.GetCenaValue(Cena_Necessaria))
+        {
+            if(!GameManager.Instance.GetCenaValue(Cena_Atual))
+            {
+                return true;
+            }
+        }
 
         return false;
     }

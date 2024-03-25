@@ -680,6 +680,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
+  newPositionData: {fileID: 0}
+  hasfoundKey: {fileID: 0}
+  XValue: 0
+  YValue: 0
+  shouldSetInitialPosition: 0
 --- !u!114 &290217670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,6 +1326,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 061487faf28593a47b5cdd56d96f3736, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -1583,6 +1590,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: ee2858f9776473e4980e61eaf8ae9284, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -2972,6 +2981,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 11400000, guid: fa28577e261f4d54983ef671fdd1f284, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -3516,6 +3527,18 @@ MonoBehaviour:
             m_StringArgument: EndlessRunner
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1033612295}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 2
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1033612293}
@@ -3716,8 +3739,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
-  necessaryConditions:
-  - {fileID: 11400000, guid: e553b1ba7a512674a917a50a4e85034e, type: 2}
+  necessaryConditions: []
+  Cena_Necessaria: 1
+  Cena_Atual: 2
   thisCondition: {fileID: 11400000, guid: f25404830e4bb904a8018eab24ba51b0, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -4255,6 +4279,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1199815970}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 3
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1199815969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4297,9 +4333,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
-  necessaryConditions:
-  - {fileID: 11400000, guid: e8beb02aac256d748b0d4fcc0b6cfda5, type: 2}
-  - {fileID: 11400000, guid: f25404830e4bb904a8018eab24ba51b0, type: 2}
+  necessaryConditions: []
+  Cena_Necessaria: 2_minigame
+  Cena_Atual: 3
   thisCondition: {fileID: 11400000, guid: c50a002bbaf34e24ebaa779c18896005, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -5592,7 +5628,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1624011805

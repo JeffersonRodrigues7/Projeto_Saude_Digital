@@ -143,6 +143,7 @@ public class EndlessRunnerManager : Singleton<EndlessRunnerManager>, IDataPersis
     private void GameOverFadeCompleted()
     {
         gameCompletedCondition.Value = true;
+        GameManager.Instance.SetCenaTrue("2_minigame");
         SceneChanger.Instance.ChangeTo(sceneToGoOnFinish);
     }
 

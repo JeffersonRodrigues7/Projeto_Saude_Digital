@@ -9,7 +9,6 @@ public class KeyGamePlayer : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
     [SerializeField] private string playerName;
-    [SerializeField] public BoolVariable hasfoundKey;
 
     public RectTransform stamina;
     public GameObject WIN;
@@ -92,9 +91,8 @@ public class KeyGamePlayer : MonoBehaviour
 
     public void callVillage()
     {
-        Debug.Log("Key: " + hasfoundKey.Value);
-        hasfoundKey.Value = true;
-        Debug.Log("Key: " + hasfoundKey.Value);
+
+        GameManager.Instance.SetCenaTrue("4_minigame");
 
         FindObjectOfType<PlayerStartPositionSetter>().newPositionData.setPos = true;
         FindObjectOfType<PlayerStartPositionSetter>().newPositionData.vector3Position = new Vector3(-3f, 16.5f, 0);

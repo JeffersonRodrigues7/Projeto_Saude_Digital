@@ -16,9 +16,9 @@ CONST NPC_NAME = "Rogério"
         {PLAYER_ACTOR}: Eu preciso voltar para a escola para falar com a professora {format_name(professor_name)}.
         {PLAYER_ACTOR}: Acho que eu não deveria mais incomodar o professor {format_name(NPC_NAME)}.
     
-    -last_finished_cutscene >= 4:
+    -last_finished_cutscene >= 5:
         {PLAYER_ACTOR}: Acho que eu não deveria incomodar o professor {format_name(NPC_NAME)} agora.
 
-    - else:
-        {PLAYER_ACTOR}: Eu não deveria entrar aqui.
+    //- else:
+        //{PLAYER_ACTOR}: Eu não deveria entrar aqui.
 }
