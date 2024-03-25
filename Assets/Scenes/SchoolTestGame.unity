@@ -389,6 +389,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
+  newPositionData: {fileID: 0}
+  hasfoundKey: {fileID: 0}
+  XValue: 0
+  YValue: 0
+  shouldSetInitialPosition: 0
 --- !u!95 &59306271 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6929339542639464089, guid: 581d7153f6a4604409b3316a476a27cd, type: 3}
@@ -1565,6 +1570,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 2e7d7de2772edcf419ebcc237b943bd3, type: 2}
+  Cena_Necessaria: -1
   thisCondition: {fileID: 0}
   playOnlyOnce: 0
   playAfterConditionsMet: 1
@@ -3196,6 +3202,7 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions: []
+  Cena_Necessaria: -1
   thisCondition: {fileID: 0}
   playOnlyOnce: 0
   playAfterConditionsMet: 1
@@ -5227,6 +5234,7 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions: []
+  Cena_Necessaria: -1
   thisCondition: {fileID: 0}
   playOnlyOnce: 0
   playAfterConditionsMet: 1
@@ -6277,6 +6285,7 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions: []
+  Cena_Necessaria: -1
   thisCondition: {fileID: 0}
   playOnlyOnce: 0
   playAfterConditionsMet: 1
@@ -6757,6 +6766,7 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions: []
+  Cena_Necessaria: -1
   thisCondition: {fileID: 11400000, guid: 37ac683808af50b4199b6b47ccba8c78, type: 2}
   playOnlyOnce: 0
   playAfterConditionsMet: 1
@@ -7944,15 +7954,15 @@ PrefabInstance:
     - target: {fileID: 5712906174301584574, guid: 6f6814c96ae99104ba52f537447f46fc, type: 3}
       propertyPath: sceneChanger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 192005876}
     - target: {fileID: 5712906174301584574, guid: 6f6814c96ae99104ba52f537447f46fc, type: 3}
       propertyPath: playerAnimator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 983532496}
     - target: {fileID: 5712906174301584574, guid: 6f6814c96ae99104ba52f537447f46fc, type: 3}
       propertyPath: playerTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 59306273}
     - target: {fileID: 5712906174301584575, guid: 6f6814c96ae99104ba52f537447f46fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
