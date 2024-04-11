@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TargetIndicator : MonoBehaviour
 {
 
     public Transform toAlanHouse;
+    public Transform toSchool;
     public Transform toTeacherHouse;
+    
     public float distanciaObjetivo;
-    public bool cenaFinalizada;
-    public ScriptableObject cenaProvaFinalizada;
-    public ScriptableObject cenaProfessoraComFome;
     private Transform Target;
-
 
     public void ChangeTarget(Transform target)
     {
@@ -21,23 +20,33 @@ public class TargetIndicator : MonoBehaviour
 
     private void validaCenas()
     {
-        if (cenaProvaFinalizada.Equals(true))
+        if (GameManager.Instance.GetCenaValue("4_3"))
         {
-            ChangeTarget(toAlanHouse);
+            ChangeTarget(toSchool);
         }
-        else if (cenaProfessoraComFome.Equals(true))
+        else if (GameManager.Instance.GetCenaValue("4_minigame"))
         {
             ChangeTarget(toTeacherHouse);
+        }
+        else if (GameManager.Instance.GetCenaValue("4_1"))
+        {
+            ChangeTarget(toTeacherHouse);
+        }
+        else if (GameManager.Instance.GetCenaValue("3"))
+        {
+            ChangeTarget(toSchool);
+        }
+        else if (GameManager.Instance.GetCenaValue("1"))
+        {
+            ChangeTarget(toAlanHouse);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cenaFinalizada)
-        {
-            validaCenas();
-        }
+        
+        validaCenas();
 
         if (Target != null)
         {
