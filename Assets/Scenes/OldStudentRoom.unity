@@ -338,6 +338,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 88094293}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 13
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &88094293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +366,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
+  Cena_Necessaria: 12
+  Cena_Atual: 13
   thisCondition: {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -669,6 +683,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 94406986}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 12
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &94406986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +711,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 86271255b265280408f45b3d2a24472b, type: 2}
+  Cena_Necessaria: 11
+  Cena_Atual: 12
   thisCondition: {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -1728,6 +1756,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
+  newPositionData: {fileID: 0}
+  hasfoundKey: {fileID: 0}
+  XValue: 0
+  YValue: 0
+  shouldSetInitialPosition: 0
 --- !u!114 &416777688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,6 +2938,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: bac94d88342979d4a986add1dd3427a1, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 11400000, guid: 061487faf28593a47b5cdd56d96f3736, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -3947,6 +3982,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -5096,6 +5133,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -6065,6 +6104,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: c50a002bbaf34e24ebaa779c18896005, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 11400000, guid: 01a4f97b28c0ec94399c34a8c8a6b257, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -6612,6 +6653,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -7373,6 +7416,8 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   necessaryConditions: []
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
   playOnlyOnce: 0
   playAfterConditionsMet: 1
@@ -8236,6 +8281,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
+  Cena_Necessaria: 
+  Cena_Atual: 
   thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1

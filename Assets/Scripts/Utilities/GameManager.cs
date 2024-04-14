@@ -16,6 +16,18 @@ public class GameManager : MonoBehaviour
     public bool cena4_2_5 = false;
     public bool cena4_minigame = false;
     public bool cena4_3 = false;
+    public bool cena4_4 = false;
+    public bool cena5 = false;
+    public bool cena6 = false;
+    public bool cena6_minigame = false;
+    public bool cena7 = false;
+    public bool cena8 = false;
+    public bool cena9 = false;
+    public bool cena10 = false;
+    public bool cena11 = false;
+    public bool cena12 = false;
+    public bool cena13 = false;
+    public bool cena14 = false;
 
     public static GameManager Instance
     {
@@ -74,6 +86,39 @@ public class GameManager : MonoBehaviour
                 break;
             case "4_3":
                 cena4_3 = true;
+                break;            
+            case "4_4":
+                cena4_4 = true;
+                break;
+            case "5":
+                cena5 = true;
+                break;
+            case "6":
+                cena6 = true;
+                break;
+            case "7":
+                cena7 = true;
+                break;
+            case "8":
+                cena8 = true;
+                break;
+            case "9":
+                cena9 = true;
+                break;
+            case "10":
+                cena10 = true;
+                break;
+            case "11":
+                cena11 = true;
+                break;
+            case "12":
+                cena12 = true;
+                break;
+            case "13":
+                cena13 = true;
+                break;
+            case "14":
+                cena14 = true;
                 break;
             default:
                 Debug.Log("Não encontrado cena de valor para Setar: " + cena);
@@ -105,6 +150,28 @@ public class GameManager : MonoBehaviour
                 return cena4_minigame;
             case "4_3":
                 return cena4_3;
+            case "4_4":
+                return cena4_4;
+            case "5":
+                return cena5;
+            case "6":
+                return cena6;
+            case "7":
+                return cena7;
+            case "8":
+                return cena8;
+            case "9":
+                return cena9;
+            case "10":
+                return cena10;
+            case "11":
+                return cena11;
+            case "12":
+                return cena12;
+            case "13":
+                return cena13;
+            case "14":
+                return cena14;
             default:
                 Debug.Log("Não encontrado cena de valor para Buscar: " + cena);
                 return false;

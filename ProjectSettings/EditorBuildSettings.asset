@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SchoolTest.unity
     guid: 3f1c0be14d5f0594c9f0be4051c28898
+  - enabled: 1
+    path: Assets/Scenes/OldStudentRoom.unity
+    guid: 4c873315b28bb514fad23140d2961f46
   m_configObjects: {}

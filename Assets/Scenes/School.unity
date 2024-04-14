@@ -476,6 +476,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 115644747}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 14
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &115644747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,8 +504,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
-  Cena_Necessaria: 
-  Cena_Atual: 
+  Cena_Necessaria: 13
+  Cena_Atual: 14
   thisCondition: {fileID: 11400000, guid: 1453b757906636543b1f0598cfbddc97, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -3736,6 +3748,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1296386092}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 10
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1296386093}
@@ -3814,8 +3838,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: a701aad527398054598691412422d183, type: 2}
-  Cena_Necessaria: 
-  Cena_Atual: 
+  Cena_Necessaria: 9
+  Cena_Atual: 10
   thisCondition: {fileID: 11400000, guid: 06e0346fbef6b584f82b46c3f0dbba26, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -4951,6 +4975,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1581006980}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 11
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1581006980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4967,8 +5003,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 06e0346fbef6b584f82b46c3f0dbba26, type: 2}
-  Cena_Necessaria: 
-  Cena_Atual: 
+  Cena_Necessaria: 10
+  Cena_Atual: 11
   thisCondition: {fileID: 11400000, guid: 86271255b265280408f45b3d2a24472b, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -6492,8 +6528,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 119d3be9930033e47ac125f24f087f67, type: 2}
-  Cena_Necessaria: 
-  Cena_Atual: 
+  Cena_Necessaria: 6
+  Cena_Atual: 7
   thisCondition: {fileID: 11400000, guid: 55a68e1264b7b24458da323342ad271e, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
@@ -6686,6 +6722,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1894345570}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 7
             m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
@@ -8275,6 +8323,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2028459527}
+          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
+          m_MethodName: FinalizarCena
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 9
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &2028459527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8291,8 +8351,8 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   necessaryConditions:
   - {fileID: 11400000, guid: c3f950dd788e6264f9bacc9747fae1a2, type: 2}
-  Cena_Necessaria: 
-  Cena_Atual: 
+  Cena_Necessaria: 8
+  Cena_Atual: 9
   thisCondition: {fileID: 11400000, guid: a701aad527398054598691412422d183, type: 2}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
