@@ -8,6 +8,7 @@ public class PlayerSwipeController : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 1.0f;
     [SerializeField] Animator animator = null;
+    [SerializeField] SwipeDetector swipeDetector = null;
     public MovementJoystick joystickMovement;
 
     private Rigidbody2D rigidbody2d = null;
@@ -75,7 +76,18 @@ public class PlayerSwipeController : MonoBehaviour
             horizontal = 0;
         }
 
-        ProcessMovement(horizontal, vertical);
+        if (swipeDetector != null && !swipeDetector.swipeStarted)
+        {
+            stopMove();
+        }
+        //ProcessMovement(horizontal, vertical);
+    }
+
+    private void stopMove()
+    {
+        animator.SetFloat("xDirection", lookDirection.x);
+        animator.SetFloat("yDirection", lookDirection.y);
+        animator.SetBool("isWalking", false);
     }
 
 
@@ -83,7 +95,7 @@ public class PlayerSwipeController : MonoBehaviour
     {
         if (isInDialogue || isInCutscene || movementBlocked)
         {
-            rigidbody2d.velocity = Vector3.zero;
+            //rigidbody2d.velocity = Vector3.zero;
             animator.SetBool("isWalking", false);
             return;
         }
@@ -146,8 +158,6 @@ public class PlayerSwipeController : MonoBehaviour
 
         consumedSwipe = false;
 
-        ////Debug.Log("here");
-
         Vector2 move = new Vector2(joystickMovement.joystickVec.x, joystickMovement.joystickVec.y);
 
         if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
@@ -157,6 +167,9 @@ public class PlayerSwipeController : MonoBehaviour
         }
 
         bool isWalking = (Mathf.Abs(lookDirection.x) > 0.0f || Mathf.Abs(lookDirection.y) > 0.0f);
+
+        if (swipeDetector != null) isWalking = swipeDetector.swipeStarted;
+        Debug.Log(isWalking);
 
         animator.SetFloat("xDirection", lookDirection.x);
         animator.SetFloat("yDirection", lookDirection.y);
@@ -170,8 +183,7 @@ public class PlayerSwipeController : MonoBehaviour
             return;
         }
 
-
-
+        Debug.Log("HERE");
 
         Vector2 move = new Vector2(horizontal, vertical);
 

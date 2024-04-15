@@ -1,8 +1,8 @@
-CONST PLAYER_ACTOR = "player"
-CONST A_ACTOR = "A"
-CONST B_ACTOR = "B"
-CONST PROFESSOR_ACTOR = "professor"
-CONST OLD_STUDENT = "oldstudent"
+CONST PLAYER_ACTOR = "Bryan"
+CONST A_ACTOR = "Alan"
+CONST B_ACTOR = "Beatriz"
+CONST PROFESSOR_ACTOR = "Carla"
+CONST OLD_STUDENT = "Marcos"
 
 VAR player_name = "Bryan"
 VAR a_name = "Alan"

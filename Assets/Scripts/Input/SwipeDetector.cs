@@ -6,7 +6,7 @@ public class SwipeDetector : MonoBehaviour
     private Vector2 fingerDownPosition;
     private Vector2 fingerUpPosition;
     private Direction lastSwipeDirection;
-    private bool swipeStarted = false;
+    public bool swipeStarted = false;
 
     [SerializeField] private bool detectSwipeOnlyAfterRelease = false;
     [SerializeField] private bool detectSwipeWhenStationary = true;
