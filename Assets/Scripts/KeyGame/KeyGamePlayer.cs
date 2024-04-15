@@ -96,6 +96,8 @@ public class KeyGamePlayer : MonoBehaviour
 
         FindObjectOfType<PlayerStartPositionSetter>().newPositionData.setPos = true;
         FindObjectOfType<PlayerStartPositionSetter>().newPositionData.vector3Position = new Vector3(-3f, 16.5f, 0);
+
+        GameManager.Instance.lastSceneVisited = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Village");
     }
 

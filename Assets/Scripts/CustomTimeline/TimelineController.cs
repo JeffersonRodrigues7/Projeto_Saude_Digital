@@ -203,7 +203,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
         }
 
         if (addSceneToGallery)
-            SceneGalleryManager.Instance.AddSceneToGallery(gallerySceneIndex, gameDataBeforeStarting, gallerySceneName);
+            //SceneGalleryManager.Instance.AddSceneToGallery(gallerySceneIndex, gameDataBeforeStarting, gallerySceneName);
 
         if (collidersToDisable != null)
         {

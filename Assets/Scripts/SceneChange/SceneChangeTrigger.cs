@@ -53,6 +53,7 @@ public class SceneChangeTrigger : MonoBehaviour, IDataPersistence
             yield return new WaitForSeconds(1.5f);
         }
         
+        GameManager.Instance.lastSceneVisited = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
 

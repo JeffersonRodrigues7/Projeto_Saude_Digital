@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 public class PlayerSwipeController : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class PlayerSwipeController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
+
+    private void OnEnable()
+    {
+        Debug.Log("Last Scene: " + GameManager.Instance.lastSceneVisited);
+    }
+
+
 
     private void Start()
     {

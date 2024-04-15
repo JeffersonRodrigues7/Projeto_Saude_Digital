@@ -57,6 +57,7 @@ public class SceneChanger : Singleton<SceneChanger>, IDataPersistence
         if (saveBeforeChangingScene)
             DataPersistenceManager.Instance.SaveGame();
 
+        GameManager.Instance.lastSceneVisited = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -134,6 +135,7 @@ public class SceneChanger : Singleton<SceneChanger>, IDataPersistence
 
         screenEffect.FadeOut(true);
         yield return new WaitForSeconds(screenEffect.FadeOutDuration);
+        GameManager.Instance.lastSceneVisited = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
 {
@@ -26,10 +27,35 @@ public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
         SetPosition();
         SetDirection(animator);
 
-        if(hasfoundKey != null)
+        if (SceneManager.GetActiveScene().name == "Village")
         {
-            Debug.Log("Key Village: " + hasfoundKey.Value);
-            setStartPosition();
+            setInitialPosition(GameManager.Instance.lastSceneVisited);
+        }
+    }
+
+    private void setInitialPosition(string lastScene)
+    {
+        switch (lastScene)
+        {
+            case "HouseIndoors":
+                transform.position = new Vector3(-11.35f, 12.49f, 0);
+                break;
+
+            case "School":
+                transform.position = new Vector3(13.61f, 2.31f, 0);
+                break;
+
+            case "OldStudentRoom":
+                transform.position = new Vector3(13.61f, -13.18f, 0);
+                break;
+
+            default:
+                if (hasfoundKey != null)
+                {
+                    Debug.Log("Key Village: " + hasfoundKey.Value);
+                    setStartPosition();
+                }
+                break;
         }
     }
 

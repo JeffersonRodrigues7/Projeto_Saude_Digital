@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
 
+    public string lastSceneVisited = "Null";
+
     public bool cena0 = false;
     public bool cena1 = false;
     public bool cena2 = false;
