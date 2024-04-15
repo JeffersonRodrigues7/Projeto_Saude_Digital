@@ -743,11 +743,11 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 14.25
+    m_Start: 13.744444444444445
     m_ClipIn: 0
     m_Asset: {fileID: -1011226302718616318}
-    m_Duration: 1.5333333333333334
-    m_TimeScale: 1
+    m_Duration: 2.555555555555557
+    m_TimeScale: 0.5999999999999996
     m_ParentTrack: {fileID: -7393546388771396936}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
@@ -808,8 +808,8 @@ MonoBehaviour:
     m_Recordable: 1
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 3.550000000000013
-    m_PreExtrapolationTime: 14.25
+    m_PostExtrapolationTime: 3.033333333333342
+    m_PreExtrapolationTime: 13.744444444444445
     m_DisplayName: Recorded (3)
   - m_Version: 1
     m_Start: 19.333333333333346
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 16.3
+  m_Time: 16.45
   m_Retroactive: 0
   m_EmitOnce: 1
   m_Asset: {fileID: 11400000, guid: f06eeade0d779144ca1226e2e1f37977, type: 2}
@@ -1767,7 +1767,6 @@ MonoBehaviour:
     m_Objects:
     - {fileID: -3998754748597483963}
     - {fileID: -4805843725202212297}
-    - {fileID: -2359768324390208003}
     - {fileID: 8428267525216710533}
     - {fileID: 4366904635084278736}
     - {fileID: 8281131917370799097}
@@ -1890,22 +1889,6 @@ MonoBehaviour:
   m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!114 &-2359768324390208003
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
-  m_Name: Signal Emitter
-  m_EditorClassIdentifier: 
-  m_Time: 16.583333333333332
-  m_Retroactive: 0
-  m_EmitOnce: 1
-  m_Asset: {fileID: 11400000, guid: 62c6373b946beb641b6ad74867768394, type: 2}
 --- !u!114 &-2349422191385956374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2014,7 +1997,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.5
+    m_Start: 0.2833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -8762479864120484829}
     m_Duration: 0.41666666666666685
@@ -2079,8 +2062,8 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 5.317369614512471
-    m_PreExtrapolationTime: 3.5
+    m_PostExtrapolationTime: 8.534036281179137
+    m_PreExtrapolationTime: 0.2833333333333333
     m_DisplayName: AlanIdleRight
   - m_Version: 1
     m_Start: 9.234036281179138
@@ -3576,39 +3559,6 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: triKnock01
-  - m_Version: 1
-    m_Start: 15.3
-    m_ClipIn: 0
-    m_Asset: {fileID: 2213441279381777553}
-    m_Duration: 1
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: -1119120947848439703}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: qubodup-DoorOpen01
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -4331,23 +4281,6 @@ MonoBehaviour:
   m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!114 &2213441279381777553
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
-  m_Name: AudioPlayableAsset(Clone)
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 2799bb3565e115047a41641847b47e29, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
-  m_ClipProperties:
-    volume: 1
 --- !u!114 &2461335070843253404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4457,10 +4390,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 14.25
+    m_Start: 13.770833269755045
     m_ClipIn: 0
     m_Asset: {fileID: 7163744574186052954}
-    m_Duration: 1.5333333333333332
+    m_Duration: 2.5291667302449596
     m_TimeScale: 1
     m_ParentTrack: {fileID: 3520415971950972015}
     m_EaseInDuration: 0
@@ -4523,10 +4456,10 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 14.25
+    m_PreExtrapolationTime: 13.770833269755045
     m_DisplayName: NewPlayerMoveDown
   - m_Version: 1
-    m_Start: 15.783333333333333
+    m_Start: 16.300000000000004
     m_ClipIn: 0
     m_Asset: {fileID: 7480614995275471354}
     m_Duration: 0.08333333333333333
@@ -4538,25 +4471,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -4591,7 +4506,7 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 3.466666666666679
+    m_PostExtrapolationTime: 2.95000000000001
     m_PreExtrapolationTime: 0
     m_DisplayName: MainIdleRight
   - m_Version: 1

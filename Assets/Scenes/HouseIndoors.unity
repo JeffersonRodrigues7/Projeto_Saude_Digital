@@ -666,6 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 200
   animator: {fileID: 114129466}
+  swipeDetector: {fileID: 0}
   joystickMovement: {fileID: 0}
 --- !u!114 &290217669
 MonoBehaviour:
@@ -968,6 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5569c274d4e51324aaae8e6f20d08376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swipeStarted: 0
   detectSwipeOnlyAfterRelease: 0
   detectSwipeWhenStationary: 1
   minDistanceForSwipe: 20
@@ -1708,7 +1710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5712906174301584544, guid: 6f6814c96ae99104ba52f537447f46fc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5712906174301584574, guid: 6f6814c96ae99104ba52f537447f46fc, type: 3}
       propertyPath: sceneChanger
@@ -2049,6 +2051,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5151510892512806384, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151510892512806384, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -173.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92e8d06c41726a4ebc5642e96d5ae86, type: 3}
 --- !u!224 &639758856 stripped
@@ -2384,6 +2394,10 @@ PrefabInstance:
     - target: {fileID: 2379953061108527071, guid: 86041953f70610244b33d0adc847e2de, type: 3}
       propertyPath: m_Name
       value: TalkHelpUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379953061108527071, guid: 86041953f70610244b33d0adc847e2de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86041953f70610244b33d0adc847e2de, type: 3}
@@ -3285,18 +3299,6 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 10
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 824465090}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: MoveDialoguePainelUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -4241,18 +4243,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 824465090}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: MoveDialoguePainelUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 823347006}
           m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
           m_MethodName: StartDialogue
@@ -4355,8 +4345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e752be4eefc2944f843b4eb283e4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreOtherConditions: 1
-  ignoreSelfCondition: 1
+  ignoreOtherConditions: 0
+  ignoreSelfCondition: 0
   necessaryConditions: []
   Cena_Necessaria: 2_minigame
   Cena_Atual: 3
@@ -4391,7 +4381,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: e2ef7150ee35271408cc6b88ce035136, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0

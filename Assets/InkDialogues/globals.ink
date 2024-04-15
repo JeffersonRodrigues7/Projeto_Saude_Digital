@@ -1,10 +1,10 @@
-CONST PLAYER_ACTOR = "Bryan"
+CONST PLAYER_ACTOR = "Lucas"
 CONST A_ACTOR = "Alan"
 CONST B_ACTOR = "Beatriz"
 CONST PROFESSOR_ACTOR = "Carla"
 CONST OLD_STUDENT = "Marcos"
 
-VAR player_name = "Bryan"
+VAR player_name = "Lucas"
 VAR a_name = "Alan"
 VAR b_name = "Beatriz"
 VAR adriano = "Adriano"
