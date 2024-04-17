@@ -12,7 +12,7 @@ public class UnityEventOnTriggerEnter : MonoBehaviour
         //Debug.Log("OOnTriggerEnter2D fired");
         if (collision.CompareTag("Player"))
         {
-            //Debug.Log("Player fired trigger");
+            Debug.Log("Player fired trigger");
             onTriggerEnterEvent?.Invoke();
         }
     }

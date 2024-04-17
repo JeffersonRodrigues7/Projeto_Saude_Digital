@@ -169,7 +169,7 @@ public class PlayerSwipeController : MonoBehaviour
         bool isWalking = (Mathf.Abs(lookDirection.x) > 0.0f || Mathf.Abs(lookDirection.y) > 0.0f);
 
         if (swipeDetector != null) isWalking = swipeDetector.swipeStarted;
-        Debug.Log(isWalking);
+        //Debug.Log(isWalking);
 
         animator.SetFloat("xDirection", lookDirection.x);
         animator.SetFloat("yDirection", lookDirection.y);
