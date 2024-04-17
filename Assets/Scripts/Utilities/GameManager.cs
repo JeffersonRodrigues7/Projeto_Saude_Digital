@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
 
     public string lastSceneVisited = "Null";
+    public string currentMission = "0";
 
     public bool cena0 = false;
     public bool cena1 = false;
@@ -60,70 +61,92 @@ public class GameManager : MonoBehaviour
         switch(cena)
         {
             case "0":
-                cena0 = true; 
+                cena0 = true;
+                currentMission = "1";
                 break;
             case "1":
                 cena1 = true;
+                currentMission = "2";
                 break;
             case "2":
                 cena2 = true;
+                currentMission = "2_minigame";
                 break;
             case "2_minigame":
                 cena2_minigame = true;
+                currentMission = "3";
                 break;
             case "3":
                 cena3 = true;
+                currentMission = "4_1";
                 break;
             case "4_1":
                 cena4_1 = true;
+                currentMission = "4_2";
                 break;
             case "4_2":
                 cena4_2 = true;
+                currentMission = "4_2_5";
                 break;
             case "4_2_5":
                 cena4_2_5 = true;
+                currentMission = "4_minigame";
                 break;
             case "4_minigame":
                 cena4_minigame = true;
+                currentMission = "4_3";
                 break;
             case "4_3":
                 cena4_3 = true;
+                currentMission = "4_4";
                 break;            
             case "4_4":
                 cena4_4 = true;
+                currentMission = "5";
                 break;
             case "5":
                 cena5 = true;
+                currentMission = "6";
                 break;
             case "6":
                 cena6 = true;
+                currentMission = "6_minigame";
                 break;
             case "6_minigame":
                 cena6_minigame = true;
+                currentMission = "7";
                 break;
             case "7":
                 cena7 = true;
+                currentMission = "8";
                 break;
             case "8":
                 cena8 = true;
+                currentMission = "9";
                 break;
             case "9":
                 cena9 = true;
+                currentMission = "10";
                 break;
             case "10":
                 cena10 = true;
+                currentMission = "11";
                 break;
             case "11":
                 cena11 = true;
+                currentMission = "12";
                 break;
             case "12":
                 cena12 = true;
+                currentMission = "13";
                 break;
             case "13":
                 cena13 = true;
+                currentMission = "14";
                 break;
             case "14":
                 cena14 = true;
+                currentMission = "15";
                 break;
             default:
                 Debug.Log("Não encontrado cena de valor para Setar: " + cena);

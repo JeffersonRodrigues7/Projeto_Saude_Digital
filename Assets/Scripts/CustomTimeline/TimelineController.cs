@@ -93,8 +93,6 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
     private bool ConditionsMet()
     {
-        Debug.Log("#1");
-
         //Debug.Log("Checking conditions for " + gameObject.name);
         if (ignoreOtherConditions)
             return true;
@@ -112,22 +110,16 @@ public class TimelineController : MonoBehaviour, IDataPersistence
         //        return false;
         //}
 
-        Debug.Log("#2");
-
         if (Cena_Necessaria == "-1") return true;
-
-        Debug.Log("#3");
 
         if (GameManager.Instance.GetCenaValue(Cena_Necessaria))
         {
-            Debug.Log("#3.5");
             if (!GameManager.Instance.GetCenaValue(Cena_Atual))
             {
-                Debug.Log("#4");
                 return true;
             }
         }
-        Debug.Log("ERRO");
+
         return false;
     }
 
@@ -333,12 +325,9 @@ public class TimelineController : MonoBehaviour, IDataPersistence
 
     public void CheckConditionsAndStart()
     {
-        Debug.Log("#0");
-
         ////Debug.Log("CheckConditionsAndStart fired");
         if (ConditionsMet())
         {
-            Debug.Log("#5");
             StartTimeline();
             CancelInvoke("CheckConditionsAndStart");
         }
