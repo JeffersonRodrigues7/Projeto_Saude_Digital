@@ -98,6 +98,9 @@ public class GameManager : MonoBehaviour
             case "6":
                 cena6 = true;
                 break;
+            case "6_minigame":
+                cena6_minigame = true;
+                break;
             case "7":
                 cena7 = true;
                 break;
@@ -158,6 +161,8 @@ public class GameManager : MonoBehaviour
                 return cena5;
             case "6":
                 return cena6;
+            case "6_minigame":
+                return cena6_minigame;
             case "7":
                 return cena7;
             case "8":

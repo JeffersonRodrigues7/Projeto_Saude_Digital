@@ -91,7 +91,8 @@ public class Alternativas : MonoBehaviour
                 PauseGame();
 
 
-                atualiza(jogadorErrou);
+                atualizaAlternativa(numQuestao);
+                atualizaQuestao(numQuestao);
             }
         }
 
