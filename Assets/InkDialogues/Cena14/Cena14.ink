@@ -20,7 +20,7 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Hoje em dia [X], está bem e tenta ajudar outras pessoas que estão passando pelos mesmos problemas. 
 {PLAYER_ACTOR}: Na época ele disse que escrever ajudava e por isso ele criou um diário. 
 {B_ACTOR}: Eu não sei se tô entendendo... 
-{PLAYER_ACTOR}: Bem, [X] me deu o diário quando eu disse que tinha um colega enfrentando alguns problemas parecidos com os dele. 
+{PLAYER_ACTOR}: Bem, um antigo aluno me deu o diário quando eu disse que tinha um colega enfrentando alguns problemas parecidos com os dele. 
 {PLAYER_ACTOR}: Sei que você pediu para esquecermos de tudo, mas... Eu e {A_ACTOR} queremos que você saiba que não precisa ser assim. Você não tem de passar por tudo sozinho. 
 {PLAYER_ACTOR}: Esse diário é para você. Talvez as coisas escritas nele te façam se sentir menos solitário, afinal alguém já passou por algo parecido antes e hoje está bem. 
 {B_ACTOR}: ... 
