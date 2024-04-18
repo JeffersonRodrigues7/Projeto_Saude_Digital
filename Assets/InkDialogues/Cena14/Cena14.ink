@@ -1,5 +1,8 @@
 INCLUDE ../globals.ink
 
+{PLAYER_ACTOR}: {B_ACTOR}!  Espere, por favor. 
+{B_ACTOR}: ...
+
 {PLAYER_ACTOR}: Oi, {B_ACTOR}!  Boa tarde. 
 {PLAYER_ACTOR}: Como você tem estado? 
 {B_ACTOR}: Hey, {PLAYER_ACTOR}, {A_ACTOR}. Vocês não se desgrudam mesmo, né?  
