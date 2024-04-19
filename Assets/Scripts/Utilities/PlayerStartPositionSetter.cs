@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
 {
@@ -11,6 +13,9 @@ public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
     //feito por gustavo e jefferson
     [SerializeField] public StartingPositionData newPositionData;
     [SerializeField] public BoolVariable hasfoundKey;
+
+    [SerializeField] public Image NextDayImage;
+    [SerializeField] public Text NextDayText;
 
     private Vector3 playerPosition;
     private string gameObjectNameForPosition;
@@ -35,6 +40,14 @@ public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
 
     private void setInitialPosition(string lastScene)
     {
+        if (GameManager.Instance.isNewDay)
+        {
+            GameManager.Instance.isNewDay = false;
+            StartCoroutine(FadeOutContinueMessage());
+            transform.position = new Vector3(-16.49f, 0.53f, 0);
+            return;
+        }
+
         switch (lastScene)
         {
             case "HouseIndoors":
@@ -58,6 +71,40 @@ public class PlayerStartPositionSetter : MonoBehaviour, IDataPersistence
                 break;
         }
     }
+
+    private IEnumerator FadeOutContinueMessage()
+    {
+        NextDayImage.enabled = true;
+        NextDayText.enabled = true;
+
+        Color ImageStartColor = new Color(0, 0, 0, 1);
+        Color ImageFinalColor = new Color(0, 0, 0, 0);
+        NextDayImage.color = ImageStartColor;
+
+        Color TextStartColor = new Color(1, 1, 1, 1);
+        Color TextFinalColor = new Color(1, 1, 1, 0);
+        NextDayText.color = TextStartColor;
+
+        yield return new WaitForSeconds(1f);
+
+        float elapsedTime = 0f;
+        float fadeDuration = 1f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+
+            float t = Mathf.Clamp01(elapsedTime / fadeDuration);
+
+            NextDayImage.color = Color.Lerp(ImageStartColor, ImageFinalColor, t);
+            NextDayText.color = Color.Lerp(TextStartColor, TextFinalColor, t);
+            yield return null;
+        }
+
+        NextDayImage.enabled = false;
+        NextDayText.enabled = false;
+    }
+
 
     /*private void SetPosition()
     {

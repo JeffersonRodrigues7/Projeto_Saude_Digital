@@ -13,6 +13,7 @@ public class TimelineController : MonoBehaviour, IDataPersistence
     [SerializeField] private bool ignoreSelfCondition;
 
     [Header("Params")]
+    [SerializeField] private bool EncerrarDia = false;
     [SerializeField] BoolVariable[] necessaryConditions;
     [SerializeField] private string Cena_Necessaria = "";
     [SerializeField] private string Cena_Atual = "";
@@ -188,6 +189,8 @@ public class TimelineController : MonoBehaviour, IDataPersistence
     {
         if (!_isPlaying)
             return;
+
+        if (EncerrarDia) GameManager.Instance.isNewDay = true;
 
         _timelineStarted = false;
 

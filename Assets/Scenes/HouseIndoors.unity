@@ -683,6 +683,8 @@ MonoBehaviour:
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
   newPositionData: {fileID: 0}
   hasfoundKey: {fileID: 0}
+  NextDayImage: {fileID: 0}
+  NextDayText: {fileID: 0}
   XValue: 0
   YValue: 0
   shouldSetInitialPosition: 0
@@ -1350,6 +1352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 1
   necessaryConditions:
   - {fileID: 11400000, guid: 061487faf28593a47b5cdd56d96f3736, type: 2}
   Cena_Necessaria: 4_4
@@ -1614,6 +1617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: ee2858f9776473e4980e61eaf8ae9284, type: 2}
   Cena_Necessaria: 
@@ -3074,6 +3078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   Cena_Necessaria: 
@@ -3822,6 +3827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: 1
   Cena_Atual: 2
@@ -4465,6 +4471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: 2_minigame
   Cena_Atual: 3

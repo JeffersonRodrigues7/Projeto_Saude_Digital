@@ -565,6 +565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
   Cena_Necessaria: 13
@@ -1499,6 +1500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: 6
   Cena_Atual: 6_minigame
@@ -1874,6 +1876,8 @@ MonoBehaviour:
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
   newPositionData: {fileID: 0}
   hasfoundKey: {fileID: 0}
+  NextDayImage: {fileID: 0}
+  NextDayText: {fileID: 0}
   XValue: 0
   YValue: 0
   shouldSetInitialPosition: 0
@@ -3065,6 +3069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: 4_3
   Cena_Atual: 4_4
@@ -3661,7 +3666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1268655512
 Transform:
   m_ObjectHideFlags: 0
@@ -4095,6 +4100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 1
   necessaryConditions:
   - {fileID: 11400000, guid: a701aad527398054598691412422d183, type: 2}
   Cena_Necessaria: 9
@@ -5170,6 +5176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 06e0346fbef6b584f82b46c3f0dbba26, type: 2}
   Cena_Necessaria: 10
@@ -6147,6 +6154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: 3
   Cena_Atual: 4_1
@@ -6569,6 +6577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 119d3be9930033e47ac125f24f087f67, type: 2}
   Cena_Necessaria: 6
@@ -7075,8 +7084,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922561083}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15.323631}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.8, y: 4.5, z: 15.323631}
   m_LocalScale: {x: 1.45, y: 1.45, z: 1.2}
   m_Children: []
   m_Father: {fileID: 1064992221}
@@ -7141,7 +7150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 7092468368285573436, guid: 840471c8dc9ba4a48a3217f496326cce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c00ff6fb252e50f4289ef0e31c215ea1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7414,6 +7423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: -1
   Cena_Atual: 0
@@ -8302,6 +8312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 1
   necessaryConditions:
   - {fileID: 11400000, guid: c3f950dd788e6264f9bacc9747fae1a2, type: 2}
   Cena_Necessaria: 8

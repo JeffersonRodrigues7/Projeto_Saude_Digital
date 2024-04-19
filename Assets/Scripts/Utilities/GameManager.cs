@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
 
+    public bool isNewDay = false;
     public string lastSceneVisited = "Null";
     public string currentMission = "0";
 

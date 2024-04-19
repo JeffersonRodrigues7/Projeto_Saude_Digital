@@ -421,6 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 1
   necessaryConditions:
   - {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
   Cena_Necessaria: 12
@@ -766,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 86271255b265280408f45b3d2a24472b, type: 2}
   Cena_Necessaria: 11
@@ -1876,6 +1878,8 @@ MonoBehaviour:
   positionData: {fileID: 11400000, guid: ca1950224067e354b9d926e8892fc530, type: 2}
   newPositionData: {fileID: 0}
   hasfoundKey: {fileID: 0}
+  NextDayImage: {fileID: 0}
+  NextDayText: {fileID: 0}
   XValue: 0
   YValue: 0
   shouldSetInitialPosition: 0
@@ -3055,6 +3059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: bac94d88342979d4a986add1dd3427a1, type: 2}
   Cena_Necessaria: 
@@ -4099,6 +4104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   Cena_Necessaria: 
@@ -5250,6 +5256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   Cena_Necessaria: 
@@ -6221,6 +6228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: c50a002bbaf34e24ebaa779c18896005, type: 2}
   Cena_Necessaria: 
@@ -6771,6 +6779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   Cena_Necessaria: 
@@ -7535,6 +7544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions: []
   Cena_Necessaria: 
   Cena_Atual: 
@@ -8399,6 +8409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
+  EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 4eecfa4a4ec2749458a35bcbea7aebab, type: 2}
   Cena_Necessaria: 
