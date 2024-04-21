@@ -6,11 +6,11 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Nós conseguimos! Sobrevivemos à mais uma prova.
 {A_ACTOR}: Sim e até acho que fui bem.
 {A_ACTOR}: Devo ter tirado pelo menos um sete.
-{PLAYER_ACTOR}: Passeio pelo parque agora?
-{A_ACTOR}: Hm... Na verdade...
-{A_ACTOR}: Se você puder ir na frente, eu te encontro lá daqui a pouco.
+{PLAYER_ACTOR}: Nossa preciso ir ao banheiro, estou muito apertado!
+{A_ACTOR}: Eita, claro!
+{A_ACTOR}: Pode ir na frente, eu te encontro lá daqui a pouco.
 {A_ACTOR}: Quero conversar com o {PROFESSOR_ACTOR}. Explicar o que aconteceu esses dias e porque eu faltei.
-{PLAYER_ACTOR}: Claro! É uma boa ideia mesmo.
+{PLAYER_ACTOR}: Claro! É uma boa ideia mesmo. Até mais {A_ACTOR}.
 
 {A_ACTOR}: Com licença, Professor? Posso falar um pouquinho com o senhor?
 {A_ACTOR}: Então foi isso.
