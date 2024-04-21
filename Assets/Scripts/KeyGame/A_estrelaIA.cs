@@ -11,7 +11,7 @@ public class A_estrelaIA : MonoBehaviour
 
     private NavMeshAgent agent;
     private GameObject[] moitas;
-    private float cooldown = 3f;
+    private float cooldown = 1f;
     private float cooldownTime;
     private GameObject moitaTarget;
     public GameObject WIN;
@@ -25,11 +25,13 @@ public class A_estrelaIA : MonoBehaviour
     private bool started;
 
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private Vector2 lookDirection; 
 
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         score = 0;
 
@@ -58,29 +60,30 @@ public class A_estrelaIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(agent.velocity);
+        if(agent.velocity.x > 0) spriteRenderer.flipX = false;
+
         if (started == true)
         {
-            
-
             moitas = GameObject.FindGameObjectsWithTag("Moita");
 
-            if (moitaTarget != null && cooldownTime == 0)
+            if (moitaTarget == null)
             {
+                moitaTarget = GetClosestmoita(moitas, moitas.Length);
+            }
 
+            //lookDirection = (moitaTarget.transform.position - transform.position).normalized;
+
+            animator.SetFloat("xDirection", agent.velocity.x);
+            animator.SetFloat("yDirection", agent.velocity.y);
+            animator.SetBool("isWalking", true);
+
+            if (cooldownTime == 0)
+            {
                 ////Debug.Log("estou procurando" + moitaTarget.name);
                 agent.SetDestination(moitaTarget.transform.position);
 
-                lookDirection = (moitaTarget.transform.position - transform.position).normalized;
-
-                animator.SetFloat("xDirection", lookDirection.x);
-                animator.SetFloat("yDirection", lookDirection.y);
-                animator.SetBool("isWalking", true);
-
                 cooldownTime = cooldown;
-            }
-            else if (moitaTarget == null)
-            {
-                moitaTarget = GetClosestmoita(moitas, moitas.Length);
             }
 
             cooldownTime = Mathf.Clamp(cooldownTime - Time.fixedDeltaTime, 0, Mathf.Infinity);
