@@ -9,6 +9,7 @@ public class TargetIndicator : MonoBehaviour
 
     public GameObject toAlanHouse;
     public GameObject toSchool;
+    public GameObject toOldStudent;
     public GameObject toTeacherHouse;
     public GameObject toBathroom;
 
@@ -25,7 +26,14 @@ public class TargetIndicator : MonoBehaviour
 
     private void validaCenas()
     {
-        if (GameManager.Instance.GetCenaValue("8"))
+        if (GameManager.Instance.GetCenaValue("11"))
+        {
+            ChangeTarget(toOldStudent.transform);
+            objetivo.text = "Visite o aluno antigo!";
+            activeObjective(toOldStudent);
+        }
+
+        else if (GameManager.Instance.GetCenaValue("8"))
         {
             ChangeTarget(toSchool.transform);
             objetivo.text = "Hora de ir para a escola novamente!";
