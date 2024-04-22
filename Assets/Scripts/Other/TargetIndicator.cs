@@ -13,8 +13,6 @@ public class TargetIndicator : MonoBehaviour
     public GameObject toTeacherHouse;
     public GameObject toBathroom;
 
-    private GameObject[] goals;
-
     public float distanciaObjetivo;
     public Text objetivo;
     private Transform Target;
@@ -26,6 +24,13 @@ public class TargetIndicator : MonoBehaviour
 
     private void validaCenas()
     {
+        if (GameManager.Instance.GetCenaValue("13"))
+        {
+            ChangeTarget(toSchool.transform);
+            objetivo.text = "Encontre a Beatriz na escola";
+            activeObjective(toSchool);
+        }
+
         if (GameManager.Instance.GetCenaValue("11"))
         {
             ChangeTarget(toOldStudent.transform);
@@ -79,7 +84,7 @@ public class TargetIndicator : MonoBehaviour
         {
             ChangeTarget(toSchool.transform);
             objetivo.text = "Converse com a professora na escola";
-            activeObjective(toTeacherHouse);
+            activeObjective(toSchool);
         }
         else if (GameManager.Instance.GetCenaValue("1"))
         {
@@ -95,10 +100,6 @@ public class TargetIndicator : MonoBehaviour
 
     private void Start()
     {
-        goals[0] = toAlanHouse;
-        goals[1] = toBathroom;
-        goals[2] = toSchool;
-        goals[3] = toTeacherHouse;
     }
 
     // Update is called once per frame
@@ -138,31 +139,47 @@ public class TargetIndicator : MonoBehaviour
     {
         if (objective == toAlanHouse)
         {
-            goals[0].SetActive(true);
-            goals[1].SetActive(false);
-            goals[2].SetActive(false);
-            goals[3].SetActive(false);
+            toAlanHouse.SetActive(true);
+            toBathroom.SetActive(false);
+            toTeacherHouse.SetActive(false);
+            toOldStudent.SetActive(false);
+            toSchool.SetActive(false);
         }
+
         else if (objective == toBathroom)
         {
-            goals[0].SetActive(false);
-            goals[1].SetActive(true);
-            goals[2].SetActive(false);
-            goals[3].SetActive(false);
+            toAlanHouse.SetActive(false);
+            toBathroom.SetActive(true);
+            toTeacherHouse.SetActive(false);
+            toOldStudent.SetActive(false);
+            toSchool.SetActive(false);
         }
+
         else if (objective == toSchool)
         {
-            goals[0].SetActive(false);
-            goals[1].SetActive(false);
-            goals[2].SetActive(true);
-            goals[3].SetActive(false);
+            toAlanHouse.SetActive(false);
+            toBathroom.SetActive(false);
+            toTeacherHouse.SetActive(false);
+            toOldStudent.SetActive(false);
+            toSchool.SetActive(true);
         }
+
         else if (objective == toTeacherHouse)
         {
-            goals[0].SetActive(false);
-            goals[1].SetActive(false);
-            goals[2].SetActive(false);
-            goals[3].SetActive(true);
+            toAlanHouse.SetActive(false);
+            toBathroom.SetActive(false);
+            toTeacherHouse.SetActive(true);
+            toOldStudent.SetActive(false);
+            toSchool.SetActive(false);
+        }
+
+        else if(objective == toOldStudent)
+        {
+            toAlanHouse.SetActive(false);
+            toBathroom.SetActive(false);
+            toTeacherHouse.SetActive(false);
+            toOldStudent.SetActive(true);
+            toSchool.SetActive(false);
         }
     }
 }

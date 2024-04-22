@@ -1,6 +1,6 @@
 INCLUDE ../globals.ink
 
-{PLAYER_ACTOR}: Tudo bem, agora é esperar.
+{PLAYER_ACTOR}: Bom, cheguei a praça.
 {PLAYER_ACTOR}: Tomara que {A_ACTOR} não demore.
 {PLAYER_ACTOR}: Acho que eu bebi água demais tentando me acalmar.
 {PLAYER_ACTOR}: Preciso de um banheiro

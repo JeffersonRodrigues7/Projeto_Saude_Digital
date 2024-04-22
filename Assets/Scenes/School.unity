@@ -1508,7 +1508,11 @@ MonoBehaviour:
   playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 1
-  _animatorsToControlUntilEnd: []
+  _animatorsToControlUntilEnd:
+  - {fileID: 416777689}
+  - {fileID: 219575437}
+  - {fileID: 540687327}
+  - {fileID: 708025961}
   collidersToDisable: []
   cutsceneStartedEvent: {fileID: 11400000, guid: 5a4317d468f93754ab3cab685b02f42b, type: 2}
   cutsceneEndedEvent: {fileID: 11400000, guid: 14af7480061963642bf38ac8d42fe5f3, type: 2}
@@ -6580,7 +6584,7 @@ MonoBehaviour:
   EncerrarDia: 0
   necessaryConditions:
   - {fileID: 11400000, guid: 119d3be9930033e47ac125f24f087f67, type: 2}
-  Cena_Necessaria: 6
+  Cena_Necessaria: 6_minigame
   Cena_Atual: 7
   thisCondition: {fileID: 11400000, guid: 55a68e1264b7b24458da323342ad271e, type: 2}
   playOnlyOnce: 1
@@ -7425,7 +7429,7 @@ MonoBehaviour:
   ignoreSelfCondition: 0
   EncerrarDia: 0
   necessaryConditions: []
-  Cena_Necessaria: -1
+  Cena_Necessaria: 99
   Cena_Atual: 0
   thisCondition: {fileID: 11400000, guid: e0e3ab3acadae3e42bbdd81aa5b21c4e, type: 2}
   playOnlyOnce: 1
