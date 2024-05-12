@@ -8,8 +8,9 @@ INCLUDE ../globals.ink
 }
 
 === para_casa_de_a ===
-{PLAYER_ACTOR}: Se me lembro bem a casa do {format_name(a_name)} fica no canto superior esquerdo da cidade.
-{PLAYER_ACTOR}: É bem fácil de achar, já que a mãe dele {format_important_text("gosta MUITO de flores")}.
+{PLAYER_ACTOR}: Agora você pode clicar em ocultar caso não queira mais ver a dica.
+//{PLAYER_ACTOR}: Se me lembro bem a casa do {format_name(a_name)} fica no canto superior esquerdo da cidade.
+//{PLAYER_ACTOR}: É bem fácil de achar, já que a mãe dele {format_important_text("gosta MUITO de flores")}.
 -> END
 
 === para_escola ===
@@ -30,8 +31,8 @@ Desenvolvedor: Você realmente não deveria poder clicar nesse botão neste mome
 
 
 === check_scene4_conditions ===
-{   
-    - !is_searching_for_key && !has_found_key:
+//{   
+    //- !is_searching_for_key && !has_found_key:
         {PLAYER_ACTOR}: Eu preciso encontrar a casa da professora {format_name(professor_name)}.
         {PLAYER_ACTOR}: Pelo que ela me disse, a casa fica na parte {format_important_text("inferior")} do vilarejo,  {format_important_text("à esquerda da casa da dona Tereza")}.
         {PLAYER_ACTOR}: Se não me engano é a {format_important_text("sexta casa, contando da direita para a esquerda")}.

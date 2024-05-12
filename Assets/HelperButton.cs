@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HelperButton : MonoBehaviour
 {
+    [SerializeField] private Tutorial tutorial;
     [SerializeField] private TextAsset inkHelperJson;
 
     private Image btnImage;
@@ -19,6 +20,8 @@ public class HelperButton : MonoBehaviour
 
     public void ShowHelpText()
     {
+        if(tutorial == null || !tutorial.enabled || !tutorial.isTutoriaOn) return;
+
         ////Debug.Log("ShowHelpText fired");
         ////Debug.Log("isInDialogueMode: " + DialogueManager.Instance.isInDialogueMode);
         if (DialogueManager.Instance.isInDialogueMode)

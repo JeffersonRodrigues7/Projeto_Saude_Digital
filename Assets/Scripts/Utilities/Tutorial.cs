@@ -54,6 +54,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private float moveTotalTime = 1.0f;
 
     [Header("Helper button Tutorial")]
+    [SerializeField] public bool isTutoriaOn = false;
     [SerializeField] private GameObject pointHandIcon;
     [SerializeField] private Button helperButton;
     [SerializeField] [TextArea] private string[] beforePointHandTexts;
@@ -95,6 +96,7 @@ public class Tutorial : MonoBehaviour
 
     public void StartTutorial()
     {
+        isTutoriaOn = true;
         playerController.BlockMovement();
         playerControllerEnabledValue = playerController.enabled;
         helperButton.interactable = false;
@@ -107,7 +109,7 @@ public class Tutorial : MonoBehaviour
 
     private IEnumerator ShowTutorial()
     {
-        //Debug.Log("ShowTutorial fired");
+        Debug.Log("ShowTutorial fired");
         yield return new WaitForSeconds(1.2f);
 
         screenBlockerAnimator.SetTrigger("Show");
@@ -140,6 +142,7 @@ public class Tutorial : MonoBehaviour
 
     private void TutorialFinished()
     {
+        isTutoriaOn = false;
         movementHandIcon.SetActive(false);
         pointHandIcon.SetActive(false);
         helperButton.interactable = true;
@@ -156,7 +159,7 @@ public class Tutorial : MonoBehaviour
         if (beforeMovementIconTexts.Length > 0)
             yield return ShowTutorialTextList(beforeMovementIconTexts);
 
-        movementHandIcon.SetActive(true);
+        //movementHandIcon.SetActive(true);
 
         if (duringMovementIconText != "")
             yield return ShowSingleText(duringMovementIconText);
