@@ -81,7 +81,7 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: É por que elas são doidas? 
  
 
-{PROFESSOR_ACTOR}:  O quê!!? 
+{PROFESSOR_ACTOR}: O quê!!? 
 {PROFESSOR_ACTOR}: Claro que não! 
 {PROFESSOR_ACTOR}: Infelizmente, acho que isso é um preconceito bem comum. 
 {PROFESSOR_ACTOR}: Mas pessoas que buscam ajuda para os problemas que tem são qualquer coisa menos “doidas”. 

@@ -11,10 +11,10 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Ahn...?
 {PLAYER_ACTOR}: Claro, quero sim.
 {PLAYER_ACTOR}: Desculpa, tô meio distraído.
-{A_ACTOR}: Você tá preocupado com o {B_ACTOR}, não é?
-{A_ACTOR}: Como ele tem faltado às provas, você não conseguiu conversar com ele como queria.
+{A_ACTOR}: Você tá preocupado com a {B_ACTOR}, não é?
+{A_ACTOR}: Como elA tem faltado às provas, você não conseguiu conversar com ela como queria.
 {PLAYER_ACTOR}: ...
-{PLAYER_ACTOR}: Espero que esteja tudo bem com ele.
+{PLAYER_ACTOR}: Espero que esteja tudo bem com ela.
 {A_ACTOR}: ...
 {A_ACTOR}: Olha, acho que isso vai te animar.
 {A_ACTOR}: Toma, um cupcake.
@@ -65,6 +65,6 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Parecem ser muitas coisas para se fazer e pensar.
 {A_ACTOR}: Por isso mesmo é importante ter ajuda.
 {A_ACTOR}: Então não fique preocupado.
-{A_ACTOR}: Logo poderemos ajudar o {B_ACTOR}.
+{A_ACTOR}: Logo poderemos ajudar a {B_ACTOR}.
 {PLAYER_ACTOR}: Obrigado, {A_ACTOR}...
 {PLAYER_ACTOR}: Até lá... tem mais cupcakes?

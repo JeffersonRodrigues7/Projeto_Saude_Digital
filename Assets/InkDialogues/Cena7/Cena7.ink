@@ -9,10 +9,10 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Nossa preciso ir ao banheiro, estou muito apertado!
 {A_ACTOR}: Eita, claro!
 {A_ACTOR}: Pode ir na frente, eu te encontro lá daqui a pouco.
-{A_ACTOR}: Quero conversar com o {PROFESSOR_ACTOR}. Explicar o que aconteceu esses dias e porque eu faltei.
+{A_ACTOR}: Quero conversar com a {PROFESSOR_ACTOR}. Explicar o que aconteceu esses dias e porque eu faltei.
 {PLAYER_ACTOR}: Claro! É uma boa ideia mesmo. Até mais {A_ACTOR}.
 
-{A_ACTOR}: Com licença, Professor? Posso falar um pouquinho com o senhor?
+{A_ACTOR}: Com licença, Professora? Posso falar um pouquinho com a senhora?
 {A_ACTOR}: Então foi isso.
 {A_ACTOR}: Hoje {PLAYER_ACTOR} passou em casa e viemos juntos. Não me senti como antes.
 {A_ACTOR}: Na verdade, ontem ele até veio falar com o senhor para tentar me ajudar.

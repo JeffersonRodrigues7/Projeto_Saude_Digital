@@ -16,13 +16,13 @@ INCLUDE ../globals.ink
 {A_ACTOR}: Você sempre vai perguntar isso? 
 {A_ACTOR}: Não tem pegadinha nenhuma. 
 {PLAYER_ACTOR}: {B_ACTOR}, me desculpe, mas a verdade é que desde aquele dia no parque eu pensei muito em você. Fiquei tentando encontrar uma maneira de ajudar. 
-{PLAYER_ACTOR}: Por causa disso acabei conhecendo [X]. Ele estudou na nossa escola uns anos atrás e nessa época ele teve um quadro de depressão. 
-{PLAYER_ACTOR}: Hoje em dia [X], está bem e tenta ajudar outras pessoas que estão passando pelos mesmos problemas. 
+{PLAYER_ACTOR}: Por causa disso acabei conhecendo {OLD_STUDENT}. Ele estudou na nossa escola uns anos atrás e nessa época ele teve um quadro de depressão. 
+{PLAYER_ACTOR}: Hoje em dia {OLD_STUDENT}, está bem e tenta ajudar outras pessoas que estão passando pelos mesmos problemas. 
 {PLAYER_ACTOR}: Na época ele disse que escrever ajudava e por isso ele criou um diário. 
 {B_ACTOR}: Eu não sei se tô entendendo... 
-{PLAYER_ACTOR}: Bem, um antigo aluno me deu o diário quando eu disse que tinha um colega enfrentando alguns problemas parecidos com os dele. 
-{PLAYER_ACTOR}: Sei que você pediu para esquecermos de tudo, mas... Eu e {A_ACTOR} queremos que você saiba que não precisa ser assim. Você não tem de passar por tudo sozinho. 
-{PLAYER_ACTOR}: Esse diário é para você. Talvez as coisas escritas nele te façam se sentir menos solitário, afinal alguém já passou por algo parecido antes e hoje está bem. 
+{PLAYER_ACTOR}: Bem, um antigo aluno me deu o diário quando eu disse que tinha uma colega enfrentando alguns problemas parecidos com os dele. 
+{PLAYER_ACTOR}: Sei que você pediu para esquecermos de tudo, mas... Eu e {A_ACTOR} queremos que você saiba que não precisa ser assim. Você não tem de passar por tudo sozinha. 
+{PLAYER_ACTOR}: Esse diário é para você. Talvez as coisas escritas nele te façam se sentir menos solitária, afinal alguém já passou por algo parecido antes e hoje está bem. 
 {B_ACTOR}: ... 
 {B_ACTOR}: ........ 
 {B_ACTOR}: {PLAYER_ACTOR}... Você não precisava ter tido todo esse trabalho. 
@@ -44,7 +44,7 @@ INCLUDE ../globals.ink
 {B_ACTOR}: Que? 
 {A_ACTOR}: Quando alguém faz algo gentil por nós, o correto é dizer obrigado, não pedir desculpas. 
 {B_ACTOR}: Ah... Então, nesse caso... 
-{B_ACTOR}: Obrigado. 
+{B_ACTOR}: Obrigada. 
 {PLAYER_ACTOR}: Ficamos felizes em ajudar. 
 {PLAYER_ACTOR}: Saiba que pode contar com a gente. 
 {B_ACTOR}: Vou começar a ler assim que puder. 

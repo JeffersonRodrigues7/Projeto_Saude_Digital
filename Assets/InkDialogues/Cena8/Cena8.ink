@@ -6,7 +6,7 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Preciso de um banheiro
 {PLAYER_ACTOR}: A-GO-RA!
 
-{PLAYER_ACTOR}: Nossa, é o aluno novo? Oi, {B_ACTOR}, tudo... bem? (emoji surpreso)
+{PLAYER_ACTOR}: Nossa, é a aluna nova? Oi, {B_ACTOR}, tudo... bem?
 {B_ACTOR}: Ah!
 {B_ACTOR}: Oi. Tchau.
 {B_ACTOR}: Eu já tô saindo.
@@ -17,7 +17,7 @@ INCLUDE ../globals.ink
 {PLAYER_ACTOR}: Mas foi tão rápido...
 
 {A_ACTOR}: Hey, {PLAYER_ACTOR}! Foi mal por te deixar esperando.
-{A_ACTOR}: Eu precisava explicar as coisas para o {PROFESSOR_ACTOR}.
+{A_ACTOR}: Eu precisava explicar as coisas para a {PROFESSOR_ACTOR}.
 {PLAYER_ACTOR}: Sem problemas.
 {PLAYER_ACTOR}: Como foi a conversa?
 {A_ACTOR}: Deu tudo certo. Vão marcar para que eu faça as provas que perdi.
@@ -32,9 +32,9 @@ INCLUDE ../globals.ink
 {A_ACTOR}: Se estiver preocupado com algo pode falar comigo. Vamos ajudar um ao outro.
 {PLAYER_ACTOR}: Poxa, {A_ACTOR}... Obrigado.
 {PLAYER_ACTOR}: A verdade é que acabei de ver algo que me assustou um pouco.
-{PLAYER_ACTOR}: Lembra que eu te contei que tinha um aluno novo na nossa sala? {B_ACTOR}.
-{A_ACTOR}: Bem... Eu fui ao banheiro um pouco antes de você chegar e ele estava lá. E eu acho que ele estava se machucando.
+{PLAYER_ACTOR}: Lembra que eu te contei que tinha uma aluna nova na nossa sala? A {B_ACTOR}.
+{A_ACTOR}: Bem... Eu fui ao banheiro um pouco antes de você chegar e ela estava saindo de lá. E eu acho que ela estava se machucando.
 {A_ACTOR}: Isso parece bem sério. O que você acha que devemos fazer?
-{PLAYER_ACTOR}: Talvez tentar conversar com ele? Ter certeza se é isso mesmo.
+{PLAYER_ACTOR}: Talvez tentar conversar com ela? Ter certeza se é isso mesmo.
 {PLAYER_ACTOR}: Podemos tentar nos aproximar dele depois da prova de amanhã...
 {A_ACTOR}: Estarei ao seu lado.

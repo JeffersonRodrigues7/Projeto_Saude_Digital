@@ -2,14 +2,14 @@ INCLUDE ../globals.ink
 
 {PLAYER_ACTOR}: Deu certo! 
 {PLAYER_ACTOR}: Deu trabalho, mas agora o diário está destravado. 
-{PLAYER_ACTOR}: Você quer ir comigo entrega-lo para o [B]? 
+{PLAYER_ACTOR}: Você quer ir comigo entrega-lo para a {B_ACTOR}? 
 {A_ACTOR}: Claro, mas antes de irmos, eu queria te dizer uma coisa... 
 {PLAYER_ACTOR}: Tudo bem. 
 {PLAYER_ACTOR}: Você precisa de algo? 
 {A_ACTOR}: Hahaha. Você tá sempre tentando ajudar, não é? 
 {PLAYER_ACTOR}: É o que amigos fazem. 
 {A_ACTOR}: Sim. É sobre isso mesmo que eu preciso falar. 
-{A_ACTOR}: Você tem dado tudo de si para me ajudar e para ajudar o [B], também 
+{A_ACTOR}: Você tem dado tudo de si para me ajudar e para ajudar a {B_ACTOR}, também 
 {A_ACTOR}: {PLAYER_ACTOR}, você é um ótimo amigo. Sempre atento para ouvir, cuidadoso, leal... 
 {A_ACTOR}: Saiba que eu sou muito grato por isso. 
 {PLAYER_ACTOR}: Se continuar me elogiando tanto eu vou ficar sem graça. 
