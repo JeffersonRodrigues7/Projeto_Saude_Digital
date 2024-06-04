@@ -640,6 +640,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 82cd07146751dfa4e8c28f534a1eab41, type: 2}
     - {fileID: 11400000, guid: 18eca9c73e2f9c749af93c00696bff43, type: 2}
+    - {fileID: 11400000, guid: 5bb70cd54613a4640812c8704e8727d8, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -674,7 +675,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -751,6 +752,68 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 12
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 94406987}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Pause
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetInkDialogue
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4900000, guid: 98f5a49e5de85ae4189c70dfb6a46087, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetStartIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: SetFinalIndex
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1229394685}
+          m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &94406986
@@ -883,13 +946,19 @@ PlayableDirector:
   - key: {fileID: -85902220240889755, guid: 225295680b37a294b945c720f5837eed, type: 2}
     value: {fileID: 708025961}
   - key: {fileID: 9081731340337745205, guid: 225295680b37a294b945c720f5837eed, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 467673824}
   - key: {fileID: 3921975671547100808, guid: 225295680b37a294b945c720f5837eed, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 467673825}
   - key: {fileID: -8321490948067146190, guid: 225295680b37a294b945c720f5837eed, type: 2}
     value: {fileID: 368947154}
   - key: {fileID: 7901000763630380457, guid: 225295680b37a294b945c720f5837eed, type: 2}
     value: {fileID: 368947154}
+  - key: {fileID: -1156004040172172580, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 1779753723}
+  - key: {fileID: -4145881879215299806, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 708025958}
+  - key: {fileID: 2499258543171625487, guid: 225295680b37a294b945c720f5837eed, type: 2}
+    value: {fileID: 416777686}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &143992378

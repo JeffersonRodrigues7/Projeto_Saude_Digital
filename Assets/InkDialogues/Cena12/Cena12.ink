@@ -1,4 +1,7 @@
 INCLUDE ../globals.ink
+{OLD_STUDENT}: Olá, quem é?
+{PLAYER_ACTOR}: Boa tarde, somos os alunos da Professora Carla.
+{OLD_STUDENT}: Ah sim, estava esperando por vocês, podem entrar.
 
 {OLD_STUDENT}: Entendi... Então vocês querem saber mais para tentar apoiar sua colega.
 {OLD_STUDENT}: É uma ótima atitude. Estar bem informado é importante. 
