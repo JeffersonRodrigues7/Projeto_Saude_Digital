@@ -286,7 +286,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<style=\"Important\">VOC\xCA N\xC3O PRECISA LIDAR COM ISTO SOZINHO!</style>"
+  m_text: "<style=\"Important\">NINGU\xC9M PRECISA LIDAR COM ISTO SOZINHO!</style>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23740dfe213dc9b4cae139164b16d02b, type: 2}
   m_sharedMaterial: {fileID: -7025876807678020394, guid: 23740dfe213dc9b4cae139164b16d02b, type: 2}
@@ -503,8 +503,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESPERAMOS QUE VOC\xCA TENHA APRENDIDO ALGO SOBRE OS <style=\"C1\">Transtornos
-    de ansiedade</style> e como buscar ajuda, caso necess\xE1rio."
+  m_text: "Esperamos que voc\xEA tenha aprendido algo sobre os <style=\"C1\">transtornos
+    de ansiedade e depress\xE3o</style> e como buscar ajuda, caso necess\xE1rio."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23740dfe213dc9b4cae139164b16d02b, type: 2}
   m_sharedMaterial: {fileID: -7025876807678020394, guid: 23740dfe213dc9b4cae139164b16d02b, type: 2}
@@ -1240,8 +1240,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CASO SE IDENTIFIQUE COM OS SINTOMAS APRESENTADOS, PROCURE AJUDA PROFISSIONAL,
-    E SE POSS\xCDVEL, TENTE CONVERSAR COM ALGU\xC9M DE SUA CONFIAN\xC7A."
+  m_text: "Caso voc\xEA ou algu\xE9m que conhe\xE7a se identifique com os sintomas
+    apresentados, procure ajuda profissional. Se poss\xEDvel, tente conversar com
+    algu\xE9m de sua confian\xE7a."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23740dfe213dc9b4cae139164b16d02b, type: 2}
   m_sharedMaterial: {fileID: -7025876807678020394, guid: 23740dfe213dc9b4cae139164b16d02b, type: 2}
