@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public bool cena10 = false;
     public bool cena11 = false;
     public bool cena12 = false;
+    public bool cena12_minigame = false;
     public bool cena13 = false;
     public bool cena14 = false;
 
@@ -139,6 +140,10 @@ public class GameManager : MonoBehaviour
                 break;
             case "12":
                 cena12 = true;
+                currentMission = "12_minigame";
+                break;
+            case "12_minigame":
+                cena12_minigame = true;
                 currentMission = "13";
                 break;
             case "13":
@@ -199,6 +204,8 @@ public class GameManager : MonoBehaviour
                 return cena11;
             case "12":
                 return cena12;
+            case "12_minigame":
+                return cena12_minigame;
             case "13":
                 return cena13;
             case "14":

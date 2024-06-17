@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Cadeado : MonoBehaviour
 {
     public TextMeshProUGUI digito1;
@@ -25,6 +25,8 @@ public class Cadeado : MonoBehaviour
     public float shakeDuration = 0.5f;
     public float shakeMagnitude = 0.1f;
     private Vector3 originalPosition;
+
+    public GameObject mensagemVitoria;
 
 
 
@@ -67,7 +69,9 @@ public class Cadeado : MonoBehaviour
             Debug.Log("Cadeado aberto!");
             arcoCadeado.transform.localScale = new Vector3(arcoCadeado.transform.localScale.x, 2.0f, arcoCadeado.transform.localScale.z);
 
-            
+            mensagemVitoria.SetActive(true);
+
+
         }
         else
         {
@@ -153,6 +157,8 @@ public class Cadeado : MonoBehaviour
 
 
 
+
+
     // Método para iniciar o efeito de sacudida
     public void TriggerShake()
     {
@@ -172,6 +178,15 @@ public class Cadeado : MonoBehaviour
             yield return null;
         }
         transform.localPosition = originalPosition;
+    }
+
+
+    public void callOldStudent()
+    {
+
+        GameManager.Instance.SetCenaTrue("12_minigame");
+        GameManager.Instance.lastSceneVisited = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("OldStudentRoom");
     }
 
 

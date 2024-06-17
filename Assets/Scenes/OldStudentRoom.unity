@@ -422,11 +422,10 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   EncerrarDia: 1
-  necessaryConditions:
-  - {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
-  Cena_Necessaria: 12
+  necessaryConditions: []
+  Cena_Necessaria: 12_minigame
   Cena_Atual: 13
-  thisCondition: {fileID: 11400000, guid: 1c967c2abafb948418bfaa651251582c, type: 2}
+  thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 0
@@ -706,9 +705,9 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 94406986}
-          m_TargetAssemblyTypeName: TimelineController, Assembly-CSharp
-          m_MethodName: TimelineFinished
+        - m_Target: {fileID: 94406987}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Pause
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -718,28 +717,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1268655511}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 615394528}
+          m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+          m_MethodName: ChangeTo
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1268655514}
-          m_TargetAssemblyTypeName: SceneChangeTrigger, Assembly-CSharp
-          m_MethodName: ChangeScene
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: CodeGame
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 94406986}
@@ -831,11 +818,10 @@ MonoBehaviour:
   ignoreOtherConditions: 0
   ignoreSelfCondition: 0
   EncerrarDia: 0
-  necessaryConditions:
-  - {fileID: 11400000, guid: 86271255b265280408f45b3d2a24472b, type: 2}
+  necessaryConditions: []
   Cena_Necessaria: 11
   Cena_Atual: 12
-  thisCondition: {fileID: 11400000, guid: f5a13b89b6bd5f44f828196de251f67b, type: 2}
+  thisCondition: {fileID: 0}
   playOnlyOnce: 1
   playAfterConditionsMet: 1
   fadeOutBeforeStart: 0

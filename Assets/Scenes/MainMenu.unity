@@ -2408,8 +2408,9 @@ MonoBehaviour:
   cena9: 1
   cena10: 1
   cena11: 1
-  cena12: 1
-  cena13: 1
+  cena12: 0
+  cena12_minigame: 0
+  cena13: 0
   cena14: 0
 --- !u!4 &1479015607
 Transform:
