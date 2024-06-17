@@ -13,12 +13,10 @@ public class Dicas : MonoBehaviour
     public GameObject dica04;
     public GameObject dica05;
     public GameObject atencaoUltimaDica;
-    public bool certezaUltimaDica;
     int ultimaDicaAtiva = 1;
 
     void Start()
     {
-        certezaUltimaDica = false;
         
     }
 
@@ -73,9 +71,4 @@ public class Dicas : MonoBehaviour
 
     }
 
-    public void naoCerteza()
-    {
-        gameObject.SetActive(true);
-        atencaoUltimaDica.SetActive(false);
-    }
 }
