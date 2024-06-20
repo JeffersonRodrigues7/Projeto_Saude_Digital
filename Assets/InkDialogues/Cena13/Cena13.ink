@@ -29,3 +29,5 @@ INCLUDE ../globals.ink
 {A_ACTOR}: Que é você, caso não tenha ficado claro. 
 {PLAYER_ACTOR}: Obrigado, {A_ACTOR}. 
 {PLAYER_ACTOR}:  Eu prometo. 
+{PLAYER_ACTOR}: Obrigado por tudo {OLD_STUDENT}, tenho certeza que seu diário irá ser muito útil.
+{OLD_STUDENT}: Disponha garotos, lembre-se de sempre cuidarem um do outro!
