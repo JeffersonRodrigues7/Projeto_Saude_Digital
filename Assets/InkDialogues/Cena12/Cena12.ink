@@ -40,7 +40,9 @@ INCLUDE ../globals.ink
 {OLD_STUDENT}: Poxa, isso parece ótimo! Mas não foi o meu caso. Na minha época eu entrei num grupo de teatro... e escrevi um diário. 
 {OLD_STUDENT}: Ele me acompanhou dos piores momentos até quando senti não precisar mais dele. 
 {OLD_STUDENT}: Pode ser que ver minha jornada ajude sua colega, então darei o diário à vocês. 
-{OLD_STUDENT}: Só tem um probleminha... Eu o mantinha em segredo e não lembro mais como destravá-lo. Hahaha. 
-{OLD_STUDENT}: Deixo essa missão em suas mãos. 
+{OLD_STUDENT}: Só tem um probleminha... Eu o mantinha em segredo, travado com um cadeado de três letras e não lembro mais como destravá-lo.
+{OLD_STUDENT}: Mas eu sabia que no futuro eu poderia esquecer da senha, então deixei anotado algumas dicas para que eu sempre lembre da senha.
+{OLD_STUDENT}: Lembro vagamente que era sobre um sentimento, algo que eu buscava para me acalmar.
+{OLD_STUDENT}: Deixo essa missão de descobrir o que é em suas mãos. 
 {PLAYER_ACTOR}: Uau! Muito obrigado. 
 {PLAYER_ACTOR}: Vamos dar um jeito nisso. Tenho certeza de que vai ajudar nossa colega. 
