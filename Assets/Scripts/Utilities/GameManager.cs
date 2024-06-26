@@ -1,11 +1,14 @@
+using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
 
+    public string currentScene = "";
     public bool isNewDay = false;
     public string lastSceneVisited = "Null";
     public string currentMission = "0";
@@ -56,6 +59,41 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this);
+
+        SetValues();
+        LoadGame();
+    }
+
+    private void SetValues()
+    {
+        currentScene = "";
+        isNewDay = false;
+        lastSceneVisited = "Null";
+        currentMission = "0";
+
+        cena0 = false;
+        cena1 = false;
+        cena2 = false;
+        cena2_minigame = false;
+        cena3 = false;
+        cena4_1 = false;
+        cena4_2 = false;
+        cena4_2_5 = false;
+        cena4_minigame = false;
+        cena4_3 = false;
+        cena4_4 = false;
+        cena5 = false;
+        cena6 = false;
+        cena6_minigame = false;
+        cena7 = false;
+        cena8 = false;
+        cena9 = false;
+        cena10 = false;
+        cena11 = false;
+        cena12 = false;
+        cena12_minigame = false;
+        cena13 = false;
+        cena14 = false;
     }
 
     public void SetCenaTrue(string cena)
@@ -158,6 +196,8 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Não encontrado cena de valor para Setar: " + cena);
                 break;
         }
+
+        SaveGame();
     }
 
     public bool GetCenaValue(string cena)
@@ -210,9 +250,131 @@ public class GameManager : MonoBehaviour
                 return cena13;
             case "14":
                 return cena14;
+            case "99": //Para a cena 0 executar
+                return true;
             default:
                 Debug.Log("Não encontrado cena de valor para Buscar: " + cena);
                 return false;
         }
+    }
+
+    public void SaveGame()
+    {
+        // Salva o nome da cena atual
+        currentScene = SceneManager.GetActiveScene().name;
+        PlayerPrefs.SetString("SavedScene", currentScene);
+
+        PlayerPrefs.SetInt("cena0", cena0 ? 1 : 0);
+        PlayerPrefs.SetInt("cena1", cena1 ? 1 : 0);
+        PlayerPrefs.SetInt("cena2", cena2 ? 1 : 0);
+        PlayerPrefs.SetInt("cena2_minigame", cena2_minigame ? 1 : 0);
+        PlayerPrefs.SetInt("cena3", cena3 ? 1 : 0);
+        PlayerPrefs.SetInt("cena4_1", cena4_1 ? 1 : 0);
+        PlayerPrefs.SetInt("cena4_2", cena4_2 ? 1 : 0);
+        PlayerPrefs.SetInt("cena4_2_5", cena4_2_5 ? 1 : 0);
+        PlayerPrefs.SetInt("cena4_minigame", cena4_minigame ? 1 : 0);
+        PlayerPrefs.SetInt("cena4_3", cena4_3 ? 1 : 0);
+        PlayerPrefs.SetInt("cena4_4", cena4_4 ? 1 : 0);
+        PlayerPrefs.SetInt("cena5", cena5 ? 1 : 0);
+        PlayerPrefs.SetInt("cena6", cena6 ? 1 : 0);
+        PlayerPrefs.SetInt("cena6_minigame", cena6_minigame ? 1 : 0);
+        PlayerPrefs.SetInt("cena7", cena7 ? 1 : 0);
+        PlayerPrefs.SetInt("cena8", cena8 ? 1 : 0);
+        PlayerPrefs.SetInt("cena9", cena9 ? 1 : 0);
+        PlayerPrefs.SetInt("cena10", cena10 ? 1 : 0);
+        PlayerPrefs.SetInt("cena11", cena11 ? 1 : 0);
+        PlayerPrefs.SetInt("cena12", cena12 ? 1 : 0);
+        PlayerPrefs.SetInt("cena12_minigame", cena12_minigame ? 1 : 0);
+        PlayerPrefs.SetInt("cena13", cena13 ? 1 : 0);
+        PlayerPrefs.SetInt("cena14", cena14 ? 1 : 0);
+
+        PlayerPrefs.SetInt("isNewDay", isNewDay ? 1 : 0);
+        PlayerPrefs.SetString("lastSceneVisited", lastSceneVisited);
+        PlayerPrefs.SetString("currentMission", currentMission);
+
+        PlayerPrefs.Save();
+
+        Debug.Log("Jogo Salvo!");
+    }
+
+    public void LoadGame()
+    {
+        currentScene = PlayerPrefs.GetString("SavedScene");
+
+        cena0 = PlayerPrefs.GetInt("cena0", 0) == 1;
+        cena1 = PlayerPrefs.GetInt("cena1", 0) == 1;
+        cena2 = PlayerPrefs.GetInt("cena2", 0) == 1;
+        cena2_minigame = PlayerPrefs.GetInt("cena2_minigame", 0) == 1;
+        cena3 = PlayerPrefs.GetInt("cena3", 0) == 1;
+        cena4_1 = PlayerPrefs.GetInt("cena4_1", 0) == 1;
+        cena4_2 = PlayerPrefs.GetInt("cena4_2", 0) == 1;
+        cena4_2_5 = PlayerPrefs.GetInt("cena4_2_5", 0) == 1;
+        cena4_minigame = PlayerPrefs.GetInt("cena4_minigame", 0) == 1;
+        cena4_3 = PlayerPrefs.GetInt("cena4_3", 0) == 1;
+        cena4_4 = PlayerPrefs.GetInt("cena4_4", 0) == 1;
+        cena5 = PlayerPrefs.GetInt("cena5", 0) == 1;
+        cena6 = PlayerPrefs.GetInt("cena6", 0) == 1;
+        cena6_minigame = PlayerPrefs.GetInt("cena6_minigame", 0) == 1;
+        cena7 = PlayerPrefs.GetInt("cena7", 0) == 1;
+        cena8 = PlayerPrefs.GetInt("cena8", 0) == 1;
+        cena9 = PlayerPrefs.GetInt("cena9", 0) == 1;
+        cena10 = PlayerPrefs.GetInt("cena10", 0) == 1;
+        cena11 = PlayerPrefs.GetInt("cena11", 0) == 1;
+        cena12 = PlayerPrefs.GetInt("cena12", 0) == 1;
+        cena12_minigame = PlayerPrefs.GetInt("cena12_minigame", 0) == 1;
+        cena13 = PlayerPrefs.GetInt("cena13", 0) == 1;
+        cena14 = PlayerPrefs.GetInt("cena14", 0) == 1;
+
+        isNewDay = PlayerPrefs.GetInt("isNewDay", 0) == 1;
+        lastSceneVisited = PlayerPrefs.GetString("lastSceneVisited");
+        currentMission = PlayerPrefs.GetString("currentMission");
+    }
+
+    //chamado via botão de continuar
+    public void LoadScene()
+    {
+        if (!string.IsNullOrEmpty(currentScene))
+        {
+            SceneManager.LoadScene(currentScene);
+        }
+    }
+
+    //chamado via botão de new game
+    public void ResetGame()
+    {
+        //PlayerPrefs.SetString("SavedScene", "");
+
+        //PlayerPrefs.SetInt("cena0", 0);
+        //PlayerPrefs.SetInt("cena1", 0);
+        //PlayerPrefs.SetInt("cena2", 0);
+        //PlayerPrefs.SetInt("cena2_minigame", 0);
+        //PlayerPrefs.SetInt("cena3", 0);
+        //PlayerPrefs.SetInt("cena4_1", 0);
+        //PlayerPrefs.SetInt("cena4_2", 0);
+        //PlayerPrefs.SetInt("cena4_2_5", 0);
+        //PlayerPrefs.SetInt("cena4_minigame", 0);
+        //PlayerPrefs.SetInt("cena4_3", 0);
+        //PlayerPrefs.SetInt("cena4_4", 0);
+        //PlayerPrefs.SetInt("cena5", 0);
+        //PlayerPrefs.SetInt("cena6", 0);
+        //PlayerPrefs.SetInt("cena6_minigame", 0);
+        //PlayerPrefs.SetInt("cena7", 0);
+        //PlayerPrefs.SetInt("cena8", 0);
+        //PlayerPrefs.SetInt("cena9", 0);
+        //PlayerPrefs.SetInt("cena10", 0);
+        //PlayerPrefs.SetInt("cena11", 0);
+        //PlayerPrefs.SetInt("cena12", 0);
+        //PlayerPrefs.SetInt("cena12_minigame", 0);
+        //PlayerPrefs.SetInt("cena13", 0);
+        //PlayerPrefs.SetInt("cena14", 0);
+
+        //PlayerPrefs.SetInt("isNewDay", 0);
+        //PlayerPrefs.SetString("lastSceneVisited", "Null");
+        //PlayerPrefs.SetString("currentMission", "");
+
+        //PlayerPrefs.Save();
+        SetValues();
+
+        Debug.Log("Jogo Resetado!");
     }
 }
