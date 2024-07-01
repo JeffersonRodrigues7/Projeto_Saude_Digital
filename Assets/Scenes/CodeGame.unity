@@ -5260,7 +5260,6 @@ MonoBehaviour:
   dica04: {fileID: 1898360694}
   dica05: {fileID: 573074129}
   atencaoUltimaDica: {fileID: 561808359}
-  certezaUltimaDica: 0
 --- !u!114 &1372969180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6651,7 +6650,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "4. Tranquilidade mental: Descreve uma mente livre de preocupa\xE7\xF5es,
-    ansiedades e stress, resultando em um sentimento de bem-estar profundo."
+    ansiedades e estresse, resultando em um sentimento de bem-estar profundo."
 --- !u!222 &1898360696
 CanvasRenderer:
   m_ObjectHideFlags: 0
