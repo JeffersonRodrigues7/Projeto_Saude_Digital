@@ -168,6 +168,8 @@ public class TimelineController : MonoBehaviour, IDataPersistence
             yield return new WaitForSeconds(ScreenEffect.Instance.FadeOutDuration);
         }
 
+        if(_director == null) _director = GetComponent<PlayableDirector>();
+
         //Debug.Log("Starting timeline");
         _director.Play();
         _isPlaying = true;

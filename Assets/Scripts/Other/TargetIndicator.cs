@@ -24,6 +24,8 @@ public class TargetIndicator : MonoBehaviour
 
     private void validaCenas()
     {
+
+
         if (GameManager.Instance.GetCenaValue("13"))
         {
             ChangeTarget(toSchool.transform);
@@ -31,7 +33,7 @@ public class TargetIndicator : MonoBehaviour
             activeObjective(toSchool);
         }
 
-        if (GameManager.Instance.GetCenaValue("11"))
+        else if (GameManager.Instance.GetCenaValue("11"))
         {
             ChangeTarget(toOldStudent.transform);
             objetivo.text = "Visite o aluno antigo!";

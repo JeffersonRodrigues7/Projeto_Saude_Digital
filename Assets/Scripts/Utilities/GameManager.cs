@@ -60,11 +60,11 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
 
-        SetValues();
+        SetInitialValues();
         LoadGame();
     }
 
-    private void SetValues()
+    private void SetInitialValues()
     {
         currentScene = "";
         isNewDay = false;
@@ -258,6 +258,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Chamado ao entrar em uma nova scene ou ao iniciar uma nova cinematica
     public void SaveGame()
     {
         // Salva o nome da cena atual
@@ -342,38 +343,8 @@ public class GameManager : MonoBehaviour
     //chamado via botão de new game
     public void ResetGame()
     {
-        //PlayerPrefs.SetString("SavedScene", "");
-
-        //PlayerPrefs.SetInt("cena0", 0);
-        //PlayerPrefs.SetInt("cena1", 0);
-        //PlayerPrefs.SetInt("cena2", 0);
-        //PlayerPrefs.SetInt("cena2_minigame", 0);
-        //PlayerPrefs.SetInt("cena3", 0);
-        //PlayerPrefs.SetInt("cena4_1", 0);
-        //PlayerPrefs.SetInt("cena4_2", 0);
-        //PlayerPrefs.SetInt("cena4_2_5", 0);
-        //PlayerPrefs.SetInt("cena4_minigame", 0);
-        //PlayerPrefs.SetInt("cena4_3", 0);
-        //PlayerPrefs.SetInt("cena4_4", 0);
-        //PlayerPrefs.SetInt("cena5", 0);
-        //PlayerPrefs.SetInt("cena6", 0);
-        //PlayerPrefs.SetInt("cena6_minigame", 0);
-        //PlayerPrefs.SetInt("cena7", 0);
-        //PlayerPrefs.SetInt("cena8", 0);
-        //PlayerPrefs.SetInt("cena9", 0);
-        //PlayerPrefs.SetInt("cena10", 0);
-        //PlayerPrefs.SetInt("cena11", 0);
-        //PlayerPrefs.SetInt("cena12", 0);
-        //PlayerPrefs.SetInt("cena12_minigame", 0);
-        //PlayerPrefs.SetInt("cena13", 0);
-        //PlayerPrefs.SetInt("cena14", 0);
-
-        //PlayerPrefs.SetInt("isNewDay", 0);
-        //PlayerPrefs.SetString("lastSceneVisited", "Null");
-        //PlayerPrefs.SetString("currentMission", "");
-
         //PlayerPrefs.Save();
-        SetValues();
+        SetInitialValues();
 
         Debug.Log("Jogo Resetado!");
     }

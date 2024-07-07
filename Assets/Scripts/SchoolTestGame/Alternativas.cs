@@ -251,6 +251,8 @@ public class Alternativas : MonoBehaviour
 
     public void ResumeGame()
     {
+        if (alternativa1 == null || alternativa2 == null) return;
+
         alternativa1.transform.Translate(Vector3.down * velocidade * Time.deltaTime);
         alternativa2.transform.Translate(Vector3.down * velocidade * Time.deltaTime); // Continua o jogo com o tempo normal
         isPaused = false;
