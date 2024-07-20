@@ -17,5 +17,5 @@ CONST NPC_NAME = "Emanuel"
     {NPC_NAME}: Quem sabe realmente não seja a chave necessária para abrir o tesouro que me aguarda.
     
     ~is_searching_for_key = false
-    ~has_found_key = true
+    //~has_found_key = true
 }
