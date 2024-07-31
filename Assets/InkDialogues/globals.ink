@@ -3,6 +3,7 @@ CONST A_ACTOR = "Alan"
 CONST B_ACTOR = "Beatriz"
 CONST PROFESSOR_ACTOR = "Carla"
 CONST OLD_STUDENT = "Marcos"
+CONST HUSBAND_NAME = "Rogério"
 
 VAR player_name = "Lucas"
 VAR a_name = "Alan"

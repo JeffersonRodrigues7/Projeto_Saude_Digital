@@ -5,15 +5,15 @@ VAR NPC_NAME = "Rogério"
 {NPC_NAME}: ALGUÉM CHEGOU, FINALMENTE!
 {NPC_NAME}: Digo...
 {NPC_NAME}: Olá!? Quem é?
-{PLAYER_ACTOR}: Oi professor {format_name(NPC_NAME)}, aqui é o {format_name(player_name)}.
-{NPC_NAME}: Oh sim! {format_name(player_name)}! O que você faz aqui?
-{PLAYER_ACTOR}: Bom... eu estava conversando com a professora {format_name(professor_name)}, e ela parecia estar com bastante fome.
+{PLAYER_ACTOR}: Oi professor {NPC_NAME}, aqui é o {player_name}.
+{NPC_NAME}: Oh sim! {player_name}! O que você faz aqui?
+{PLAYER_ACTOR}: Bom... eu estava conversando com a professora {professor_name}, e ela parecia estar com bastante fome.
 {PLAYER_ACTOR}: Aparentemente você deveria ter levado algo para ela comer.
 {PLAYER_ACTOR}: Como ela não podia sair da escola eu decidi passar aqui para levar pra ela, se não tiver problema.
 
 {NPC_NAME}: Ah sim! Então...
 {NPC_NAME}: Como eu posso explicar isso...
-{NPC_NAME}: Bom {format_name(player_name)}, é uma situação um pouco embaraçosa, mas eu meio que estou preso dentro de casa no momento. Se não fosse isso eu já teria levado o almoço dela faz tempo.
+{NPC_NAME}: Bom {player_name}, é uma situação um pouco embaraçosa, mas eu meio que estou preso dentro de casa no momento. Se não fosse isso eu já teria levado o almoço dela faz tempo.
 {PLAYER_ACTOR}: Preso dentro de casa???
 {NPC_NAME}: Então... como eu disse, é um pouco embaraçoso.
 {NPC_NAME}: Eu estava testando uma das minhas invenções. É basicamente uma tranca automática.
@@ -25,13 +25,13 @@ VAR NPC_NAME = "Rogério"
 
 {NPC_NAME}: Acho que eu deixei cair no parque, quando estava fazendo minha caminhada hoje pela manhã, mas é impossível eu ir buscar ela estando preso aqui dentro, como você pode ver.
 {NPC_NAME}: Eu sei que não deveria te pedir isso, mas eu estou em uma situação um pouco desesperada como você pode ver.
-{NPC_NAME}: {format_name(player_name)}, você poderia dar uma passada no parque e ver se eu deixei a chave cair lá?
+{NPC_NAME}: {player_name}, você poderia dar uma passada no parque e ver se eu deixei a chave cair lá?
 
 {PLAYER_ACTOR}: Claro que sim, professor! O parque é bem próximo daqui, não vai ser problema nenhum.
 {PLAYER_ACTOR}: Além disso, estou mesmo precisando me exercitar.
 {PLAYER_ACTOR}: Você sempre faz caminhada? é verdade que a realização de exercícios físicos pode ajudar na diminuição de estresse e ansiedade?
 
-{NPC_NAME}: É sim {format_name(player_name)}, inclusive me ajuda muito com as minhas invenções, sempre tenho ideias novas quando saio para caminhar!!
+{NPC_NAME}: É sim {player_name}, inclusive me ajuda muito com as minhas invenções, sempre tenho ideias novas quando saio para caminhar!!
 
 {PLAYER_ACTOR}: Que legal!!
 {PLAYER_ACTOR}: Me parece uma boa ideia fazer isso todas as manhãs... provavelmente irá me ajudar também.
@@ -43,7 +43,7 @@ VAR NPC_NAME = "Rogério"
 {PLAYER_ACTOR}: Vou convidar alguns amigos para esta procura!
 {PLAYER_ACTOR}: Assim que tiver novidades volto aqui para te informar.
 
-{NPC_NAME}: Muito obrigado {format_name(player_name)}!
+{NPC_NAME}: Muito obrigado {player_name}!
 
 
 ~ is_searching_for_key = true

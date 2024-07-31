@@ -12,7 +12,7 @@ INCLUDE ../globals.ink
 }
 
 {A_ACTOR}: Em todo caso, eu preciso aceitar que provavelmente estou doente...
-{A_ACTOR}: Seja um <style="c1">Transtorno de Ansiedade</style> ou alguma outra coisa, eu preciso buscar ajuda pra isso logo.
+{A_ACTOR}: Seja um Transtorno de Ansiedade ou alguma outra coisa, eu preciso buscar ajuda pra isso logo.
 {A_ACTOR}: Okay! Está decidido!
 {A_ACTOR}: Amanhã eu vou fazer a prova, e depois vou falar com a professora.
 {A_ACTOR}: Sei que tem uma psicóloga que trabalha na escola, então ela deve conseguir me encaminhar pro tratamento correto.

@@ -3,7 +3,7 @@ INCLUDE ../globals.ink
 CONST HUSBAND_NAME = "Rogério"
 
 {PROFESSOR_ACTOR}: Pode entrar!
-{PROFESSOR_ACTOR}: Olá {format_name(player_name)}! O que está fazendo na escola esse horário?  
+{PROFESSOR_ACTOR}: Olá {PLAYER_ACTOR}! O que está fazendo na escola esse horário?  
 {PROFESSOR_ACTOR}: Se for pela nota da prova, sinto muito, mas eu nem comecei a corrigir elas ainda. 
  
 {PLAYER_ACTOR}: Na verdade, professora, eu queria te perguntar algumas coisas. 
@@ -69,5 +69,5 @@ CONST HUSBAND_NAME = "Rogério"
  
 {PLAYER_ACTOR}:  Bem, quais são as diferenças entre um psicólogo e um psiquiatra?  
  
-{PROFESSOR_ACTOR}: Na verdade essa dúvida é bem comum, {format_name(player_name)}. 
+{PROFESSOR_ACTOR}: Na verdade essa dúvida é bem comum, {PLAYER_ACTOR}. 
 {PROFESSOR_ACTOR}: Existe uma série de diferenças entre esses profissionais.  

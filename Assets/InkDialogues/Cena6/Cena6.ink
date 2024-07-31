@@ -1,6 +1,6 @@
 INCLUDE ../globals.ink
 
-{PLAYER_ACTOR}: {format_name(a_name)}!
+{PLAYER_ACTOR}: {A_ACTOR}!
 {PLAYER_ACTOR}: Como você está se sentindo hoje?
 
 {A_ACTOR}: ...

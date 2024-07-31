@@ -6,11 +6,11 @@ CONST HUSBAND_NAME = "Rogério"
 /* Player e professora surpresos */
 {PROFESSOR_ACTOR}: Bom... como eu estava dizendo...
 /* Som de barriga roncando novamente */
-{PROFESSOR_ACTOR}: Sinto muito por isso {format_name(player_name)}! Eu estou sem comer o dia todo.
+{PROFESSOR_ACTOR}: Sinto muito por isso {PLAYER_ACTOR}! Eu estou sem comer o dia todo.
 {PROFESSOR_ACTOR}: Meu marido tinha combinado de trazer algo pra mim agora a tarde, mas até o momento ele não deu nenhum sinal de vida. 
 {PROFESSOR_ACTOR}: E eu também não posso sair agora para buscar algo.
 
-{PLAYER_ACTOR}: O seu marido é o professor {format_name(HUSBAND_NAME)}, né?
+{PLAYER_ACTOR}: O seu marido é o professor {HUSBAND_NAME}, né?
 
 {PROFESSOR_ACTOR}: Isso mesmo! Tinha me esquecido que vocês têm aula com ele também.
 
@@ -37,7 +37,7 @@ CONST HUSBAND_NAME = "Rogério"
 {PLAYER_ACTOR}: E você está me tirando dúvidas sobre essas questões que são bem importantes pra mim.
 {PLAYER_ACTOR}: Eu preciso que você consiga pensar direito para me tirar essas dúvidas.
 
-{PROFESSOR_ACTOR}: Você tem certeza {format_name(player_name)}?
+{PROFESSOR_ACTOR}: Você tem certeza {PLAYER_ACTOR}?
 
 {PLAYER_ACTOR}: Tenho sim professora! Não precisa se preocupar!
 
@@ -46,10 +46,10 @@ CONST HUSBAND_NAME = "Rogério"
 {PLAYER_ACTOR}: A propósito... onde fica a casa de vocês mesmo?
 
 {PROFESSOR_ACTOR}: Oh! Sim, claro!
-{PROFESSOR_ACTOR}: Fica na parte {format_important_text("de baixo")} do vilarejo. 
+{PROFESSOR_ACTOR}: Fica na parte de baixo do vilarejo. 
 {PROFESSOR_ACTOR}: Vai ser fácil de achar. Tem um carrinho de sorvete próximo à casa.
 {PROFESSOR_ACTOR}: Tenho certeza que você vai achar com facilidade.
 
 {PLAYER_ACTOR}: Acho que com essas informações eu consigo encontrar.
 
-{PROFESSOR_ACTOR}: Perfeito! Muito obrigado mesmo {format_name(player_name)}!
+{PROFESSOR_ACTOR}: Perfeito! Muito obrigado mesmo {PLAYER_ACTOR}!

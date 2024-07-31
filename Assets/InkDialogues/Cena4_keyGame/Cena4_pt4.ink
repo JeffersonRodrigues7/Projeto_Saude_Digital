@@ -3,10 +3,10 @@ INCLUDE ../globals.ink
 VAR NPC_NAME = "Rogério"
 
 {PLAYER_ACTOR}: Voltei professora!
-{PLAYER_ACTOR}: Consegui pegar algo para você comer com o professor {format_name(NPC_NAME)}.
+{PLAYER_ACTOR}: Consegui pegar algo para você comer com o professor {NPC_NAME}.
 {PLAYER_ACTOR}: Ele me deu esse pote cheio de cookies.
 
-{PROFESSOR_ACTOR}: Oi {format_name(player_name)}!
+{PROFESSOR_ACTOR}: Oi {player_name}!
 {PROFESSOR_ACTOR}: Que bom que deu tudo certo.
 {PROFESSOR_ACTOR}: Mas você até que demorou um pouquinho, aconteceu alguma coisa lá?
 
@@ -22,14 +22,14 @@ VAR NPC_NAME = "Rogério"
 
 /* fade out e fade in */
 
-{PROFESSOR_ACTOR}: Não acredito que o {format_name(NPC_NAME)} se trancou de novo com aquela tranca automática dele.
+{PROFESSOR_ACTOR}: Não acredito que o {NPC_NAME} se trancou de novo com aquela tranca automática dele.
 {PLAYER_ACTOR}: Então não foi a primeira vez?
 {PROFESSOR_ACTOR}: Quem dera fosse.
 {PROFESSOR_ACTOR}: Eu perdi a conta já de quantas vezes isso aconteceu.
 
-{PLAYER_ACTOR}: Isso é bem a cara do professor {format_name(NPC_NAME)} mesmo.
+{PLAYER_ACTOR}: Isso é bem a cara do professor {NPC_NAME} mesmo.
 
-{PROFESSOR_ACTOR}: Aliás {format_name(player_name)}, acho que eu estava te devendo terminar uma explicação.
+{PROFESSOR_ACTOR}: Aliás {player_name}, acho que eu estava te devendo terminar uma explicação.
 {PROFESSOR_ACTOR}: Se eu não me engano você tinha me pergutado a diferença entre psicologos e psiquiatras, certo?
 
 {PLAYER_ACTOR}: Isso mesmo, professora.
@@ -57,10 +57,10 @@ VAR NPC_NAME = "Rogério"
 {PROFESSOR_ACTOR}: Claro, além do tratamento, ter uma qualidade de vida boa, com uma alimentação saudável, praticar exercícios e até meditação podem ajudar.
 {PROFESSOR_ACTOR}: Mas buscar o tratamento adequado ainda é muito importante!
  
-{PLAYER_ACTOR}:  Muito obrigado, professora {format_name(professor_name)}! 
+{PLAYER_ACTOR}:  Muito obrigado, professora {professor_name}! 
 {PLAYER_ACTOR}:  Acho que você me fez entender mais do que eu esperava. 
  
-{PROFESSOR_ACTOR}: De nada. Fico feliz que você me veja como um adulto confiável e eu possa ter ajudado, {format_name(player_name)}! 
+{PROFESSOR_ACTOR}: De nada. Fico feliz que você me veja como um adulto confiável e eu possa ter ajudado, {player_name}! 
 {PROFESSOR_ACTOR}: É preocupante como a ansiedade e depressão vem se tornando problemas muito frequentes hoje em dia. 
 {PROFESSOR_ACTOR}: E ainda assim faltam informações. 
 {PROFESSOR_ACTOR}: Pessoas de todas as idades sofrem, sem saber como lidar com estas questões. 
@@ -69,7 +69,7 @@ VAR NPC_NAME = "Rogério"
 
 {PLAYER_ACTOR}: Acho que preciso ir agora antes que fique tarde. Muito obrigado novamente, professora!
 {PROFESSOR_ACTOR}: Eu quem te agradeço por ter todo esse trabalho para me ajudar.
-{PROFESSOR_ACTOR}: Até amanhã, {format_name(player_name)}!
+{PROFESSOR_ACTOR}: Até amanhã, {player_name}!
 {PLAYER_ACTOR}: Até amanhã!
 
 ~ gave_food_to_teacher = true
