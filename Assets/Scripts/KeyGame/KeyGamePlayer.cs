@@ -12,8 +12,8 @@ public class KeyGamePlayer : MonoBehaviour
 
     public RectTransform stamina;
     public GameObject WIN;
-    private int score = 0;
-    public bool catRunning = false;
+    private int score;
+    public bool catRunning;
 
     PlayerSwipeController playerSwipeController;
     AudioController audioController;
@@ -23,6 +23,8 @@ public class KeyGamePlayer : MonoBehaviour
         updateScore();
         playerSwipeController = gameObject.GetComponent<PlayerSwipeController>();
         audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
+        catRunning = false;
+        score = 0;
     }
 
     public void Update()
